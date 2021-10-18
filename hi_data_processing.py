@@ -12,9 +12,8 @@ def pairs(f1,f2):
     data["target"] =[]
     with open(f1,encoding='utf-8') as src_file, open(f2,encoding='utf-8') as tgt_file:
         for src, tgt in zip(src_file,tgt_file):
-            if src:
-                data["source"].append(re.sub("\(.*?\)", "", src.strip()))
-                data["target"].append(re.sub("\(.*?\)", "", tgt.strip()))
+            data["source"].append(re.sub("\(.*?\)", "", src.strip())+'\n')
+            data["target"].append(re.sub("\(.*?\)", "", tgt.strip())+'\n')
     return data
 
 hi_pairs = pairs("data/TED2020.en-hi.hi","data/TED2020.en-hi.en")
@@ -40,5 +39,5 @@ file_mapping = {
     'valid.en_XX': en_valid,}
 
 for k, v in file_mapping.items():
-    with open(f'processed/{k}', 'w',encoding='utf-8') as fp:
+    with open(f'processed/hi/{k}', 'w',encoding='utf-8') as fp:
         fp.writelines(v)
