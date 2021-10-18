@@ -1,10 +1,10 @@
 
-SPM="C:/program files/python39/lib/site-packages/sentencepiece"
-MODEL=sentence.bpe.model
-DATA=C:/Users/nullv/Desktop/2021Autumn/MT/project/processed
+SPM=/Users/sig/sentencepiece/build/src/spm_encode
+MODEL=/Users/sig/Documents/Sy/mbart.cc25.v2/sentence.bpe.model
+DATA=/Users/sig/Documents/Sy/Machine-Translation/processed/gu
 TRAIN=train
 VALID=valid
-SRC=hi_IN
+SRC=gu_IN
 TGT=en_XX
 ${SPM} --model=${MODEL} < ${DATA}/${TRAIN}.${SRC} > ${DATA}/${TRAIN}.spm.${SRC} &
 ${SPM} --model=${MODEL} < ${DATA}/${TRAIN}.${TGT} > ${DATA}/${TRAIN}.spm.${TGT} &
