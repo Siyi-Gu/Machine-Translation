@@ -3,7 +3,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 
 def pairs():
-    lines = open('wikititles-v1.gu-en.tsv', encoding='utf-8').read().strip().split('\n')
+    lines = open('data/wikititles-v1.gu-en.tsv', encoding='utf-8').read().strip().split('\n')
     #get rid of non-translation
     lines = [l for l in lines if not re.match("[A-Za-z]",l[0])]
     # Split every line into pairs and normalize
