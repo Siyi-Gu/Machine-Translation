@@ -13,19 +13,24 @@ def pairs():
 gu_df=pd.DataFrame(pairs())
 gu_df.columns = ['source','target']
 
-#train, validation split 
-train, valid = train_test_split(gu_df,test_size=0.2,random_state=42)
+#train, validation, test split 
+train, sub = train_test_split(gu_df,test_size=0.2,random_state=42)
+valid, test = train_test_split(sub,test_size=0.5,random_state=42)
 
 gu_train = train['source']
 en_train = train['target']
 gu_valid = valid['source']
 en_valid = valid['target']
+gu_test = test['source']
+en_test = test['target']
 
 file_mapping = {
     'train.gu_IN': gu_train,
     'train.en_XX': en_train,
     'valid.gu_IN': gu_valid,
-    'valid.en_XX': en_valid,}
+    'valid.en_XX': en_valid,
+    'test.gu_IN': gu_test,
+    'test.en_XX': gu_test}
 
 for k, v in file_mapping.items():
     with open(f'processed/gu/{k}', 'w',encoding='utf-8') as fp:
