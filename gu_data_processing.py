@@ -30,7 +30,7 @@ file_mapping = {
     'valid.gu_IN': gu_valid,
     'valid.en_XX': en_valid,
     'test.gu_IN': gu_test,
-    'test.en_XX': gu_test}
+    'test.en_XX': en_test}
 
 for k, v in file_mapping.items():
     with open(f'processed/gu/{k}', 'w',encoding='utf-8') as fp:
