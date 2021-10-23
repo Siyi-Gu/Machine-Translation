@@ -16,26 +16,26 @@ def pairs(f1,f2):
             data["target"].append(re.sub("\(.*?\)", "", tgt.strip())+'\n')
     return data
 
-hi_pairs = pairs("data/TED2020.en-gu.gu","data/TED2020.en-gu.en")
+gu_pairs = pairs("data/TED2020.en-gu.gu","data/TED2020.en-gu.en")
 
 #remove empyty rows
-hi_df = pd.DataFrame.from_dict(hi_pairs)
-hi_df.replace("", np.nan, inplace=True)
-hi_df.dropna(subset=['target'], inplace=True)
-hi_df.dropna(subset=['source'], inplace=True)
+gu_df = pd.DataFrame.from_dict(gu_pairs)
+gu_df.replace("", np.nan, inplace=True)
+gu_df.dropna(subset=['target'], inplace=True)
+gu_df.dropna(subset=['source'], inplace=True)
 
 #train, validation split 
-train, valid = train_test_split(hi_df,test_size=0.2,random_state=42)
+train, valid = train_test_split(gu_df,test_size=0.2,random_state=42)
 
-hi_train = train['source']
+gu_train = train['source']
 en_train = train['target']
-hi_valid = valid['source']
+gu_valid = valid['source']
 en_valid = valid['target']
 
 file_mapping = {
-    'train.hi_IN': hi_train,
+    'train.gu_IN': gu_train,
     'train.en_XX': en_train,
-    'valid.hi_IN': hi_valid,
+    'valid.gu_IN': gu_valid,
     'valid.en_XX': en_valid,}
 
 for k, v in file_mapping.items():
