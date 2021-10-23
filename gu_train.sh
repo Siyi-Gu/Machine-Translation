@@ -2,7 +2,7 @@ PRETRAIN=/mnt/mbart.cc25.v2/model.pt
 langs=ar_AR,cs_CZ,de_DE,en_XX,es_XX,et_EE,fi_FI,fr_XX,gu_IN,hi_IN,it_IT,ja_XX,kk_KZ,ko_KR,lt_LT,lv_LV,my_MM,ne_NP,nl_XX,ro_RO,ru_RU,si_LK,tr_TR,vi_VN,zh_CN
 SRC=gu_IN
 TGT=en_XX
-DATA_PATH=/mnt/Machine-Translation/processed/new_gu/gu-en
+DATA_PATH=/mnt/Machine-Translation/processed/ted_gu/gu-en
 MODEL_PATH=/mnt/Machine-Translation/no_transfer
 
 # training
@@ -15,14 +15,14 @@ CUDA_VISIBLE_DEVICES=0 fairseq-train ${DATA_PATH} \
   --optimizer adam --adam-eps 1e-06 --adam-betas '(0.9, 0.98)' \
   --lr-scheduler polynomial_decay --lr 3e-05 --warmup-updates 2500 --total-num-update 40000 \
   --dropout 0.3 --attention-dropout 0.1 --weight-decay 0.0 \
-  --max-tokens 512 --update-freq 2 \
-  --save-interval 5 --no-epoch-checkpoints \
+  --max-tokens 768 --update-freq 2 \
+  --save-interval 2 --no-epoch-checkpoints \
   --seed 222 --log-format simple --log-interval 2 \
   --restore-file $PRETRAIN \
   --reset-optimizer --reset-meters --reset-dataloader --reset-lr-scheduler \
   --langs $langs \
   --ddp-backend no_c10d \
-  --max-epoch 5 \
+  --max-epoch 2 \
   --save-dir ${MODEL_PATH} 
   
   

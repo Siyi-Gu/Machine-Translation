@@ -1,11 +1,12 @@
 langs=ar_AR,cs_CZ,de_DE,en_XX,es_XX,et_EE,fi_FI,fr_XX,gu_IN,hi_IN,it_IT,ja_XX,kk_KZ,ko_KR,lt_LT,lv_LV,my_MM,ne_NP,nl_XX,ro_RO,ru_RU,si_LK,tr_TR,vi_VN,zh_CN
-DATA_PATH=/mnt/Machine-Translation/processed/gu/gu-en
+DATA_PATH=/mnt/Machine-Translation/processed/ted_gu/gu-en
 MODEL_PATH=/mnt/Machine-Translation/no_transfer
 
 PREFIX_OUT=$MODEL_PATH/generation
 CUDA_VISIBLE_DEVICES=0 fairseq-generate ${DATA_PATH} \
     --path $MODEL_PATH/checkpoint_best.pt \
     --task translation_from_pretrained_bart \
+    --bpe 'sentencepiece' --sentencepiece-model /mnt/mbart.cc25.v2/sentence.bpe.model \
     -t en_XX -s gu_IN \
     --remove-bpe 'sentencepiece' \
     --langs $langs \
