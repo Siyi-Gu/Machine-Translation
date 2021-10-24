@@ -8,7 +8,7 @@ translation_table = str.maketrans('', '', string.punctuation)
 def pairs():
     lines = open('data/wikititles-v1.gu-en.tsv', encoding='utf-8').read().strip().split('\n')
     #get rid of non-translation
-    lines = [l.translate(translation_table) for l in lines if not re.match("[A-Za-z]",l[0])]
+    lines = [l.lower().translate(translation_table) for l in lines if not re.match("[A-Za-z]",l[0])]
     # Split every line into pairs and normalize
     pairs = [[s+'\n' for s in l.split('\t')] for l in lines]
     return pairs
