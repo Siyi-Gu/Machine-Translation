@@ -4,7 +4,7 @@ VALID=valid
 
 SRC=gu_IN
 TGT=en_XX
-NAME=gu-en
+NAME=hi-en
 DEST=/mnt/Machine-Translation/processed/hi
 DICT=/mnt/mbart.cc25.v2/dict.txt
 
