@@ -14,3 +14,5 @@ https://aclanthology.org/W19-5332.pdf
 https://strawberryperl.com/download/5.32.1.1/strawberry-perl-5.32.1.1-64bit.msi
 
 https://github.com/shahparth123/eng_guj_parallel_corpus/blob/master/train.en
+
+http://www.statmt.org/wmt20/pdf/2020.wmt-1.46.pdf
