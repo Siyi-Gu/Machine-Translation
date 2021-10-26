@@ -1,5 +1,6 @@
 import re
 import pandas as pd
+import numpy as np
 from sklearn.model_selection import train_test_split
 import string
 
@@ -14,6 +15,11 @@ def pairs():
 
 gu_df=pd.DataFrame(pairs())
 gu_df.columns = ['source','target']
+gu_df.replace("", np.nan, inplace=True)
+gu_df.replace("\n", np.nan, inplace=True)
+gu_df.dropna(subset=['target'], inplace=True)
+gu_df.dropna(subset=['source'], inplace=True)
+gu_df = gu_df.drop_duplicates()
 
 #train, validation, test split 
 train, sub = train_test_split(gu_df,test_size=0.2,random_state=42)

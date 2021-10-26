@@ -25,6 +25,7 @@ hi_df.replace("", np.nan, inplace=True)
 hi_df.replace("\n", np.nan, inplace=True)
 hi_df.dropna(subset=['target'], inplace=True)
 hi_df.dropna(subset=['source'], inplace=True)
+hi_df = hi_df.drop_duplicates()
 
 #train, validation split 
 train, valid = train_test_split(hi_df,test_size=0.2,random_state=42)
