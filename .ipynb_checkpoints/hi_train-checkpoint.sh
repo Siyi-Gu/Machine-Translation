@@ -16,12 +16,12 @@ CUDA_VISIBLE_DEVICES=0 fairseq-train ${DATA_PATH} --fp16 \
   --lr-scheduler polynomial_decay --lr 3e-05 --warmup-updates 2500 --total-num-update 40000 \
   --dropout 0.3 --attention-dropout 0.1 --weight-decay 0.0 \
   --max-tokens 1200 --update-freq 2 \
-  --save-interval 10 --no-epoch-checkpoints \
+  --save-interval 25 --no-epoch-checkpoints \
   --seed 222 --log-format simple --log-interval 2 \
   --restore-file $PRETRAIN \
   --reset-optimizer --reset-meters --reset-dataloader --reset-lr-scheduler \
   --langs $langs \
   --ddp-backend no_c10d \
-  --max-epoch 20 \
+  --max-epoch 50 \
   --save-dir ${MODEL_PATH} 
   

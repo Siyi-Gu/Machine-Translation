@@ -1,0 +1,4550 @@
+2021-10-26 16:26:26 | INFO | fairseq_cli.generate | Namespace(all_gather_list_size=16384, batch_size=64, batch_size_valid=64, beam=5, bf16=False, bpe=None, broadcast_buffers=False, bucket_cap_mb=25, checkpoint_shard_count=1, checkpoint_suffix='', constraints=None, cpu=False, criterion='cross_entropy', curriculum=0, data='/mnt/Machine-Translation/transformer/preprocess/gu/gu-en-word', data_buffer_size=10, dataset_impl=None, ddp_backend='c10d', decoding_format=None, device_id=0, disable_validation=False, distributed_backend='nccl', distributed_init_method=None, distributed_no_spawn=False, distributed_port=-1, distributed_rank=0, distributed_world_size=1, distributed_wrapper='DDP', diverse_beam_groups=-1, diverse_beam_strength=0.5, diversity_rate=-1.0, empty_cache_freq=0, eval_bleu=False, eval_bleu_args=None, eval_bleu_detok='space', eval_bleu_detok_args=None, eval_bleu_print_samples=False, eval_bleu_remove_bpe=None, eval_tokenized_bleu=False, fast_stat_sync=False, find_unused_parameters=False, fix_batches_to_gpus=False, fixed_validation_seed=None, force_anneal=None, fp16=False, fp16_init_scale=128, fp16_no_flatten_grads=False, fp16_scale_tolerance=0.0, fp16_scale_window=None, gen_subset='test', iter_decode_eos_penalty=0.0, iter_decode_force_max_iter=False, iter_decode_max_iter=10, iter_decode_with_beam=1, iter_decode_with_external_reranker=False, left_pad_source='True', left_pad_target='False', lenpen=1, lm_path=None, lm_weight=0.0, load_alignments=False, localsgd_frequency=3, log_format=None, log_interval=100, lr_scheduler='fixed', lr_shrink=0.1, match_source_len=False, max_len_a=0, max_len_b=200, max_source_positions=1024, max_target_positions=1024, max_tokens=None, max_tokens_valid=None, memory_efficient_bf16=False, memory_efficient_fp16=False, min_len=1, min_loss_scale=0.0001, model_overrides='{}', model_parallel_size=1, nbest=1, no_beamable_mm=False, no_early_stop=False, no_progress_bar=False, no_repeat_ngram_size=0, no_seed_provided=False, nprocs_per_node=1, num_batch_buckets=0, num_shards=1, num_workers=1, optimizer=None, path='./no_transfer_word/checkpoint_best.pt', pipeline_balance=None, pipeline_checkpoint='never', pipeline_chunks=0, pipeline_decoder_balance=None, pipeline_decoder_devices=None, pipeline_devices=None, pipeline_encoder_balance=None, pipeline_encoder_devices=None, pipeline_model_parallel=False, prefix_size=0, print_alignment=False, print_step=False, profile=False, quantization_config_path=None, quiet=False, remove_bpe=None, replace_unk=None, required_batch_size_multiple=8, required_seq_len_multiple=1, results_path=None, retain_dropout=False, retain_dropout_modules=None, retain_iter_history=False, sacrebleu=False, sampling=False, sampling_topk=-1, sampling_topp=-1.0, score_reference=False, scoring='bleu', seed=1, shard_id=0, skip_invalid_size_inputs_valid_test=False, slowmo_algorithm='LocalSGD', slowmo_momentum=None, source_lang='gu_IN', target_lang='en_XX', task='translation', temperature=1.0, tensorboard_logdir=None, threshold_loss_scale=None, tokenizer=None, tpu=False, train_subset='train', truncate_source=False, unkpen=0, unnormalized=False, upsample_primary=1, user_dir=None, valid_subset='valid', validate_after_updates=0, validate_interval=1, validate_interval_updates=0, warmup_updates=0, zero_sharding='none')
+2021-10-26 16:26:26 | INFO | fairseq.tasks.translation | [gu_IN] dictionary: 7720 types
+2021-10-26 16:26:26 | INFO | fairseq.tasks.translation | [en_XX] dictionary: 7416 types
+2021-10-26 16:26:26 | INFO | fairseq.data.data_utils | loaded 908 examples from: /mnt/Machine-Translation/transformer/preprocess/gu/gu-en-word/test.gu_IN-en_XX.gu_IN
+2021-10-26 16:26:26 | INFO | fairseq.data.data_utils | loaded 908 examples from: /mnt/Machine-Translation/transformer/preprocess/gu/gu-en-word/test.gu_IN-en_XX.en_XX
+2021-10-26 16:26:26 | INFO | fairseq.tasks.translation | /mnt/Machine-Translation/transformer/preprocess/gu/gu-en-word test gu_IN-en_XX 908 examples
+2021-10-26 16:26:26 | INFO | fairseq_cli.generate | loading model(s) from ./no_transfer_word/checkpoint_best.pt
+S-124	<unk>
+T-124	<<unk>>
+H-124	-3.3011577129364014	cosmetics
+D-124	-3.3011577129364014	cosmetics
+P-124	-6.6018 -0.0005
+S-88	<unk>
+T-88	<<unk>>
+H-88	-3.3011577129364014	cosmetics
+D-88	-3.3011577129364014	cosmetics
+P-88	-6.6018 -0.0005
+S-89	<unk>
+T-89	<<unk>>
+H-89	-3.3011577129364014	cosmetics
+D-89	-3.3011577129364014	cosmetics
+P-89	-6.6018 -0.0005
+S-95	પ્રહલાદ
+T-95	<<unk>>
+H-95	-0.858496367931366	prahlad tipanya
+D-95	-0.858496367931366	prahlad tipanya
+P-95	-0.6506 -1.9247 -0.0002
+S-96	વિજ્ઞાન
+T-96	science
+H-96	-0.25284868478775024	science science
+D-96	-0.25284868478775024	science science
+P-96	-0.0265 -0.6058 -0.1263
+S-97	<unk>
+T-97	<<unk>>
+H-97	-3.3011577129364014	cosmetics
+D-97	-3.3011577129364014	cosmetics
+P-97	-6.6018 -0.0005
+S-98	<unk>
+T-98	<<unk>>
+H-98	-3.3011577129364014	cosmetics
+D-98	-3.3011577129364014	cosmetics
+P-98	-6.6018 -0.0005
+S-103	<unk>
+T-103	<<unk>>
+H-103	-3.3011577129364014	cosmetics
+D-103	-3.3011577129364014	cosmetics
+P-103	-6.6018 -0.0005
+S-104	<unk>
+T-104	<<unk>>
+H-104	-3.3011577129364014	cosmetics
+D-104	-3.3011577129364014	cosmetics
+P-104	-6.6018 -0.0005
+S-106	સાહિબગંજ
+T-106	sahebganj
+H-106	-1.355003833770752	sahebganj district
+D-106	-1.355003833770752	sahebganj district
+P-106	-2.7906 -1.2735 -0.0009
+S-107	<unk>
+T-107	<<unk>>
+H-107	-3.3011577129364014	cosmetics
+D-107	-3.3011577129364014	cosmetics
+P-107	-6.6018 -0.0005
+S-115	<unk>
+T-115	<<unk>>
+H-115	-3.3011577129364014	cosmetics
+D-115	-3.3011577129364014	cosmetics
+P-115	-6.6018 -0.0005
+S-116	<unk>
+T-116	<<unk>>
+H-116	-3.3011577129364014	cosmetics
+D-116	-3.3011577129364014	cosmetics
+P-116	-6.6018 -0.0005
+S-119	હૈદરાબાદ
+T-119	hyderabad
+H-119	-1.1273099184036255	hyderabad
+D-119	-1.1273099184036255	hyderabad
+P-119	-2.0671 -0.1875
+S-120	<unk>
+T-120	<<unk>>
+H-120	-3.3011577129364014	cosmetics
+D-120	-3.3011577129364014	cosmetics
+P-120	-6.6018 -0.0005
+S-122	<unk>
+T-122	<<unk>>
+H-122	-3.3011577129364014	cosmetics
+D-122	-3.3011577129364014	cosmetics
+P-122	-6.6018 -0.0005
+S-83	<unk>
+T-83	<<unk>>
+H-83	-3.3011577129364014	cosmetics
+D-83	-3.3011577129364014	cosmetics
+P-83	-6.6018 -0.0005
+S-129	સિંધી
+T-129	sindhi
+H-129	-1.530754566192627	sindhi sindhis
+D-129	-1.530754566192627	sindhi sindhis
+P-129	-0.3880 -4.2040 -0.0003
+S-137	<unk>
+T-137	<<unk>>
+H-137	-3.3011577129364014	cosmetics
+D-137	-3.3011577129364014	cosmetics
+P-137	-6.6018 -0.0005
+S-140	<unk>
+T-140	<<unk>>
+H-140	-3.3011577129364014	cosmetics
+D-140	-3.3011577129364014	cosmetics
+P-140	-6.6018 -0.0005
+S-144	<unk>
+T-144	<<unk>>
+H-144	-3.3011577129364014	cosmetics
+D-144	-3.3011577129364014	cosmetics
+P-144	-6.6018 -0.0005
+S-146	જાન્યુઆરી
+T-146	january
+H-146	-0.40563011169433594	january
+D-146	-0.40563011169433594	january
+P-146	-0.0026 -0.8086
+S-148	<unk>
+T-148	<<unk>>
+H-148	-3.3011577129364014	cosmetics
+D-148	-3.3011577129364014	cosmetics
+P-148	-6.6018 -0.0005
+S-152	<unk>
+T-152	<<unk>>
+H-152	-3.3011577129364014	cosmetics
+D-152	-3.3011577129364014	cosmetics
+P-152	-6.6018 -0.0005
+S-157	શાકભાજી
+T-157	<<unk>>
+H-157	-0.02585235983133316	vegetables
+D-157	-0.02585235983133316	vegetables
+P-157	-0.0504 -0.0014
+S-159	<unk>
+T-159	<<unk>>
+H-159	-3.3011577129364014	cosmetics
+D-159	-3.3011577129364014	cosmetics
+P-159	-6.6018 -0.0005
+S-160	<unk>
+T-160	<<unk>>
+H-160	-3.3011577129364014	cosmetics
+D-160	-3.3011577129364014	cosmetics
+P-160	-6.6018 -0.0005
+S-161	<unk>
+T-161	<<unk>>
+H-161	-3.3011577129364014	cosmetics
+D-161	-3.3011577129364014	cosmetics
+P-161	-6.6018 -0.0005
+S-165	<unk>
+T-165	<<unk>>
+H-165	-3.3011577129364014	cosmetics
+D-165	-3.3011577129364014	cosmetics
+P-165	-6.6018 -0.0005
+S-166	<unk>
+T-166	<<unk>>
+H-166	-3.3011577129364014	cosmetics
+D-166	-3.3011577129364014	cosmetics
+P-166	-6.6018 -0.0005
+S-168	<unk>
+T-168	<<unk>>
+H-168	-3.3011577129364014	cosmetics
+D-168	-3.3011577129364014	cosmetics
+P-168	-6.6018 -0.0005
+S-178	<unk>
+T-178	<<unk>>
+H-178	-3.3011577129364014	cosmetics
+D-178	-3.3011577129364014	cosmetics
+P-178	-6.6018 -0.0005
+S-45	વાશીમ
+T-45	washim
+H-45	-0.9792029857635498	washim
+D-45	-0.9792029857635498	washim
+P-45	-1.6595 -0.2989
+S-5	<unk>
+T-5	<<unk>>
+H-5	-3.3011577129364014	cosmetics
+D-5	-3.3011577129364014	cosmetics
+P-5	-6.6018 -0.0005
+S-12	<unk>
+T-12	<<unk>>
+H-12	-3.3011577129364014	cosmetics
+D-12	-3.3011577129364014	cosmetics
+P-12	-6.6018 -0.0005
+S-13	<unk>
+T-13	<<unk>>
+H-13	-3.3011577129364014	cosmetics
+D-13	-3.3011577129364014	cosmetics
+P-13	-6.6018 -0.0005
+S-17	<unk>
+T-17	tiger
+H-17	-3.3011577129364014	cosmetics
+D-17	-3.3011577129364014	cosmetics
+P-17	-6.6018 -0.0005
+S-18	<unk>
+T-18	<<unk>>
+H-18	-3.3011577129364014	cosmetics
+D-18	-3.3011577129364014	cosmetics
+P-18	-6.6018 -0.0005
+S-21	<unk>
+T-21	<<unk>>
+H-21	-3.3011577129364014	cosmetics
+D-21	-3.3011577129364014	cosmetics
+P-21	-6.6018 -0.0005
+S-22	ઉત્તરાખંડ
+T-22	uttarakhand
+H-22	-3.132981777191162	ogla
+D-22	-3.132981777191162	ogla
+P-22	-6.2654 -0.0006
+S-23	<unk>
+T-23	<<unk>>
+H-23	-3.3011577129364014	cosmetics
+D-23	-3.3011577129364014	cosmetics
+P-23	-6.6018 -0.0005
+S-24	<unk>
+T-24	<<unk>>
+H-24	-3.3011577129364014	cosmetics
+D-24	-3.3011577129364014	cosmetics
+P-24	-6.6018 -0.0005
+S-27	<unk>
+T-27	blood
+H-27	-3.3011577129364014	cosmetics
+D-27	-3.3011577129364014	cosmetics
+P-27	-6.6018 -0.0005
+S-32	<unk>
+T-32	<<unk>>
+H-32	-3.3011577129364014	cosmetics
+D-32	-3.3011577129364014	cosmetics
+P-32	-6.6018 -0.0005
+S-33	હોશંગાબાદ
+T-33	hoshangabad
+H-33	-1.725311040878296	hoshangabad district
+D-33	-1.725311040878296	hoshangabad district
+P-33	-1.4316 -3.7437 -0.0007
+S-35	<unk>
+T-35	<<unk>>
+H-35	-3.3011577129364014	cosmetics
+D-35	-3.3011577129364014	cosmetics
+P-35	-6.6018 -0.0005
+S-39	<unk>
+T-39	<<unk>>
+H-39	-3.3011577129364014	cosmetics
+D-39	-3.3011577129364014	cosmetics
+P-39	-6.6018 -0.0005
+S-44	<unk>
+T-44	<<unk>>
+H-44	-3.3011577129364014	cosmetics
+D-44	-3.3011577129364014	cosmetics
+P-44	-6.6018 -0.0005
+S-2	<unk>
+T-2	curry
+H-2	-3.3011577129364014	cosmetics
+D-2	-3.3011577129364014	cosmetics
+P-2	-6.6018 -0.0005
+S-48	મમિત
+T-48	mamit
+H-48	-2.315373182296753	mamit
+D-48	-2.315373182296753	mamit
+P-48	-2.1203 -2.5104
+S-49	<unk>
+T-49	<<unk>>
+H-49	-3.3011577129364014	cosmetics
+D-49	-3.3011577129364014	cosmetics
+P-49	-6.6018 -0.0005
+S-53	<unk>
+T-53	<<unk>>
+H-53	-3.3011577129364014	cosmetics
+D-53	-3.3011577129364014	cosmetics
+P-53	-6.6018 -0.0005
+S-54	<unk>
+T-54	<<unk>>
+H-54	-3.3011577129364014	cosmetics
+D-54	-3.3011577129364014	cosmetics
+P-54	-6.6018 -0.0005
+S-55	<unk>
+T-55	<<unk>>
+H-55	-3.3011577129364014	cosmetics
+D-55	-3.3011577129364014	cosmetics
+P-55	-6.6018 -0.0005
+S-56	<unk>
+T-56	<<unk>>
+H-56	-3.3011577129364014	cosmetics
+D-56	-3.3011577129364014	cosmetics
+P-56	-6.6018 -0.0005
+S-57	<unk>
+T-57	<<unk>>
+H-57	-3.3011577129364014	cosmetics
+D-57	-3.3011577129364014	cosmetics
+P-57	-6.6018 -0.0005
+S-59	<unk>
+T-59	<<unk>>
+H-59	-3.3011577129364014	cosmetics
+D-59	-3.3011577129364014	cosmetics
+P-59	-6.6018 -0.0005
+S-61	<unk>
+T-61	<<unk>>
+H-61	-3.3011577129364014	cosmetics
+D-61	-3.3011577129364014	cosmetics
+P-61	-6.6018 -0.0005
+S-67	<unk>
+T-67	<<unk>>
+H-67	-3.3011577129364014	cosmetics
+D-67	-3.3011577129364014	cosmetics
+P-67	-6.6018 -0.0005
+S-68	<unk>
+T-68	<<unk>>
+H-68	-3.3011577129364014	cosmetics
+D-68	-3.3011577129364014	cosmetics
+P-68	-6.6018 -0.0005
+S-69	<unk>
+T-69	<<unk>>
+H-69	-3.3011577129364014	cosmetics
+D-69	-3.3011577129364014	cosmetics
+P-69	-6.6018 -0.0005
+S-72	<unk>
+T-72	<<unk>>
+H-72	-3.3011577129364014	cosmetics
+D-72	-3.3011577129364014	cosmetics
+P-72	-6.6018 -0.0005
+S-76	<unk>
+T-76	<<unk>>
+H-76	-3.3011577129364014	cosmetics
+D-76	-3.3011577129364014	cosmetics
+P-76	-6.6018 -0.0005
+S-81	<unk>
+T-81	<<unk>>
+H-81	-3.3011577129364014	cosmetics
+D-81	-3.3011577129364014	cosmetics
+P-81	-6.6018 -0.0005
+S-335	<unk>
+T-335	<<unk>>
+H-335	-3.3011577129364014	cosmetics
+D-335	-3.3011577129364014	cosmetics
+P-335	-6.6018 -0.0005
+S-290	<unk>
+T-290	<<unk>>
+H-290	-3.3011577129364014	cosmetics
+D-290	-3.3011577129364014	cosmetics
+P-290	-6.6018 -0.0005
+S-291	<unk>
+T-291	<<unk>>
+H-291	-3.3011577129364014	cosmetics
+D-291	-3.3011577129364014	cosmetics
+P-291	-6.6018 -0.0005
+S-304	<unk>
+T-304	<<unk>>
+H-304	-3.3011577129364014	cosmetics
+D-304	-3.3011577129364014	cosmetics
+P-304	-6.6018 -0.0005
+S-308	<unk>
+T-308	<<unk>>
+H-308	-3.3011577129364014	cosmetics
+D-308	-3.3011577129364014	cosmetics
+P-308	-6.6018 -0.0005
+S-309	ચુરાચાંદપુર
+T-309	churachandpur
+H-309	-0.9756264090538025	churachandpur district
+D-309	-0.9756264090538025	churachandpur district
+P-309	-0.5135 -2.4128 -0.0006
+S-312	<unk>
+T-312	<<unk>>
+H-312	-3.3011577129364014	cosmetics
+D-312	-3.3011577129364014	cosmetics
+P-312	-6.6018 -0.0005
+S-313	<unk>
+T-313	<<unk>>
+H-313	-3.3011577129364014	cosmetics
+D-313	-3.3011577129364014	cosmetics
+P-313	-6.6018 -0.0005
+S-315	વિલુપ્પુરમ
+T-315	viluppuram
+H-315	-0.8846297860145569	viluppuram
+D-315	-0.8846297860145569	viluppuram
+P-315	-0.2494 -1.5199
+S-319	<unk>
+T-319	<<unk>>
+H-319	-3.3011577129364014	cosmetics
+D-319	-3.3011577129364014	cosmetics
+P-319	-6.6018 -0.0005
+S-320	<unk>
+T-320	<<unk>>
+H-320	-3.3011577129364014	cosmetics
+D-320	-3.3011577129364014	cosmetics
+P-320	-6.6018 -0.0005
+S-326	<unk>
+T-326	<<unk>>
+H-326	-3.3011577129364014	cosmetics
+D-326	-3.3011577129364014	cosmetics
+P-326	-6.6018 -0.0005
+S-327	ગુજરાતી
+T-327	gujarati
+H-327	-0.7796725630760193	gujarati films
+D-327	-0.7796725630760193	gujarati films
+P-327	-0.2689 -2.0677 -0.0024
+S-328	<unk>
+T-328	algeria
+H-328	-3.3011577129364014	cosmetics
+D-328	-3.3011577129364014	cosmetics
+P-328	-6.6018 -0.0005
+S-329	<unk>
+T-329	<<unk>>
+H-329	-3.3011577129364014	cosmetics
+D-329	-3.3011577129364014	cosmetics
+P-329	-6.6018 -0.0005
+S-332	નંદરબાર
+T-332	nandurbar
+H-332	-1.278381109237671	nandurbar district
+D-332	-1.278381109237671	nandurbar district
+P-332	-0.6564 -3.1783 -0.0005
+S-289	<unk>
+T-289	<<unk>>
+H-289	-3.3011577129364014	cosmetics
+D-289	-3.3011577129364014	cosmetics
+P-289	-6.6018 -0.0005
+S-336	<unk>
+T-336	antarctica
+H-336	-3.3011577129364014	cosmetics
+D-336	-3.3011577129364014	cosmetics
+P-336	-6.6018 -0.0005
+S-339	<unk>
+T-339	<<unk>>
+H-339	-3.3011577129364014	cosmetics
+D-339	-3.3011577129364014	cosmetics
+P-339	-6.6018 -0.0005
+S-341	<unk>
+T-341	<<unk>>
+H-341	-3.3011577129364014	cosmetics
+D-341	-3.3011577129364014	cosmetics
+P-341	-6.6018 -0.0005
+S-343	<unk>
+T-343	<<unk>>
+H-343	-3.3011577129364014	cosmetics
+D-343	-3.3011577129364014	cosmetics
+P-343	-6.6018 -0.0005
+S-349	શ્રીનગર
+T-349	srinagar
+H-349	-0.04002731293439865	srinagar
+D-349	-0.04002731293439865	srinagar
+P-349	-0.0777 -0.0023
+S-352	રેખા
+T-352	line
+H-352	-3.3551793098449707	rekha
+D-352	-3.3551793098449707	rekha
+P-352	-6.7100 -0.0003
+S-355	<unk>
+T-355	<<unk>>
+H-355	-3.3011577129364014	cosmetics
+D-355	-3.3011577129364014	cosmetics
+P-355	-6.6018 -0.0005
+S-356	<unk>
+T-356	<<unk>>
+H-356	-3.3011577129364014	cosmetics
+D-356	-3.3011577129364014	cosmetics
+P-356	-6.6018 -0.0005
+S-357	<unk>
+T-357	<<unk>>
+H-357	-3.3011577129364014	cosmetics
+D-357	-3.3011577129364014	cosmetics
+P-357	-6.6018 -0.0005
+S-359	<unk>
+T-359	<<unk>>
+H-359	-3.3011577129364014	cosmetics
+D-359	-3.3011577129364014	cosmetics
+P-359	-6.6018 -0.0005
+S-362	<unk>
+T-362	<<unk>>
+H-362	-3.3011577129364014	cosmetics
+D-362	-3.3011577129364014	cosmetics
+P-362	-6.6018 -0.0005
+S-363	લંડન
+T-363	london
+H-363	-0.09159097075462341	london
+D-363	-0.09159097075462341	london
+P-363	-0.1200 -0.0632
+S-371	મેક્સિકો
+T-371	mexico
+H-371	-1.4808824062347412	mexico
+D-371	-1.4808824062347412	mexico
+P-371	-2.5277 -0.4341
+S-377	<unk>
+T-377	<<unk>>
+H-377	-3.3011577129364014	cosmetics
+D-377	-3.3011577129364014	cosmetics
+P-377	-6.6018 -0.0005
+S-380	<unk>
+T-380	<<unk>>
+H-380	-3.3011577129364014	cosmetics
+D-380	-3.3011577129364014	cosmetics
+P-380	-6.6018 -0.0005
+S-232	<unk>
+T-232	<<unk>>
+H-232	-3.3011577129364014	cosmetics
+D-232	-3.3011577129364014	cosmetics
+P-232	-6.6018 -0.0005
+S-187	<unk>
+T-187	<<unk>>
+H-187	-3.3011577129364014	cosmetics
+D-187	-3.3011577129364014	cosmetics
+P-187	-6.6018 -0.0005
+S-191	<unk>
+T-191	<<unk>>
+H-191	-3.3011577129364014	cosmetics
+D-191	-3.3011577129364014	cosmetics
+P-191	-6.6018 -0.0005
+S-194	<unk>
+T-194	<<unk>>
+H-194	-3.3011577129364014	cosmetics
+D-194	-3.3011577129364014	cosmetics
+P-194	-6.6018 -0.0005
+S-195	<unk>
+T-195	<<unk>>
+H-195	-3.3011577129364014	cosmetics
+D-195	-3.3011577129364014	cosmetics
+P-195	-6.6018 -0.0005
+S-198	પીપાવાવ
+T-198	pipavav
+H-198	-2.2812602519989014	reliance engineering
+D-198	-2.2812602519989014	reliance engineering
+P-198	-2.8386 -3.9219 -0.0832
+S-201	<unk>
+T-201	<<unk>>
+H-201	-3.3011577129364014	cosmetics
+D-201	-3.3011577129364014	cosmetics
+P-201	-6.6018 -0.0005
+S-203	<unk>
+T-203	<<unk>>
+H-203	-3.3011577129364014	cosmetics
+D-203	-3.3011577129364014	cosmetics
+P-203	-6.6018 -0.0005
+S-214	<unk>
+T-214	<<unk>>
+H-214	-3.3011577129364014	cosmetics
+D-214	-3.3011577129364014	cosmetics
+P-214	-6.6018 -0.0005
+S-215	<unk>
+T-215	<<unk>>
+H-215	-3.3011577129364014	cosmetics
+D-215	-3.3011577129364014	cosmetics
+P-215	-6.6018 -0.0005
+S-217	મક્કા
+T-217	mecca
+H-217	-0.9559804201126099	mecca masjid blast
+D-217	-0.9559804201126099	mecca masjid blast
+P-217	-0.8624 -1.0192 -1.9422 -0.0001
+S-219	<unk>
+T-219	<<unk>>
+H-219	-3.3011577129364014	cosmetics
+D-219	-3.3011577129364014	cosmetics
+P-219	-6.6018 -0.0005
+S-222	<unk>
+T-222	<<unk>>
+H-222	-3.3011577129364014	cosmetics
+D-222	-3.3011577129364014	cosmetics
+P-222	-6.6018 -0.0005
+S-224	<unk>
+T-224	<<unk>>
+H-224	-3.3011577129364014	cosmetics
+D-224	-3.3011577129364014	cosmetics
+P-224	-6.6018 -0.0005
+S-226	બોરસદ
+T-226	borsad
+H-226	-1.618410348892212	borsad stepwell
+D-226	-1.618410348892212	borsad stepwell
+P-226	-0.7299 -4.1215 -0.0038
+S-230	<unk>
+T-230	ghana
+H-230	-3.3011577129364014	cosmetics
+D-230	-3.3011577129364014	cosmetics
+P-230	-6.6018 -0.0005
+S-182	મહેબૂબનગર
+T-182	mahbubnagar
+H-182	-0.25139597058296204	mahbubnagar
+D-182	-0.25139597058296204	mahbubnagar
+P-182	-0.3299 -0.1729
+S-236	<unk>
+T-236	<<unk>>
+H-236	-3.3011577129364014	cosmetics
+D-236	-3.3011577129364014	cosmetics
+P-236	-6.6018 -0.0005
+S-237	<unk>
+T-237	<<unk>>
+H-237	-3.3011577129364014	cosmetics
+D-237	-3.3011577129364014	cosmetics
+P-237	-6.6018 -0.0005
+S-243	બાબરીયા
+T-243	<<unk>>
+H-243	-0.11223633587360382	babaria
+D-243	-0.11223633587360382	babaria
+P-243	-0.2242 -0.0003
+S-244	<unk>
+T-244	<<unk>>
+H-244	-3.3011577129364014	cosmetics
+D-244	-3.3011577129364014	cosmetics
+P-244	-6.6018 -0.0005
+S-250	<unk>
+T-250	<<unk>>
+H-250	-3.3011577129364014	cosmetics
+D-250	-3.3011577129364014	cosmetics
+P-250	-6.6018 -0.0005
+S-259	જબલપુર
+T-259	jabalpur
+H-259	-0.12233275920152664	jabalpur
+D-259	-0.12233275920152664	jabalpur
+P-259	-0.2070 -0.0377
+S-261	<unk>
+T-261	<<unk>>
+H-261	-3.3011577129364014	cosmetics
+D-261	-3.3011577129364014	cosmetics
+P-261	-6.6018 -0.0005
+S-263	<unk>
+T-263	<<unk>>
+H-263	-3.3011577129364014	cosmetics
+D-263	-3.3011577129364014	cosmetics
+P-263	-6.6018 -0.0005
+S-265	<unk>
+T-265	<<unk>>
+H-265	-3.3011577129364014	cosmetics
+D-265	-3.3011577129364014	cosmetics
+P-265	-6.6018 -0.0005
+S-266	રાણપુર
+T-266	ranpur
+H-266	-0.847754955291748	ranpur
+D-266	-0.847754955291748	ranpur
+P-266	-0.3414 -1.3541
+S-267	<unk>
+T-267	<<unk>>
+H-267	-3.3011577129364014	cosmetics
+D-267	-3.3011577129364014	cosmetics
+P-267	-6.6018 -0.0005
+S-268	<unk>
+T-268	<<unk>>
+H-268	-3.3011577129364014	cosmetics
+D-268	-3.3011577129364014	cosmetics
+P-268	-6.6018 -0.0005
+S-269	<unk>
+T-269	<<unk>>
+H-269	-3.3011577129364014	cosmetics
+D-269	-3.3011577129364014	cosmetics
+P-269	-6.6018 -0.0005
+S-272	<unk>
+T-272	<<unk>>
+H-272	-3.3011577129364014	cosmetics
+D-272	-3.3011577129364014	cosmetics
+P-272	-6.6018 -0.0005
+S-285	<unk>
+T-285	<<unk>>
+H-285	-3.3011577129364014	cosmetics
+D-285	-3.3011577129364014	cosmetics
+P-285	-6.6018 -0.0005
+S-500	<unk>
+T-500	<<unk>>
+H-500	-3.3011577129364014	cosmetics
+D-500	-3.3011577129364014	cosmetics
+P-500	-6.6018 -0.0005
+S-468	<unk>
+T-468	<<unk>>
+H-468	-3.3011577129364014	cosmetics
+D-468	-3.3011577129364014	cosmetics
+P-468	-6.6018 -0.0005
+S-471	પંજાબી
+T-471	punjabi
+H-471	-1.5585135221481323	punjabis
+D-471	-1.5585135221481323	punjabis
+P-471	-3.1163 -0.0008
+S-473	<unk>
+T-473	<<unk>>
+H-473	-3.3011577129364014	cosmetics
+D-473	-3.3011577129364014	cosmetics
+P-473	-6.6018 -0.0005
+S-475	<unk>
+T-475	<<unk>>
+H-475	-3.3011577129364014	cosmetics
+D-475	-3.3011577129364014	cosmetics
+P-475	-6.6018 -0.0005
+S-478	<unk>
+T-478	<<unk>>
+H-478	-3.3011577129364014	cosmetics
+D-478	-3.3011577129364014	cosmetics
+P-478	-6.6018 -0.0005
+S-479	<unk>
+T-479	<<unk>>
+H-479	-3.3011577129364014	cosmetics
+D-479	-3.3011577129364014	cosmetics
+P-479	-6.6018 -0.0005
+S-480	<unk>
+T-480	<<unk>>
+H-480	-3.3011577129364014	cosmetics
+D-480	-3.3011577129364014	cosmetics
+P-480	-6.6018 -0.0005
+S-482	શહેર
+T-482	city
+H-482	-3.1724634170532227	common woodshrike
+D-482	-3.1724634170532227	common woodshrike
+P-482	-5.3487 -4.1685 -0.0002
+S-483	<unk>
+T-483	<<unk>>
+H-483	-3.3011577129364014	cosmetics
+D-483	-3.3011577129364014	cosmetics
+P-483	-6.6018 -0.0005
+S-488	<unk>
+T-488	<<unk>>
+H-488	-3.3011577129364014	cosmetics
+D-488	-3.3011577129364014	cosmetics
+P-488	-6.6018 -0.0005
+S-491	ગોઆ
+T-491	goa
+H-491	-2.6893649101257324	goa
+D-491	-2.6893649101257324	goa
+P-491	-5.2647 -0.1140
+S-492	સમાચાર
+T-492	<<unk>>
+H-492	-0.5668423175811768	samachar
+D-492	-0.5668423175811768	samachar
+P-492	-1.1332 -0.0005
+S-493	<unk>
+T-493	<<unk>>
+H-493	-3.3011577129364014	cosmetics
+D-493	-3.3011577129364014	cosmetics
+P-493	-6.6018 -0.0005
+S-494	<unk>
+T-494	occupations
+H-494	-3.3011577129364014	cosmetics
+D-494	-3.3011577129364014	cosmetics
+P-494	-6.6018 -0.0005
+S-499	ઉત્તાનાસન
+T-499	uttanasana
+H-499	-0.31897231936454773	hasta uttanasana
+D-499	-0.31897231936454773	hasta uttanasana
+P-499	-0.8250 -0.1317 -0.0001
+S-465	<unk>
+T-465	<<unk>>
+H-465	-3.3011577129364014	cosmetics
+D-465	-3.3011577129364014	cosmetics
+P-465	-6.6018 -0.0005
+S-501	<unk>
+T-501	<<unk>>
+H-501	-3.3011577129364014	cosmetics
+D-501	-3.3011577129364014	cosmetics
+P-501	-6.6018 -0.0005
+S-502	<unk>
+T-502	<<unk>>
+H-502	-3.3011577129364014	cosmetics
+D-502	-3.3011577129364014	cosmetics
+P-502	-6.6018 -0.0005
+S-508	<unk>
+T-508	<<unk>>
+H-508	-3.3011577129364014	cosmetics
+D-508	-3.3011577129364014	cosmetics
+P-508	-6.6018 -0.0005
+S-513	ધનબાદ
+T-513	dhanbad
+H-513	-0.6985440254211426	dhanbad
+D-513	-0.6985440254211426	dhanbad
+P-513	-0.2688 -1.1283
+S-515	<unk>
+T-515	<<unk>>
+H-515	-3.3011577129364014	cosmetics
+D-515	-3.3011577129364014	cosmetics
+P-515	-6.6018 -0.0005
+S-517	<unk>
+T-517	cancer
+H-517	-3.3011577129364014	cosmetics
+D-517	-3.3011577129364014	cosmetics
+P-517	-6.6018 -0.0005
+S-521	મુકેશ
+T-521	mukesh
+H-521	-1.2013822793960571	mukesh ambani
+D-521	-1.2013822793960571	mukesh ambani
+P-521	-1.8076 -1.7952 -0.0013
+S-523	<unk>
+T-523	<<unk>>
+H-523	-3.3011577129364014	cosmetics
+D-523	-3.3011577129364014	cosmetics
+P-523	-6.6018 -0.0005
+S-524	મંદસૌર
+T-524	mandsaur
+H-524	-0.7524259686470032	mandsaur
+D-524	-0.7524259686470032	mandsaur
+P-524	-1.3780 -0.1269
+S-529	<unk>
+T-529	<<unk>>
+H-529	-3.3011577129364014	cosmetics
+D-529	-3.3011577129364014	cosmetics
+P-529	-6.6018 -0.0005
+S-530	<unk>
+T-530	<<unk>>
+H-530	-3.3011577129364014	cosmetics
+D-530	-3.3011577129364014	cosmetics
+P-530	-6.6018 -0.0005
+S-531	ઉપનિષદ
+T-531	<<unk>>
+H-531	-1.2491616010665894	brihadaranyaka upanishad
+D-531	-1.2491616010665894	brihadaranyaka upanishad
+P-531	-3.6366 -0.1107 -0.0001
+S-533	<unk>
+T-533	<<unk>>
+H-533	-3.3011577129364014	cosmetics
+D-533	-3.3011577129364014	cosmetics
+P-533	-6.6018 -0.0005
+S-537	<unk>
+T-537	<<unk>>
+H-537	-3.3011577129364014	cosmetics
+D-537	-3.3011577129364014	cosmetics
+P-537	-6.6018 -0.0005
+S-548	યોગ
+T-548	yoga
+H-548	-2.5963358879089355	hatha yoga
+D-548	-2.5963358879089355	hatha yoga
+P-548	-7.0052 -0.7742 -0.0097
+S-428	<unk>
+T-428	<<unk>>
+H-428	-3.3011577129364014	cosmetics
+D-428	-3.3011577129364014	cosmetics
+P-428	-6.6018 -0.0005
+S-388	<unk>
+T-388	<<unk>>
+H-388	-3.3011577129364014	cosmetics
+D-388	-3.3011577129364014	cosmetics
+P-388	-6.6018 -0.0005
+S-391	<unk>
+T-391	<<unk>>
+H-391	-3.3011577129364014	cosmetics
+D-391	-3.3011577129364014	cosmetics
+P-391	-6.6018 -0.0005
+S-393	<unk>
+T-393	<<unk>>
+H-393	-3.3011577129364014	cosmetics
+D-393	-3.3011577129364014	cosmetics
+P-393	-6.6018 -0.0005
+S-397	<unk>
+T-397	<<unk>>
+H-397	-3.3011577129364014	cosmetics
+D-397	-3.3011577129364014	cosmetics
+P-397	-6.6018 -0.0005
+S-400	ધર્મ
+T-400	<<unk>>
+H-400	-0.6917687058448792	zoroastrianism
+D-400	-0.6917687058448792	zoroastrianism
+P-400	-1.3831 -0.0004
+S-401	<unk>
+T-401	<<unk>>
+H-401	-3.3011577129364014	cosmetics
+D-401	-3.3011577129364014	cosmetics
+P-401	-6.6018 -0.0005
+S-403	<unk>
+T-403	<<unk>>
+H-403	-3.3011577129364014	cosmetics
+D-403	-3.3011577129364014	cosmetics
+P-403	-6.6018 -0.0005
+S-404	<unk>
+T-404	<<unk>>
+H-404	-3.3011577129364014	cosmetics
+D-404	-3.3011577129364014	cosmetics
+P-404	-6.6018 -0.0005
+S-408	<unk>
+T-408	<<unk>>
+H-408	-3.3011577129364014	cosmetics
+D-408	-3.3011577129364014	cosmetics
+P-408	-6.6018 -0.0005
+S-409	<unk>
+T-409	<<unk>>
+H-409	-3.3011577129364014	cosmetics
+D-409	-3.3011577129364014	cosmetics
+P-409	-6.6018 -0.0005
+S-417	<unk>
+T-417	<<unk>>
+H-417	-3.3011577129364014	cosmetics
+D-417	-3.3011577129364014	cosmetics
+P-417	-6.6018 -0.0005
+S-422	<unk>
+T-422	<<unk>>
+H-422	-3.3011577129364014	cosmetics
+D-422	-3.3011577129364014	cosmetics
+P-422	-6.6018 -0.0005
+S-424	<unk>
+T-424	<<unk>>
+H-424	-3.3011577129364014	cosmetics
+D-424	-3.3011577129364014	cosmetics
+P-424	-6.6018 -0.0005
+S-425	<unk>
+T-425	<<unk>>
+H-425	-3.3011577129364014	cosmetics
+D-425	-3.3011577129364014	cosmetics
+P-425	-6.6018 -0.0005
+S-427	<unk>
+T-427	<<unk>>
+H-427	-3.3011577129364014	cosmetics
+D-427	-3.3011577129364014	cosmetics
+P-427	-6.6018 -0.0005
+S-381	<unk>
+T-381	<<unk>>
+H-381	-3.3011577129364014	cosmetics
+D-381	-3.3011577129364014	cosmetics
+P-381	-6.6018 -0.0005
+S-429	<unk>
+T-429	<<unk>>
+H-429	-3.3011577129364014	cosmetics
+D-429	-3.3011577129364014	cosmetics
+P-429	-6.6018 -0.0005
+S-430	<unk>
+T-430	<<unk>>
+H-430	-3.3011577129364014	cosmetics
+D-430	-3.3011577129364014	cosmetics
+P-430	-6.6018 -0.0005
+S-432	વડોદરા
+T-432	vadodara
+H-432	-0.13832823932170868	vadodara
+D-432	-0.13832823932170868	vadodara
+P-432	-0.0167 -0.2600
+S-438	ગાંધીનગર
+T-438	gandhinagar
+H-438	-0.7864761352539062	gandhinagar
+D-438	-0.7864761352539062	gandhinagar
+P-438	-0.1403 -1.4327
+S-439	<unk>
+T-439	shahada
+H-439	-3.3011577129364014	cosmetics
+D-439	-3.3011577129364014	cosmetics
+P-439	-6.6018 -0.0005
+S-442	<unk>
+T-442	<<unk>>
+H-442	-3.3011577129364014	cosmetics
+D-442	-3.3011577129364014	cosmetics
+P-442	-6.6018 -0.0005
+S-443	ચટણી
+T-443	chutney
+H-443	-0.10952389985322952	condiments
+D-443	-0.10952389985322952	condiments
+P-443	-0.2186 -0.0005
+S-444	<unk>
+T-444	<<unk>>
+H-444	-3.3011577129364014	cosmetics
+D-444	-3.3011577129364014	cosmetics
+P-444	-6.6018 -0.0005
+S-447	<unk>
+T-447	bantva
+H-447	-3.3011577129364014	cosmetics
+D-447	-3.3011577129364014	cosmetics
+P-447	-6.6018 -0.0005
+S-448	દેવનાગરી
+T-448	devanagari
+H-448	-2.7515833377838135	kadi india
+D-448	-2.7515833377838135	kadi india
+P-448	-7.7578 -0.4949 -0.0020
+S-450	<unk>
+T-450	<<unk>>
+H-450	-3.3011577129364014	cosmetics
+D-450	-3.3011577129364014	cosmetics
+P-450	-6.6018 -0.0005
+S-454	<unk>
+T-454	<<unk>>
+H-454	-3.3011577129364014	cosmetics
+D-454	-3.3011577129364014	cosmetics
+P-454	-6.6018 -0.0005
+S-461	<unk>
+T-461	namibia
+H-461	-3.3011577129364014	cosmetics
+D-461	-3.3011577129364014	cosmetics
+P-461	-6.6018 -0.0005
+S-462	<unk>
+T-462	<<unk>>
+H-462	-3.3011577129364014	cosmetics
+D-462	-3.3011577129364014	cosmetics
+P-462	-6.6018 -0.0005
+S-463	<unk>
+T-463	<<unk>>
+H-463	-3.3011577129364014	cosmetics
+D-463	-3.3011577129364014	cosmetics
+P-463	-6.6018 -0.0005
+S-697	<unk>
+T-697	<<unk>>
+H-697	-3.3011577129364014	cosmetics
+D-697	-3.3011577129364014	cosmetics
+P-697	-6.6018 -0.0005
+S-662	<unk>
+T-662	<<unk>>
+H-662	-3.3011577129364014	cosmetics
+D-662	-3.3011577129364014	cosmetics
+P-662	-6.6018 -0.0005
+S-663	<unk>
+T-663	<<unk>>
+H-663	-3.3011577129364014	cosmetics
+D-663	-3.3011577129364014	cosmetics
+P-663	-6.6018 -0.0005
+S-665	<unk>
+T-665	<<unk>>
+H-665	-3.3011577129364014	cosmetics
+D-665	-3.3011577129364014	cosmetics
+P-665	-6.6018 -0.0005
+S-668	કાલાવડ
+T-668	kalavad
+H-668	-0.021307414397597313	kalavad
+D-668	-0.021307414397597313	kalavad
+P-668	-0.0265 -0.0161
+S-669	ભોપાલ
+T-669	bhopal
+H-669	-2.437039613723755	bhopal
+D-669	-2.437039613723755	bhopal
+P-669	-4.6703 -0.2038
+S-670	<unk>
+T-670	<<unk>>
+H-670	-3.3011577129364014	cosmetics
+D-670	-3.3011577129364014	cosmetics
+P-670	-6.6018 -0.0005
+S-674	<unk>
+T-674	<<unk>>
+H-674	-3.3011577129364014	cosmetics
+D-674	-3.3011577129364014	cosmetics
+P-674	-6.6018 -0.0005
+S-675	સમય
+T-675	time
+H-675	-0.31774649024009705	time in india
+D-675	-0.31774649024009705	time in india
+P-675	-0.0909 -0.6213 -0.5581 -0.0006
+S-676	<unk>
+T-676	<<unk>>
+H-676	-3.3011577129364014	cosmetics
+D-676	-3.3011577129364014	cosmetics
+P-676	-6.6018 -0.0005
+S-685	<unk>
+T-685	<<unk>>
+H-685	-3.3011577129364014	cosmetics
+D-685	-3.3011577129364014	cosmetics
+P-685	-6.6018 -0.0005
+S-687	<unk>
+T-687	<<unk>>
+H-687	-3.3011577129364014	cosmetics
+D-687	-3.3011577129364014	cosmetics
+P-687	-6.6018 -0.0005
+S-688	<unk>
+T-688	<<unk>>
+H-688	-3.3011577129364014	cosmetics
+D-688	-3.3011577129364014	cosmetics
+P-688	-6.6018 -0.0005
+S-690	તીર્થંકર
+T-690	<<unk>>
+H-690	-0.07753259688615799	tirthankaras
+D-690	-0.07753259688615799	tirthankaras
+P-690	-0.1546 -0.0005
+S-691	શિવપુરી
+T-691	shivpuri
+H-691	-0.4730324149131775	shivpuri
+D-691	-0.4730324149131775	shivpuri
+P-691	-0.8346 -0.1114
+S-693	<unk>
+T-693	<<unk>>
+H-693	-3.3011577129364014	cosmetics
+D-693	-3.3011577129364014	cosmetics
+P-693	-6.6018 -0.0005
+S-656	<unk>
+T-656	<<unk>>
+H-656	-3.3011577129364014	cosmetics
+D-656	-3.3011577129364014	cosmetics
+P-656	-6.6018 -0.0005
+S-700	<unk>
+T-700	<<unk>>
+H-700	-3.3011577129364014	cosmetics
+D-700	-3.3011577129364014	cosmetics
+P-700	-6.6018 -0.0005
+S-701	<unk>
+T-701	<<unk>>
+H-701	-3.3011577129364014	cosmetics
+D-701	-3.3011577129364014	cosmetics
+P-701	-6.6018 -0.0005
+S-702	<unk>
+T-702	england
+H-702	-3.3011577129364014	cosmetics
+D-702	-3.3011577129364014	cosmetics
+P-702	-6.6018 -0.0005
+S-704	વ્યક્તિત્વ
+T-704	people
+H-704	-0.12540000677108765	personality
+D-704	-0.12540000677108765	personality
+P-704	-0.1663 -0.0845
+S-711	<unk>
+T-711	<<unk>>
+H-711	-3.3011577129364014	cosmetics
+D-711	-3.3011577129364014	cosmetics
+P-711	-6.6018 -0.0005
+S-714	કોલ્હાપૂર
+T-714	kolhapur
+H-714	-0.527478814125061	kolhapur
+D-714	-0.527478814125061	kolhapur
+P-714	-1.0124 -0.0425
+S-717	સિમડેગા
+T-717	simdega
+H-717	-1.9910926818847656	simdega simdega
+D-717	-1.9910926818847656	simdega simdega
+P-717	-1.3322 -3.6095 -1.0315
+S-720	<unk>
+T-720	<<unk>>
+H-720	-3.3011577129364014	cosmetics
+D-720	-3.3011577129364014	cosmetics
+P-720	-6.6018 -0.0005
+S-724	<unk>
+T-724	<<unk>>
+H-724	-3.3011577129364014	cosmetics
+D-724	-3.3011577129364014	cosmetics
+P-724	-6.6018 -0.0005
+S-725	<unk>
+T-725	physics
+H-725	-3.3011577129364014	cosmetics
+D-725	-3.3011577129364014	cosmetics
+P-725	-6.6018 -0.0005
+S-728	<unk>
+T-728	<<unk>>
+H-728	-3.3011577129364014	cosmetics
+D-728	-3.3011577129364014	cosmetics
+P-728	-6.6018 -0.0005
+S-731	<unk>
+T-731	<<unk>>
+H-731	-3.3011577129364014	cosmetics
+D-731	-3.3011577129364014	cosmetics
+P-731	-6.6018 -0.0005
+S-736	કપડવંજ
+T-736	kapadvanj
+H-736	-0.08561504632234573	kapadvanj
+D-736	-0.08561504632234573	kapadvanj
+P-736	-0.1709 -0.0004
+S-742	<unk>
+T-742	<<unk>>
+H-742	-3.3011577129364014	cosmetics
+D-742	-3.3011577129364014	cosmetics
+P-742	-6.6018 -0.0005
+S-746	<unk>
+T-746	<<unk>>
+H-746	-3.3011577129364014	cosmetics
+D-746	-3.3011577129364014	cosmetics
+P-746	-6.6018 -0.0005
+S-588	<unk>
+T-588	<<unk>>
+H-588	-3.3011577129364014	cosmetics
+D-588	-3.3011577129364014	cosmetics
+P-588	-6.6018 -0.0005
+S-552	<unk>
+T-552	<<unk>>
+H-552	-3.3011577129364014	cosmetics
+D-552	-3.3011577129364014	cosmetics
+P-552	-6.6018 -0.0005
+S-556	સ્ત્રી
+T-556	<<unk>>
+H-556	-1.7939211130142212	female genital mutilation
+D-556	-1.7939211130142212	female genital mutilation
+P-556	-3.5286 -1.5112 -2.1356 -0.0002
+S-557	<unk>
+T-557	salt
+H-557	-3.3011577129364014	cosmetics
+D-557	-3.3011577129364014	cosmetics
+P-557	-6.6018 -0.0005
+S-558	<unk>
+T-558	<<unk>>
+H-558	-3.3011577129364014	cosmetics
+D-558	-3.3011577129364014	cosmetics
+P-558	-6.6018 -0.0005
+S-559	ત્રિજ્યા
+T-559	radius
+H-559	-2.4963371753692627	radius
+D-559	-2.4963371753692627	radius
+P-559	-4.9923 -0.0004
+S-560	<unk>
+T-560	<<unk>>
+H-560	-3.3011577129364014	cosmetics
+D-560	-3.3011577129364014	cosmetics
+P-560	-6.6018 -0.0005
+S-562	<unk>
+T-562	<<unk>>
+H-562	-3.3011577129364014	cosmetics
+D-562	-3.3011577129364014	cosmetics
+P-562	-6.6018 -0.0005
+S-563	<unk>
+T-563	<<unk>>
+H-563	-3.3011577129364014	cosmetics
+D-563	-3.3011577129364014	cosmetics
+P-563	-6.6018 -0.0005
+S-568	<unk>
+T-568	<<unk>>
+H-568	-3.3011577129364014	cosmetics
+D-568	-3.3011577129364014	cosmetics
+P-568	-6.6018 -0.0005
+S-569	<unk>
+T-569	<<unk>>
+H-569	-3.3011577129364014	cosmetics
+D-569	-3.3011577129364014	cosmetics
+P-569	-6.6018 -0.0005
+S-571	<unk>
+T-571	<<unk>>
+H-571	-3.3011577129364014	cosmetics
+D-571	-3.3011577129364014	cosmetics
+P-571	-6.6018 -0.0005
+S-574	<unk>
+T-574	<<unk>>
+H-574	-3.3011577129364014	cosmetics
+D-574	-3.3011577129364014	cosmetics
+P-574	-6.6018 -0.0005
+S-577	<unk>
+T-577	<<unk>>
+H-577	-3.3011577129364014	cosmetics
+D-577	-3.3011577129364014	cosmetics
+P-577	-6.6018 -0.0005
+S-578	નવદુર્ગા
+T-578	<<unk>>
+H-578	-0.040704384446144104	navadurgas
+D-578	-0.040704384446144104	navadurgas
+P-578	-0.0811 -0.0003
+S-583	વીર્ય
+T-583	sperm
+H-583	-0.14333848655223846	ejaculation
+D-583	-0.14333848655223846	ejaculation
+P-583	-0.2857 -0.0010
+S-551	<unk>
+T-551	<<unk>>
+H-551	-3.3011577129364014	cosmetics
+D-551	-3.3011577129364014	cosmetics
+P-551	-6.6018 -0.0005
+S-589	<unk>
+T-589	kali
+H-589	-3.3011577129364014	cosmetics
+D-589	-3.3011577129364014	cosmetics
+P-589	-6.6018 -0.0005
+S-590	<unk>
+T-590	<<unk>>
+H-590	-3.3011577129364014	cosmetics
+D-590	-3.3011577129364014	cosmetics
+P-590	-6.6018 -0.0005
+S-598	<unk>
+T-598	<<unk>>
+H-598	-3.3011577129364014	cosmetics
+D-598	-3.3011577129364014	cosmetics
+P-598	-6.6018 -0.0005
+S-599	<unk>
+T-599	<<unk>>
+H-599	-3.3011577129364014	cosmetics
+D-599	-3.3011577129364014	cosmetics
+P-599	-6.6018 -0.0005
+S-602	વેબસાઇટ
+T-602	<<unk>>
+H-602	-0.4268142879009247	website
+D-602	-0.4268142879009247	website
+P-602	-0.8534 -0.0003
+S-611	<unk>
+T-611	<<unk>>
+H-611	-3.3011577129364014	cosmetics
+D-611	-3.3011577129364014	cosmetics
+P-611	-6.6018 -0.0005
+S-614	<unk>
+T-614	<<unk>>
+H-614	-3.3011577129364014	cosmetics
+D-614	-3.3011577129364014	cosmetics
+P-614	-6.6018 -0.0005
+S-618	<unk>
+T-618	<<unk>>
+H-618	-3.3011577129364014	cosmetics
+D-618	-3.3011577129364014	cosmetics
+P-618	-6.6018 -0.0005
+S-621	<unk>
+T-621	<<unk>>
+H-621	-3.3011577129364014	cosmetics
+D-621	-3.3011577129364014	cosmetics
+P-621	-6.6018 -0.0005
+S-622	<unk>
+T-622	<<unk>>
+H-622	-3.3011577129364014	cosmetics
+D-622	-3.3011577129364014	cosmetics
+P-622	-6.6018 -0.0005
+S-633	<unk>
+T-633	<<unk>>
+H-633	-3.3011577129364014	cosmetics
+D-633	-3.3011577129364014	cosmetics
+P-633	-6.6018 -0.0005
+S-637	<unk>
+T-637	<<unk>>
+H-637	-3.3011577129364014	cosmetics
+D-637	-3.3011577129364014	cosmetics
+P-637	-6.6018 -0.0005
+S-645	<unk>
+T-645	<<unk>>
+H-645	-3.3011577129364014	cosmetics
+D-645	-3.3011577129364014	cosmetics
+P-645	-6.6018 -0.0005
+S-646	<unk>
+T-646	<<unk>>
+H-646	-3.3011577129364014	cosmetics
+D-646	-3.3011577129364014	cosmetics
+P-646	-6.6018 -0.0005
+S-651	કરાચી
+T-651	karachi
+H-651	-3.0294911861419678	swaminarayan mandir karachi
+D-651	-3.0294911861419678	swaminarayan mandir karachi
+P-651	-7.0969 -3.3973 -1.6234 -0.0003
+S-880	ધિરાણ
+T-880	<<unk>>
+H-880	-2.556940793991089	microfinance
+D-880	-2.556940793991089	microfinance
+P-880	-5.1131 -0.0008
+S-848	<unk>
+T-848	<<unk>>
+H-848	-3.3011577129364014	cosmetics
+D-848	-3.3011577129364014	cosmetics
+P-848	-6.6018 -0.0005
+S-849	સાંગ
+T-849	<<unk>>
+H-849	-2.201385021209717	sang
+D-849	-2.201385021209717	sang
+P-849	-2.3180 -2.0847
+S-851	<unk>
+T-851	<<unk>>
+H-851	-3.3011577129364014	cosmetics
+D-851	-3.3011577129364014	cosmetics
+P-851	-6.6018 -0.0005
+S-855	નરસિંહ
+T-855	<<unk>>
+H-855	-1.304888129234314	narsinh
+D-855	-1.304888129234314	narsinh
+P-855	-0.5057 -2.1041
+S-857	<unk>
+T-857	<<unk>>
+H-857	-3.3011577129364014	cosmetics
+D-857	-3.3011577129364014	cosmetics
+P-857	-6.6018 -0.0005
+S-858	<unk>
+T-858	<<unk>>
+H-858	-3.3011577129364014	cosmetics
+D-858	-3.3011577129364014	cosmetics
+P-858	-6.6018 -0.0005
+S-860	<unk>
+T-860	<<unk>>
+H-860	-3.3011577129364014	cosmetics
+D-860	-3.3011577129364014	cosmetics
+P-860	-6.6018 -0.0005
+S-861	<unk>
+T-861	<<unk>>
+H-861	-3.3011577129364014	cosmetics
+D-861	-3.3011577129364014	cosmetics
+P-861	-6.6018 -0.0005
+S-862	<unk>
+T-862	<<unk>>
+H-862	-3.3011577129364014	cosmetics
+D-862	-3.3011577129364014	cosmetics
+P-862	-6.6018 -0.0005
+S-863	<unk>
+T-863	<<unk>>
+H-863	-3.3011577129364014	cosmetics
+D-863	-3.3011577129364014	cosmetics
+P-863	-6.6018 -0.0005
+S-868	<unk>
+T-868	<<unk>>
+H-868	-3.3011577129364014	cosmetics
+D-868	-3.3011577129364014	cosmetics
+P-868	-6.6018 -0.0005
+S-872	૧૦
+T-872	10
+H-872	-0.011312142945826054	10
+D-872	-0.011312142945826054	10
+P-872	-0.0222 -0.0005
+S-875	<unk>
+T-875	<<unk>>
+H-875	-3.3011577129364014	cosmetics
+D-875	-3.3011577129364014	cosmetics
+P-875	-6.6018 -0.0005
+S-876	<unk>
+T-876	<<unk>>
+H-876	-3.3011577129364014	cosmetics
+D-876	-3.3011577129364014	cosmetics
+P-876	-6.6018 -0.0005
+S-878	<unk>
+T-878	<<unk>>
+H-878	-3.3011577129364014	cosmetics
+D-878	-3.3011577129364014	cosmetics
+P-878	-6.6018 -0.0005
+S-847	<unk>
+T-847	odisha
+H-847	-3.3011577129364014	cosmetics
+D-847	-3.3011577129364014	cosmetics
+P-847	-6.6018 -0.0005
+S-881	<unk>
+T-881	<<unk>>
+H-881	-3.3011577129364014	cosmetics
+D-881	-3.3011577129364014	cosmetics
+P-881	-6.6018 -0.0005
+S-882	<unk>
+T-882	<<unk>>
+H-882	-3.3011577129364014	cosmetics
+D-882	-3.3011577129364014	cosmetics
+P-882	-6.6018 -0.0005
+S-884	<unk>
+T-884	<<unk>>
+H-884	-3.3011577129364014	cosmetics
+D-884	-3.3011577129364014	cosmetics
+P-884	-6.6018 -0.0005
+S-887	<unk>
+T-887	data
+H-887	-3.3011577129364014	cosmetics
+D-887	-3.3011577129364014	cosmetics
+P-887	-6.6018 -0.0005
+S-896	<unk>
+T-896	mali
+H-896	-3.3011577129364014	cosmetics
+D-896	-3.3011577129364014	cosmetics
+P-896	-6.6018 -0.0005
+S-901	<unk>
+T-901	azerbaijan
+H-901	-3.3011577129364014	cosmetics
+D-901	-3.3011577129364014	cosmetics
+P-901	-6.6018 -0.0005
+S-902	<unk>
+T-902	<<unk>>
+H-902	-3.3011577129364014	cosmetics
+D-902	-3.3011577129364014	cosmetics
+P-902	-6.6018 -0.0005
+S-903	<unk>
+T-903	<<unk>>
+H-903	-3.3011577129364014	cosmetics
+D-903	-3.3011577129364014	cosmetics
+P-903	-6.6018 -0.0005
+S-904	<unk>
+T-904	fruit
+H-904	-3.3011577129364014	cosmetics
+D-904	-3.3011577129364014	cosmetics
+P-904	-6.6018 -0.0005
+S-907	<unk>
+T-907	<<unk>>
+H-907	-3.3011577129364014	cosmetics
+D-907	-3.3011577129364014	cosmetics
+P-907	-6.6018 -0.0005
+S-1	<unk>
+T-1	<<unk>> <<unk>>
+H-1	-3.3011577129364014	cosmetics
+D-1	-3.3011577129364014	cosmetics
+P-1	-6.6018 -0.0005
+S-4	<unk>
+T-4	<<unk>> jyotirlinga
+H-4	-3.3011577129364014	cosmetics
+D-4	-3.3011577129364014	cosmetics
+P-4	-6.6018 -0.0005
+S-16	કરિયાતું
+T-16	<<unk>> <<unk>>
+H-16	-0.05273931846022606	swertia
+D-16	-0.05273931846022606	swertia
+P-16	-0.1048 -0.0007
+S-43	<unk>
+T-43	<<unk>> navsari
+H-43	-3.3011577129364014	cosmetics
+D-43	-3.3011577129364014	cosmetics
+P-43	-6.6018 -0.0005
+S-80	<unk>
+T-80	northern <<unk>>
+H-80	-3.3011577129364014	cosmetics
+D-80	-3.3011577129364014	cosmetics
+P-80	-6.6018 -0.0005
+S-788	<unk>
+T-788	<<unk>>
+H-788	-3.3011577129364014	cosmetics
+D-788	-3.3011577129364014	cosmetics
+P-788	-6.6018 -0.0005
+S-750	<unk>
+T-750	history
+H-750	-3.3011577129364014	cosmetics
+D-750	-3.3011577129364014	cosmetics
+P-750	-6.6018 -0.0005
+S-753	<unk>
+T-753	<<unk>>
+H-753	-3.3011577129364014	cosmetics
+D-753	-3.3011577129364014	cosmetics
+P-753	-6.6018 -0.0005
+S-756	<unk>
+T-756	<<unk>>
+H-756	-3.3011577129364014	cosmetics
+D-756	-3.3011577129364014	cosmetics
+P-756	-6.6018 -0.0005
+S-764	<unk>
+T-764	<<unk>>
+H-764	-3.3011577129364014	cosmetics
+D-764	-3.3011577129364014	cosmetics
+P-764	-6.6018 -0.0005
+S-765	<unk>
+T-765	<<unk>>
+H-765	-3.3011577129364014	cosmetics
+D-765	-3.3011577129364014	cosmetics
+P-765	-6.6018 -0.0005
+S-766	<unk>
+T-766	<<unk>>
+H-766	-3.3011577129364014	cosmetics
+D-766	-3.3011577129364014	cosmetics
+P-766	-6.6018 -0.0005
+S-768	<unk>
+T-768	<<unk>>
+H-768	-3.3011577129364014	cosmetics
+D-768	-3.3011577129364014	cosmetics
+P-768	-6.6018 -0.0005
+S-770	સંજય
+T-770	<<unk>>
+H-770	-0.4508008360862732	sanjay manjrekar
+D-770	-0.4508008360862732	sanjay manjrekar
+P-770	-0.0087 -1.3434 -0.0003
+S-771	૪
+T-771	4
+H-771	-0.08032665401697159	4
+D-771	-0.08032665401697159	4
+P-771	-0.1602 -0.0004
+S-774	કટિહાર
+T-774	katihar
+H-774	-0.5422162413597107	katihar
+D-774	-0.5422162413597107	katihar
+P-774	-0.7089 -0.3756
+S-778	<unk>
+T-778	<<unk>>
+H-778	-3.3011577129364014	cosmetics
+D-778	-3.3011577129364014	cosmetics
+P-778	-6.6018 -0.0005
+S-781	<unk>
+T-781	<<unk>>
+H-781	-3.3011577129364014	cosmetics
+D-781	-3.3011577129364014	cosmetics
+P-781	-6.6018 -0.0005
+S-782	<unk>
+T-782	<<unk>>
+H-782	-3.3011577129364014	cosmetics
+D-782	-3.3011577129364014	cosmetics
+P-782	-6.6018 -0.0005
+S-784	ઉસ્માનાબાદ
+T-784	osmanabad
+H-784	-1.9836610555648804	osmanabad
+D-784	-1.9836610555648804	osmanabad
+P-784	-2.9321 -1.0352
+S-787	રુદ્રપ્રયાગ
+T-787	rudraprayag
+H-787	-1.6194816827774048	rudraprayag district
+D-787	-1.6194816827774048	rudraprayag district
+P-787	-0.4205 -4.4340 -0.0040
+S-749	<unk>
+T-749	<<unk>>
+H-749	-3.3011577129364014	cosmetics
+D-749	-3.3011577129364014	cosmetics
+P-749	-6.6018 -0.0005
+S-793	<unk>
+T-793	<<unk>>
+H-793	-3.3011577129364014	cosmetics
+D-793	-3.3011577129364014	cosmetics
+P-793	-6.6018 -0.0005
+S-797	<unk>
+T-797	<<unk>>
+H-797	-3.3011577129364014	cosmetics
+D-797	-3.3011577129364014	cosmetics
+P-797	-6.6018 -0.0005
+S-799	<unk>
+T-799	<<unk>>
+H-799	-3.3011577129364014	cosmetics
+D-799	-3.3011577129364014	cosmetics
+P-799	-6.6018 -0.0005
+S-800	<unk>
+T-800	<<unk>>
+H-800	-3.3011577129364014	cosmetics
+D-800	-3.3011577129364014	cosmetics
+P-800	-6.6018 -0.0005
+S-819	<unk>
+T-819	<<unk>>
+H-819	-3.3011577129364014	cosmetics
+D-819	-3.3011577129364014	cosmetics
+P-819	-6.6018 -0.0005
+S-822	લડાખ
+T-822	ladakh
+H-822	-3.8246753215789795	chachana
+D-822	-3.8246753215789795	chachana
+P-822	-7.6491 -0.0002
+S-823	<unk>
+T-823	<<unk>>
+H-823	-3.3011577129364014	cosmetics
+D-823	-3.3011577129364014	cosmetics
+P-823	-6.6018 -0.0005
+S-824	<unk>
+T-824	<<unk>>
+H-824	-3.3011577129364014	cosmetics
+D-824	-3.3011577129364014	cosmetics
+P-824	-6.6018 -0.0005
+S-827	મુંગેર
+T-827	munger
+H-827	-1.424458622932434	munger
+D-827	-1.424458622932434	munger
+P-827	-2.1898 -0.6591
+S-832	<unk>
+T-832	<<unk>>
+H-832	-3.3011577129364014	cosmetics
+D-832	-3.3011577129364014	cosmetics
+P-832	-6.6018 -0.0005
+S-834	મુજફ્ફરપુર
+T-834	muzaffarpur
+H-834	-0.6991240978240967	muzaffarpur
+D-834	-0.6991240978240967	muzaffarpur
+P-834	-0.6396 -0.7586
+S-835	<unk>
+T-835	<<unk>>
+H-835	-3.3011577129364014	cosmetics
+D-835	-3.3011577129364014	cosmetics
+P-835	-6.6018 -0.0005
+S-836	સમસ્તીપુર
+T-836	samastipur
+H-836	-0.6251468062400818	samastipur
+D-836	-0.6251468062400818	samastipur
+P-836	-0.5358 -0.7145
+S-839	તિથિ
+T-839	<<unk>>
+H-839	-0.46055445075035095	days of the hindu calendar
+D-839	-0.46055445075035095	days of the hindu calendar
+P-839	-1.3955 -0.0132 -0.0828 -0.3725 -0.8980 -0.0013
+S-844	<unk>
+T-844	<<unk>>
+H-844	-3.3011577129364014	cosmetics
+D-844	-3.3011577129364014	cosmetics
+P-844	-6.6018 -0.0005
+S-374	<unk> ભાષા
+T-374	<<unk>>
+H-374	-2.2696962356567383	mizo language
+D-374	-2.2696962356567383	mizo language
+P-374	-6.8018 -0.0070 -0.0003
+S-324	<unk> લોકો
+T-324	<<unk>>
+H-324	-0.7718797922134399	people from maharashtra
+D-324	-0.7718797922134399	people from maharashtra
+P-324	-0.7477 -0.0576 -2.2815 -0.0008
+S-234	<unk> ઘાટી
+T-234	<<unk>>
+H-234	-3.345721483230591	communication
+D-234	-3.345721483230591	communication
+P-234	-6.6868 -0.0046
+S-110	<unk> વિજ્ઞાન
+T-110	<<unk>>
+H-110	-2.399381399154663	science science
+D-110	-2.399381399154663	science science
+P-110	-4.0262 -2.3175 -0.8545
+S-100	<unk> માછલી
+T-100	<<unk>>
+H-100	-2.8511338233947754	fish
+D-100	-2.8511338233947754	fish
+P-100	-5.7020 -0.0002
+S-37	<unk> પંચમઢી
+T-37	<<unk>>
+H-37	-2.6471359729766846	microsoft pachmarhi
+D-37	-2.6471359729766846	microsoft pachmarhi
+P-37	-5.0622 -2.8789 -0.0003
+S-15	મોટી <unk>
+T-15	<<unk>>
+H-15	-3.0383245944976807	seven social sins
+D-15	-3.0383245944976807	seven social sins
+P-15	-6.4801 -3.3138 -2.3592 -0.0002
+S-52	<unk>
+T-52	<<unk>> in jainism
+H-52	-3.3010976314544678	cosmetics
+D-52	-3.3010976314544678	cosmetics
+P-52	-6.6017 -0.0005
+S-639	<unk>
+T-639	<<unk>> wardha
+H-639	-3.3010976314544678	cosmetics
+D-639	-3.3010976314544678	cosmetics
+P-639	-6.6017 -0.0005
+S-906	ઉગલા
+T-906	juna ugla
+H-906	-1.9210410118103027	ugla
+D-906	-1.9210410118103027	ugla
+P-906	-3.8391 -0.0030
+S-867	<unk>
+T-867	the <<unk>>
+H-867	-3.3010976314544678	cosmetics
+D-867	-3.3010976314544678	cosmetics
+P-867	-6.6017 -0.0005
+S-864	<unk>
+T-864	surya <<unk>>
+H-864	-3.3010976314544678	cosmetics
+D-864	-3.3010976314544678	cosmetics
+P-864	-6.6017 -0.0005
+S-846	<unk>
+T-846	<<unk>> samaj
+H-846	-3.3010976314544678	cosmetics
+D-846	-3.3010976314544678	cosmetics
+P-846	-6.6017 -0.0005
+S-845	<unk>
+T-845	rama navami
+H-845	-3.3010976314544678	cosmetics
+D-845	-3.3010976314544678	cosmetics
+P-845	-6.6017 -0.0005
+S-818	<unk>
+T-818	<<unk>> <<unk>>
+H-818	-3.3010976314544678	cosmetics
+D-818	-3.3010976314544678	cosmetics
+P-818	-6.6017 -0.0005
+S-785	<unk>
+T-785	<<unk>> <<unk>>
+H-785	-3.3010976314544678	cosmetics
+D-785	-3.3010976314544678	cosmetics
+P-785	-6.6017 -0.0005
+S-767	<unk>
+T-767	<<unk>> <<unk>>
+H-767	-3.3010976314544678	cosmetics
+D-767	-3.3010976314544678	cosmetics
+P-767	-6.6017 -0.0005
+S-763	<unk>
+T-763	<<unk>> devi
+H-763	-3.3010976314544678	cosmetics
+D-763	-3.3010976314544678	cosmetics
+P-763	-6.6017 -0.0005
+S-647	કોરબા
+T-647	korba chhattisgarh
+H-647	-1.2312911748886108	korba
+D-647	-1.2312911748886108	korba
+P-647	-1.8421 -0.6205
+S-630	ટોંક
+T-630	tonk india
+H-630	-0.9012680053710938	tonk
+D-630	-0.9012680053710938	tonk
+P-630	-1.5363 -0.2662
+S-151	કાંગડા
+T-151	kangra himachal pradesh
+H-151	-3.0654520988464355	kangra
+D-151	-3.0654520988464355	kangra
+P-151	-3.7400 -2.3909
+S-325	<unk>
+T-325	<<unk>> <<unk>> flycatcher
+H-325	-3.3010976314544678	cosmetics
+D-325	-3.3010976314544678	cosmetics
+P-325	-6.6017 -0.0005
+S-366	હવાઇ
+T-366	<<unk>> arunachal pradesh
+H-366	-3.497593641281128	deesa
+D-366	-3.497593641281128	deesa
+P-366	-6.9864 -0.0088
+S-576	<unk>
+T-576	<<unk>> surendranagar district
+H-576	-3.3010976314544678	cosmetics
+D-576	-3.3010976314544678	cosmetics
+P-576	-6.6017 -0.0005
+S-600	<unk>
+T-600	<<unk>> in islam
+H-600	-3.3010976314544678	cosmetics
+D-600	-3.3010976314544678	cosmetics
+P-600	-6.6017 -0.0005
+S-680	<unk>
+T-680	<<unk>> and <<unk>>
+H-680	-3.3010976314544678	cosmetics
+D-680	-3.3010976314544678	cosmetics
+P-680	-6.6017 -0.0005
+S-698	મનાલી
+T-698	manali himachal pradesh
+H-698	-1.9816431999206543	manali sanctuary
+D-698	-1.9816431999206543	manali sanctuary
+P-698	-3.0024 -2.9425 -0.0001
+S-706	હમીરપુર
+T-706	hamirpur himachal pradesh
+H-706	-0.5653544068336487	hamirpur himachal pradesh
+D-706	-0.5653544068336487	hamirpur himachal pradesh
+P-706	-0.2380 -2.0072 -0.0156 -0.0006
+S-853	<unk>
+T-853	trimbakeshwar shiva temple
+H-853	-3.3010976314544678	cosmetics
+D-853	-3.3010976314544678	cosmetics
+P-853	-6.6017 -0.0005
+S-883	<unk>
+T-883	<<unk>> folk music
+H-883	-3.3010976314544678	cosmetics
+D-883	-3.3010976314544678	cosmetics
+P-883	-6.6017 -0.0005
+S-519	<unk>
+T-519	kumari <<unk>> <<unk>> <<unk>>
+H-519	-3.3010976314544678	cosmetics
+D-519	-3.3010976314544678	cosmetics
+P-519	-6.6017 -0.0005
+S-879	યુરોપ
+T-879	sovereign states of europe
+H-879	-0.015616214834153652	europe
+D-879	-0.015616214834153652	europe
+P-879	-0.0208 -0.0105
+S-383	<unk>
+T-383	nilgiri mountains
+H-383	-3.3010976314544678	cosmetics
+D-383	-3.3010976314544678	cosmetics
+P-383	-6.6017 -0.0005
+S-114	<unk>
+T-114	<<unk>> <<unk>>
+H-114	-3.3010976314544678	cosmetics
+D-114	-3.3010976314544678	cosmetics
+P-114	-6.6017 -0.0005
+S-126	<unk>
+T-126	<<unk>> banaskantha
+H-126	-3.3010976314544678	cosmetics
+D-126	-3.3010976314544678	cosmetics
+P-126	-6.6017 -0.0005
+S-141	<unk>
+T-141	<<unk>> gujarat
+H-141	-3.3010976314544678	cosmetics
+D-141	-3.3010976314544678	cosmetics
+P-141	-6.6017 -0.0005
+S-143	<unk>
+T-143	panch <<unk>>
+H-143	-3.3010976314544678	cosmetics
+D-143	-3.3010976314544678	cosmetics
+P-143	-6.6017 -0.0005
+S-156	<unk>
+T-156	<<unk>> <<unk>>
+H-156	-3.3010976314544678	cosmetics
+D-156	-3.3010976314544678	cosmetics
+P-156	-6.6017 -0.0005
+S-172	<unk>
+T-172	<<unk>> kingdom
+H-172	-3.3010976314544678	cosmetics
+D-172	-3.3010976314544678	cosmetics
+P-172	-6.6017 -0.0005
+S-199	<unk>
+T-199	<<unk>> anand
+H-199	-3.3010976314544678	cosmetics
+D-199	-3.3010976314544678	cosmetics
+P-199	-6.6017 -0.0005
+S-200	<unk>
+T-200	ranjit singh
+H-200	-3.3010976314544678	cosmetics
+D-200	-3.3010976314544678	cosmetics
+P-200	-6.6017 -0.0005
+S-247	<unk>
+T-247	<<unk>> gujarat
+H-247	-3.3010976314544678	cosmetics
+D-247	-3.3010976314544678	cosmetics
+P-247	-6.6017 -0.0005
+S-284	<unk>
+T-284	<<unk>> <<unk>>
+H-284	-3.3010976314544678	cosmetics
+D-284	-3.3010976314544678	cosmetics
+P-284	-6.6017 -0.0005
+S-301	<unk>
+T-301	<<unk>> beach
+H-301	-3.3010976314544678	cosmetics
+D-301	-3.3010976314544678	cosmetics
+P-301	-6.6017 -0.0005
+S-347	<unk>
+T-347	<<unk>> village
+H-347	-3.3010976314544678	cosmetics
+D-347	-3.3010976314544678	cosmetics
+P-347	-6.6017 -0.0005
+S-360	માંડલ
+T-360	mandal gujarat
+H-360	-0.028349971398711205	mandal
+D-360	-0.028349971398711205	mandal
+P-360	-0.0553 -0.0014
+S-365	<unk>
+T-365	<<unk>> page
+H-365	-3.3010976314544678	cosmetics
+D-365	-3.3010976314544678	cosmetics
+P-365	-6.6017 -0.0005
+S-375	સિક્કા
+T-375	sikka india
+H-375	-3.285710573196411	sikka jamvala
+D-375	-3.285710573196411	sikka jamvala
+P-375	-2.5921 -7.2646 -0.0005
+S-102	<unk>
+T-102	<<unk>> kheda
+H-102	-3.3010976314544678	cosmetics
+D-102	-3.3010976314544678	cosmetics
+P-102	-6.6017 -0.0005
+S-402	<unk>
+T-402	water <<unk>>
+H-402	-3.3010976314544678	cosmetics
+D-402	-3.3010976314544678	cosmetics
+P-402	-6.6017 -0.0005
+S-407	<unk>
+T-407	natural <<unk>>
+H-407	-3.3010976314544678	cosmetics
+D-407	-3.3010976314544678	cosmetics
+P-407	-6.6017 -0.0005
+S-411	<unk>
+T-411	pali rajasthan
+H-411	-3.3010976314544678	cosmetics
+D-411	-3.3010976314544678	cosmetics
+P-411	-6.6017 -0.0005
+S-421	<unk>
+T-421	<<unk>> <<unk>>
+H-421	-3.3010976314544678	cosmetics
+D-421	-3.3010976314544678	cosmetics
+P-421	-6.6017 -0.0005
+S-435	<unk>
+T-435	<<unk>> kund
+H-435	-3.3010976314544678	cosmetics
+D-435	-3.3010976314544678	cosmetics
+P-435	-6.6017 -0.0005
+S-436	ભરૂચ
+T-436	bharuch <<unk>>
+H-436	-0.012298780493438244	bharuch
+D-436	-0.012298780493438244	bharuch
+P-436	-0.0241 -0.0005
+S-464	<unk>
+T-464	not english
+H-464	-3.3010976314544678	cosmetics
+D-464	-3.3010976314544678	cosmetics
+P-464	-6.6017 -0.0005
+S-514	ચિખલી
+T-514	chikhli gujarat
+H-514	-0.3769819140434265	chikhali maharashtra
+D-514	-0.3769819140434265	chikhali maharashtra
+P-514	-0.8223 -0.3082 -0.0004
+S-518	નાગલપર
+T-518	<<unk>> mandvi
+H-518	-0.3561425805091858	nagalpar anjar
+D-518	-0.3561425805091858	nagalpar anjar
+P-518	-0.7531 -0.3125 -0.0028
+S-544	કલોલ
+T-544	kalol gandhinagar
+H-544	-1.0011323690414429	kalol
+D-544	-1.0011323690414429	kalol
+P-544	-1.8458 -0.1565
+S-546	અશોક
+T-546	<<unk>> <<unk>>
+H-546	-0.4483090043067932	ashoka
+D-546	-0.4483090043067932	ashoka
+P-546	-0.6565 -0.2401
+S-591	<unk>
+T-591	<<unk>> <<unk>>
+H-591	-3.3010976314544678	cosmetics
+D-591	-3.3010976314544678	cosmetics
+P-591	-6.6017 -0.0005
+S-601	<unk>
+T-601	<<unk>> sutra
+H-601	-3.3010976314544678	cosmetics
+D-601	-3.3010976314544678	cosmetics
+P-601	-6.6017 -0.0005
+S-624	સોમનાથ
+T-624	somnath temple
+H-624	-2.557086229324341	euthanasia in india
+D-624	-2.557086229324341	euthanasia in india
+P-624	-7.2867 -2.0752 -0.8643 -0.0021
+S-626	<unk>
+T-626	<<unk>> <<unk>>
+H-626	-3.3010976314544678	cosmetics
+D-626	-3.3010976314544678	cosmetics
+P-626	-6.6017 -0.0005
+S-75	ઈન્ટરનેટ પ્રોટોકોલ
+T-75	internet protocol
+H-75	-0.3158646523952484	internet protocol suite
+D-75	-0.3158646523952484	internet protocol suite
+P-75	-0.0403 -0.4182 -0.8048 -0.0001
+S-31	<unk> <unk>
+T-31	<<unk>> <<unk>>
+H-31	-3.395026922225952	cosmetics
+D-31	-3.395026922225952	cosmetics
+P-31	-6.7866 -0.0034
+S-34	<unk> <unk>
+T-34	<<unk>> <<unk>>
+H-34	-3.395026922225952	cosmetics
+D-34	-3.395026922225952	cosmetics
+P-34	-6.7866 -0.0034
+S-36	<unk> <unk>
+T-36	<<unk>> <<unk>>
+H-36	-3.395026922225952	cosmetics
+D-36	-3.395026922225952	cosmetics
+P-36	-6.7866 -0.0034
+S-40	<unk> તરંગો
+T-40	electromagnetic wave
+H-40	-1.8819115161895752	gravitational wave
+D-40	-1.8819115161895752	gravitational wave
+P-40	-5.3956 -0.2497 -0.0005
+S-42	ફેબ્રુઆરી ૨૬
+T-42	february 26
+H-42	-0.009786099195480347	february 26
+D-42	-0.009786099195480347	february 26
+P-42	-0.0129 -0.0162 -0.0002
+S-46	પાર્વતી નદી
+T-46	parbati river
+H-46	-1.4758981466293335	parvati
+D-46	-1.4758981466293335	parvati
+P-46	-2.6297 -0.3221
+S-47	<unk> <unk>
+T-47	<<unk>> <<unk>>
+H-47	-3.395026922225952	cosmetics
+D-47	-3.395026922225952	cosmetics
+P-47	-6.7866 -0.0034
+S-50	<unk> <unk>
+T-50	<<unk>> <<unk>>
+H-50	-3.395026922225952	cosmetics
+D-50	-3.395026922225952	cosmetics
+P-50	-6.7866 -0.0034
+S-51	<unk> <unk>
+T-51	<<unk>> <<unk>>
+H-51	-3.395026922225952	cosmetics
+D-51	-3.395026922225952	cosmetics
+P-51	-6.7866 -0.0034
+S-58	દરિયાઈ પ્રદૂષણ
+T-58	marine pollution
+H-58	-1.3077305555343628	air pollution
+D-58	-1.3077305555343628	air pollution
+P-58	-3.7438 -0.1778 -0.0015
+S-60	<unk> <unk>
+T-60	<<unk>> <<unk>>
+H-60	-3.395026922225952	cosmetics
+D-60	-3.395026922225952	cosmetics
+P-60	-6.7866 -0.0034
+S-63	કાબુલ નદી
+T-63	kabul river
+H-63	-0.4050343930721283	kabul
+D-63	-0.4050343930721283	kabul
+P-63	-0.5977 -0.2124
+S-64	<unk> <unk>
+T-64	<<unk>> <<unk>>
+H-64	-3.395026922225952	cosmetics
+D-64	-3.395026922225952	cosmetics
+P-64	-6.7866 -0.0034
+S-65	<unk> જિલ્લો
+T-65	<<unk>> district
+H-65	-2.437493324279785	communication district
+D-65	-2.437493324279785	communication district
+P-65	-7.3047 -0.0021 -0.0057
+S-70	<unk> મહાસાગર
+T-70	indian <<unk>>
+H-70	-1.3616628646850586	oceans
+D-70	-1.3616628646850586	oceans
+P-70	-2.7055 -0.0178
+S-30	<unk> નદી
+T-30	<<unk>> river
+H-30	-2.577366828918457	chapora river
+D-30	-2.577366828918457	chapora river
+P-30	-7.7262 -0.0051 -0.0008
+S-77	<unk> સિંઘ
+T-77	<<unk>> singh
+H-77	-2.373948097229004	bhairon singh
+D-77	-2.373948097229004	bhairon singh
+P-77	-6.5412 -0.0029 -0.5777
+S-79	<unk> સ્ટેડિયમ
+T-79	<<unk>> stadium
+H-79	-1.7518900632858276	stadium
+D-79	-1.7518900632858276	stadium
+P-79	-3.4922 -0.0116
+S-82	દાહોદ જિલ્લો
+T-82	dahod district
+H-82	-0.09283459186553955	dahod district
+D-82	-0.09283459186553955	dahod district
+P-82	-0.2630 -0.0137 -0.0018
+S-84	સંસ્કાર કેન્દ્ર
+T-84	<<unk>> kendra
+H-84	-0.8243227005004883	sanskara
+D-84	-0.8243227005004883	sanskara
+P-84	-1.6244 -0.0242
+S-85	દક્ષિણ કોરિયા
+T-85	south korea
+H-85	-0.1467026025056839	south korea
+D-85	-0.1467026025056839	south korea
+P-85	-0.0174 -0.4226 -0.0002
+S-87	રજત <unk>
+T-87	rajat <<unk>>
+H-87	-1.6680444478988647	rajat dholakia
+D-87	-1.6680444478988647	rajat dholakia
+P-87	-1.2196 -3.7844 -0.0002
+S-90	<unk> જિલ્લો
+T-90	<<unk>> district
+H-90	-2.437493324279785	communication district
+D-90	-2.437493324279785	communication district
+P-90	-7.3047 -0.0021 -0.0057
+S-92	જૈનત્વ ઢાંચાઓ
+T-92	jainism templates
+H-92	-0.0452752448618412	jainism
+D-92	-0.0452752448618412	jainism
+P-92	-0.0901 -0.0005
+S-93	<unk> <unk>
+T-93	<<unk>> <<unk>>
+H-93	-3.395026922225952	cosmetics
+D-93	-3.395026922225952	cosmetics
+P-93	-6.7866 -0.0034
+S-94	બિહાર રેજિમેન્ટ
+T-94	bihar regiment
+H-94	-0.20239020884037018	bihar
+D-94	-0.20239020884037018	bihar
+P-94	-0.2194 -0.1853
+S-99	પ્રોગ્રામિંગ ભાષા
+T-99	programming languages
+H-99	-1.916224479675293	competitive programming
+D-99	-1.916224479675293	competitive programming
+P-99	-5.0471 -0.7013 -0.0003
+S-105	ઉમરિયા જિલ્લો
+T-105	umaria district
+H-105	-0.16467003524303436	umaria district
+D-105	-0.16467003524303436	umaria district
+P-105	-0.4895 -0.0014 -0.0031
+S-108	<unk> રેખા
+T-108	<<unk>> line
+H-108	-2.7222554683685303	greek alphabet
+D-108	-2.7222554683685303	greek alphabet
+P-108	-6.4203 -1.7462 -0.0002
+S-109	<unk> સભા
+T-109	lok sabha
+H-109	-1.6978223323822021	rajya sabha
+D-109	-1.6978223323822021	rajya sabha
+P-109	-5.0194 -0.0714 -0.0027
+S-111	બકરી <unk>
+T-111	<<unk>> <<unk>>
+H-111	-0.4763890504837036	goat
+D-111	-0.4763890504837036	goat
+P-111	-0.9487 -0.0041
+S-684	સરખેજ <unk>
+T-684	<<unk>>
+H-684	-1.3400102853775024	sarkhej roza
+D-684	-1.3400102853775024	sarkhej roza
+P-684	-1.6649 -2.3547 -0.0004
+S-406	<unk> <unk>
+T-406	<<unk>>
+H-406	-3.395026922225952	cosmetics
+D-406	-3.395026922225952	cosmetics
+P-406	-6.7866 -0.0034
+S-413	<unk> તાલુકો
+T-413	<<unk>>
+H-413	-2.438645601272583	communication taluka
+D-413	-2.438645601272583	communication taluka
+P-413	-6.5393 -0.7762 -0.0004
+S-434	શ્રેણી <unk>
+T-434	uncategorized
+H-434	-3.041849136352539	indian remote sensing programme
+D-434	-3.041849136352539	indian remote sensing programme
+P-434	-5.3556 -4.3308 -2.4152 -3.1075 -0.0002
+S-456	સંત તુકારામ
+T-456	tukaram
+H-456	-1.9782551527023315	saints
+D-456	-1.9782551527023315	saints
+P-456	-3.9563 -0.0003
+S-487	<unk> જિલ્લાઓ
+T-487	uttarakhand
+H-487	-0.7724640369415283	districts of india
+D-487	-0.7724640369415283	districts of india
+P-487	-0.4746 -0.0017 -2.6123 -0.0012
+S-503	<unk> <unk>
+T-503	<<unk>>
+H-503	-3.395026922225952	cosmetics
+D-503	-3.395026922225952	cosmetics
+P-503	-6.7866 -0.0034
+S-543	<unk> <unk>
+T-543	<<unk>>
+H-543	-3.395026922225952	cosmetics
+D-543	-3.395026922225952	cosmetics
+P-543	-6.7866 -0.0034
+S-555	<unk> <unk>
+T-555	<<unk>>
+H-555	-3.395026922225952	cosmetics
+D-555	-3.395026922225952	cosmetics
+P-555	-6.7866 -0.0034
+S-566	કપોત <unk>
+T-566	<<unk>>
+H-566	-1.5687553882598877	green pigeon
+D-566	-1.5687553882598877	green pigeon
+P-566	-4.5123 -0.1938 -0.0002
+S-607	<unk> <unk>
+T-607	<<unk>>
+H-607	-3.395026922225952	cosmetics
+D-607	-3.395026922225952	cosmetics
+P-607	-6.7866 -0.0034
+S-608	સંત <unk>
+T-608	<<unk>>
+H-608	-0.875144362449646	kabir
+D-608	-0.875144362449646	kabir
+P-608	-1.4098 -0.3405
+S-657	કોયલ કુટુંબ
+T-657	<<unk>>
+H-657	-0.09388493001461029	koel
+D-657	-0.09388493001461029	koel
+P-657	-0.1823 -0.0055
+S-658	મહારાષ્ટ્રના જિલ્લાઓ
+T-658	maharashtra
+H-658	-0.9678431153297424	districts of india
+D-658	-0.9678431153297424	districts of india
+P-658	-0.5850 -0.0008 -3.2776 -0.0080
+S-664	<unk> માતા
+T-664	<<unk>>
+H-664	-2.2108256816864014	mata bhavanis mata
+D-664	-2.2108256816864014	mata bhavanis mata
+P-664	-4.3144 -2.5015 -1.9962 -0.0312
+S-673	વૈતરણા નદી
+T-673	vaitarna
+H-673	-0.6213884353637695	vaitarna river
+D-673	-0.6213884353637695	vaitarna river
+P-673	-1.8236 -0.0394 -0.0012
+S-376	જૂના <unk>
+T-376	<<unk>>
+H-376	-0.9863196015357971	juna savar
+D-376	-0.9863196015357971	juna savar
+P-376	-0.3519 -1.7635 -0.8436
+S-777	<unk> અવતરણ
+T-777	<<unk>>
+H-777	-3.635641574859619	communication
+D-777	-3.635641574859619	communication
+P-777	-7.2663 -0.0050
+S-816	<unk> <unk>
+T-816	<<unk>>
+H-816	-3.395026922225952	cosmetics
+D-816	-3.395026922225952	cosmetics
+P-816	-6.7866 -0.0034
+S-833	<unk> રાજસ્થાન
+T-833	<<unk>>
+H-833	-2.872068166732788	rajasthan
+D-833	-2.872068166732788	rajasthan
+P-833	-5.7437 -0.0004
+S-895	<unk> <unk>
+T-895	<<unk>>
+H-895	-3.395026922225952	cosmetics
+D-895	-3.395026922225952	cosmetics
+P-895	-6.7866 -0.0034
+S-0	દાંડી સત્યાગ્રહ
+T-0	salt march
+H-0	-1.2323535680770874	dandi navsari
+D-0	-1.2323535680770874	dandi navsari
+P-0	-0.8624 -2.8133 -0.0213
+S-3	<unk> <unk>
+T-3	<<unk>> <<unk>>
+H-3	-3.395026922225952	cosmetics
+D-3	-3.395026922225952	cosmetics
+P-3	-6.7866 -0.0034
+S-6	મરાઠી સાહિત્ય
+T-6	marathi literature
+H-6	-0.09210190176963806	marathi literature
+D-6	-0.09210190176963806	marathi literature
+P-6	-0.0724 -0.1917 -0.0122
+S-8	<unk> વિદુર
+T-8	<<unk>> <<unk>>
+H-8	-1.6531428098678589	vidura
+D-8	-1.6531428098678589	vidura
+P-8	-3.3059 -0.0004
+S-9	બસ્તી પ્રાંત
+T-9	basti division
+H-9	-0.7229565978050232	basti uttar pradesh
+D-9	-0.7229565978050232	basti uttar pradesh
+P-9	-1.0537 -1.8043 -0.0318 -0.0021
+S-11	ખંભાત રજવાડું
+T-11	<<unk>> state
+H-11	-0.5706140995025635	khambhat
+D-11	-0.5706140995025635	khambhat
+P-11	-0.8566 -0.2847
+S-14	<unk> રજવાડું
+T-14	<<unk>> state
+H-14	-1.890874981880188	state
+D-14	-1.890874981880188	state
+P-14	-3.4942 -0.2876
+S-19	<unk> વૈદ્ય
+T-19	<<unk>> vaidya
+H-19	-3.372227907180786	population
+D-19	-3.372227907180786	population
+P-19	-5.6729 -1.0715
+S-26	<unk> નદી
+T-26	<<unk>> river
+H-26	-2.577366828918457	chapora river
+D-26	-2.577366828918457	chapora river
+P-26	-7.7262 -0.0051 -0.0008
+S-28	<unk> પંચાયત
+T-28	panchayat <<unk>>
+H-28	-3.636871576309204	greek alphabet
+D-28	-3.636871576309204	greek alphabet
+P-28	-6.5688 -4.3417 -0.0002
+S-29	અમદાવાદ કલેક્ટર
+T-29	ahmedabad <<unk>>
+H-29	-0.08205980807542801	ahmedabad district
+D-29	-0.08205980807542801	ahmedabad district
+P-29	-0.0402 -0.2005 -0.0055
+S-251	એપ્રિલ ૨૦
+T-251	april 20
+H-251	-0.013516215607523918	april 20
+D-251	-0.013516215607523918	april 20
+P-251	-0.0032 -0.0362 -0.0012
+S-208	<unk> રાઇફલ્સ
+T-208	<<unk>> rifles
+H-208	-2.6882503032684326	microsoft rifles
+D-208	-2.6882503032684326	microsoft rifles
+P-208	-6.4906 -1.5734 -0.0007
+S-209	ઊર્જા <unk>
+T-209	<<unk>> conservation
+H-209	-2.9750163555145264	power plant
+D-209	-2.9750163555145264	power plant
+P-209	-6.4206 -2.5015 -0.0029
+S-211	ધીરુભાઈ અંબાણી
+T-211	dhirubhai ambani
+H-211	-1.9950162172317505	dhirubhai ambani
+D-211	-1.9950162172317505	dhirubhai ambani
+P-211	-1.7642 -0.0720 -4.1488
+S-212	ગારો પહાડીઓ
+T-212	garo hills
+H-212	-0.8454654216766357	garo hills
+D-212	-0.8454654216766357	garo hills
+P-212	-2.5194 -0.0032 -0.0138
+S-213	<unk> ચક્ર
+T-213	<<unk>> chakra
+H-213	-2.1997463703155518	chakra
+D-213	-2.1997463703155518	chakra
+P-213	-4.3862 -0.0133
+S-220	<unk> <unk>
+T-220	<<unk>> carrier
+H-220	-3.395026922225952	cosmetics
+D-220	-3.395026922225952	cosmetics
+P-220	-6.7866 -0.0034
+S-223	<unk> સરોવર
+T-223	<<unk>> sarovar
+H-223	-2.2283804416656494	lake manasarovar
+D-223	-2.2283804416656494	lake manasarovar
+P-223	-4.1198 -2.5639 -0.0014
+S-228	ટાટા <unk>
+T-228	tata indica
+H-228	-1.182979941368103	tata global beverages
+D-228	-1.182979941368103	tata global beverages
+P-228	-0.6681 -2.3250 -1.7384 -0.0004
+S-233	પશ્ચિમ ઘાટ
+T-233	western <<unk>>
+H-233	-0.3831000328063965	west ghat
+D-233	-0.3831000328063965	west ghat
+P-233	-0.0431 -1.1056 -0.0006
+S-238	રામ ઝુલા
+T-238	ram jhula
+H-238	-1.8614718914031982	rama jhula
+D-238	-1.8614718914031982	rama jhula
+P-238	-1.2642 -4.3199 -0.0003
+S-239	જૂન ૯
+T-239	june 9
+H-239	-0.005522515159100294	june 9
+D-239	-0.005522515159100294	june 9
+P-239	-0.0032 -0.0131 -0.0003
+S-240	<unk> નદી
+T-240	<<unk>> river
+H-240	-2.577366828918457	chapora river
+D-240	-2.577366828918457	chapora river
+P-240	-7.7262 -0.0051 -0.0008
+S-242	<unk> જિલ્લો
+T-242	<<unk>> district
+H-242	-2.437493324279785	communication district
+D-242	-2.437493324279785	communication district
+P-242	-7.3047 -0.0021 -0.0057
+S-248	કોમ્પ્યુટર હાર્ડવેર
+T-248	computer hardware
+H-248	-0.4114420413970947	computer hardware
+D-248	-0.4114420413970947	computer hardware
+P-248	-0.8704 -0.3634 -0.0005
+S-249	<unk> <unk>
+T-249	<<unk>> <<unk>>
+H-249	-3.395026922225952	cosmetics
+D-249	-3.395026922225952	cosmetics
+P-249	-6.7866 -0.0034
+S-204	<unk> <unk>
+T-204	<<unk>> <<unk>>
+H-204	-3.395026922225952	cosmetics
+D-204	-3.395026922225952	cosmetics
+P-204	-6.7866 -0.0034
+S-253	રવિ શાસ્ત્રી
+T-253	ravi shastri
+H-253	-1.946823000907898	ravi shastri
+D-253	-1.946823000907898	ravi shastri
+P-253	-2.5324 -3.3079 -0.0002
+S-257	કોલાર જિલ્લો
+T-257	kolar district
+H-257	-0.26268067955970764	kolar district
+D-257	-0.26268067955970764	kolar district
+P-257	-0.7701 -0.0133 -0.0047
+S-262	<unk> <unk>
+T-262	<<unk>> <<unk>>
+H-262	-3.395026922225952	cosmetics
+D-262	-3.395026922225952	cosmetics
+P-262	-6.7866 -0.0034
+S-270	<unk> જેમ્સ
+T-270	<<unk>> james
+H-270	-1.4020887613296509	james bond
+D-270	-1.4020887613296509	james bond
+P-270	-1.4531 -2.7525 -0.0006
+S-271	<unk> ચિત્તોડગઢ
+T-271	vijaya <<unk>>
+H-271	-1.7908090353012085	chittorgarh
+D-271	-1.7908090353012085	chittorgarh
+P-271	-3.5804 -0.0012
+S-273	<unk> નદી
+T-273	<<unk>> river
+H-273	-2.577366828918457	chapora river
+D-273	-2.577366828918457	chapora river
+P-273	-7.7262 -0.0051 -0.0008
+S-274	<unk> <unk>
+T-274	<<unk>> <<unk>>
+H-274	-3.395026922225952	cosmetics
+D-274	-3.395026922225952	cosmetics
+P-274	-6.7866 -0.0034
+S-276	આગ્રા પ્રાંત
+T-276	agra division
+H-276	-0.13302454352378845	agra division
+D-276	-0.13302454352378845	agra division
+P-276	-0.0274 -0.3710 -0.0007
+S-277	ડેની <unk>
+T-277	danny <<unk>>
+H-277	-0.9120714664459229	danny boyle
+D-277	-0.9120714664459229	danny boyle
+P-277	-1.8283 -0.9077 -0.0001
+S-279	ઇરોડ જિલ્લો
+T-279	erode district
+H-279	-0.234434574842453	erode district
+D-279	-0.234434574842453	erode district
+P-279	-0.6913 -0.0049 -0.0071
+S-280	જૂન ૨૯
+T-280	june 29
+H-280	-0.014080031774938107	june 29
+D-280	-0.014080031774938107	june 29
+P-280	-0.0031 -0.0389 -0.0002
+S-282	<unk> નદી
+T-282	<<unk>> river
+H-282	-2.577366828918457	chapora river
+D-282	-2.577366828918457	chapora river
+P-282	-7.7262 -0.0051 -0.0008
+S-283	કૃત્રિમ હીરા
+T-283	<<unk>> <<unk>>
+H-283	-1.631179928779602	rainmaking
+D-283	-1.631179928779602	rainmaking
+P-283	-3.2604 -0.0019
+S-286	<unk> <unk>
+T-286	<<unk>> <<unk>>
+H-286	-3.395026922225952	cosmetics
+D-286	-3.395026922225952	cosmetics
+P-286	-6.7866 -0.0034
+S-287	<unk> જિલ્લો
+T-287	<<unk>> district
+H-287	-2.437493324279785	communication district
+D-287	-2.437493324279785	communication district
+P-287	-7.3047 -0.0021 -0.0057
+S-155	<unk> એશિયન
+T-155	british asian
+H-155	-2.672433376312256	2010 asian games
+D-155	-2.672433376312256	2010 asian games
+P-155	-6.5517 -1.6953 -2.4425 -0.0002
+S-118	<unk> જિલ્લો
+T-118	<<unk>> district
+H-118	-2.437493324279785	communication district
+D-118	-2.437493324279785	communication district
+P-118	-7.3047 -0.0021 -0.0057
+S-123	<unk> <unk>
+T-123	<<unk>> <<unk>>
+H-123	-3.395026922225952	cosmetics
+D-123	-3.395026922225952	cosmetics
+P-123	-6.7866 -0.0034
+S-125	<unk> જિલ્લો
+T-125	<<unk>> district
+H-125	-2.437493324279785	communication district
+D-125	-2.437493324279785	communication district
+P-125	-7.3047 -0.0021 -0.0057
+S-127	<unk> મહેતા
+T-127	manubhai mehta
+H-127	-2.5220537185668945	microsoft mehta
+D-127	-2.5220537185668945	microsoft mehta
+P-127	-7.4581 -0.1069 -0.0011
+S-128	<unk> રાજ્ય
+T-128	<<unk>> state
+H-128	-2.319734573364258	central state
+D-128	-2.319734573364258	central state
+P-128	-5.8404 -1.1011 -0.0178
+S-130	અમેરિકન <unk>
+T-130	american <<unk>>
+H-130	-0.6143805980682373	american billionaires
+D-130	-0.6143805980682373	american billionaires
+P-130	-0.0414 -1.8016 -0.0002
+S-133	મરાઠા સામ્રાજ્ય
+T-133	maratha empire
+H-133	-1.550862431526184	maratha empire
+D-133	-1.550862431526184	maratha empire
+P-133	-1.2300 -3.4225 -0.0001
+S-134	સપ્ટેમ્બર ૩૦
+T-134	september 30
+H-134	-0.018690170720219612	september 30
+D-134	-0.018690170720219612	september 30
+P-134	-0.0096 -0.0454 -0.0012
+S-136	જુલાઇ ૨૫
+T-136	july 25
+H-136	-0.009180266410112381	july 25
+D-136	-0.009180266410112381	july 25
+P-136	-0.0017 -0.0254 -0.0004
+S-139	<unk> <unk>
+T-139	<<unk>> <<unk>>
+H-139	-3.395026922225952	cosmetics
+D-139	-3.395026922225952	cosmetics
+P-139	-6.7866 -0.0034
+S-142	ઓગસ્ટ ૩૦
+T-142	august 30
+H-142	-0.011167152784764767	august 30
+D-142	-0.011167152784764767	august 30
+P-142	-0.0073 -0.0257 -0.0005
+S-149	કપિલ દેવ
+T-149	kapil dev
+H-149	-0.28343668580055237	kapila
+D-149	-0.28343668580055237	kapila
+P-149	-0.5659 -0.0010
+S-150	<unk> તેંડુલકર
+T-150	sachin tendulkar
+H-150	-3.9024877548217773	microsoft india
+D-150	-3.9024877548217773	microsoft india
+P-150	-7.8276 -3.8160 -0.0639
+S-153	અમિત જેઠવા
+T-153	amit jethwa
+H-153	-1.1547502279281616	amit jethwa
+D-153	-1.1547502279281616	amit jethwa
+P-153	-0.3155 -3.1481 -0.0007
+S-154	<unk> રેતીયો
+T-154	psammophis <<unk>>
+H-154	-1.9103187322616577	psammophis condanarus
+D-154	-1.9103187322616577	psammophis condanarus
+P-154	-4.8205 -0.9102 -0.0003
+S-117	એલેક્ઝાન્ડર <unk>
+T-117	alexander <<unk>>
+H-117	-3.5426902770996094	medicine
+D-117	-3.5426902770996094	medicine
+P-117	-7.0850 -0.0004
+S-162	<unk> <unk>
+T-162	<<unk>> <<unk>>
+H-162	-3.395026922225952	cosmetics
+D-162	-3.395026922225952	cosmetics
+P-162	-6.7866 -0.0034
+S-163	કેટ <unk>
+T-163	kate <<unk>>
+H-163	-2.265106678009033	kate hudson
+D-163	-2.265106678009033	kate hudson
+P-163	-5.8251 -0.9699 -0.0003
+S-164	<unk> બક્ષી
+T-164	<<unk>> bakshi
+H-164	-2.0506813526153564	bakshi
+D-164	-2.0506813526153564	bakshi
+P-164	-4.1000 -0.0014
+S-167	<unk> <unk>
+T-167	iron man
+H-167	-3.395026922225952	cosmetics
+D-167	-3.395026922225952	cosmetics
+P-167	-6.7866 -0.0034
+S-170	<unk> જિલ્લો
+T-170	<<unk>> district
+H-170	-2.437493324279785	communication district
+D-170	-2.437493324279785	communication district
+P-170	-7.3047 -0.0021 -0.0057
+S-171	બાગમતી પ્રાંત
+T-171	bagmati zone
+H-171	-0.046951618045568466	bagmati zone
+D-171	-0.046951618045568466	bagmati zone
+P-171	-0.1232 -0.0171 -0.0005
+S-173	નેપાલ ભાષા
+T-173	<<unk>> language
+H-173	-1.070489525794983	language
+D-173	-1.070489525794983	language
+P-173	-2.1402 -0.0008
+S-174	<unk> ગુફાઓ
+T-174	<<unk>> caves
+H-174	-1.7283604145050049	caves
+D-174	-1.7283604145050049	caves
+P-174	-3.2728 -0.1839
+S-175	<unk> ફુટબોલ
+T-175	association football
+H-175	-2.9142162799835205	greek mythology
+D-175	-2.9142162799835205	greek mythology
+P-175	-7.4508 -1.2917 -0.0002
+S-188	<unk> <unk>
+T-188	<<unk>> <<unk>>
+H-188	-3.395026922225952	cosmetics
+D-188	-3.395026922225952	cosmetics
+P-188	-6.7866 -0.0034
+S-189	<unk> જિલ્લો
+T-189	<<unk>> district
+H-189	-2.437493324279785	communication district
+D-189	-2.437493324279785	communication district
+P-189	-7.3047 -0.0021 -0.0057
+S-192	<unk> મથકો
+T-192	hill stations
+H-192	-1.8827905654907227	countries in india
+D-192	-1.8827905654907227	countries in india
+P-192	-7.0613 -0.1690 -0.2956 -0.0053
+S-193	<unk> <unk>
+T-193	<<unk>> <<unk>>
+H-193	-3.395026922225952	cosmetics
+D-193	-3.395026922225952	cosmetics
+P-193	-6.7866 -0.0034
+S-196	શાહડોલ જિલ્લો
+T-196	shahdol district
+H-196	-0.11121883243322372	shahdol district
+D-196	-0.11121883243322372	shahdol district
+P-196	-0.3215 -0.0030 -0.0092
+S-197	<unk> <unk>
+T-197	<<unk>> <<unk>>
+H-197	-3.395026922225952	cosmetics
+D-197	-3.395026922225952	cosmetics
+P-197	-6.7866 -0.0034
+S-418	<unk> <unk>
+T-418	<<unk>> <<unk>>
+H-418	-3.395026922225952	cosmetics
+D-418	-3.395026922225952	cosmetics
+P-418	-6.7866 -0.0034
+S-372	ઓક્ટોબર ૨૯
+T-372	october 29
+H-372	-0.011201361194252968	october 29
+D-372	-0.011201361194252968	october 29
+P-372	-0.0025 -0.0307 -0.0004
+S-373	<unk> <unk>
+T-373	<<unk>> <<unk>>
+H-373	-3.395026922225952	cosmetics
+D-373	-3.395026922225952	cosmetics
+P-373	-6.7866 -0.0034
+S-382	ઓક્ટોબર ૨૫
+T-382	october 25
+H-382	-0.017855850979685783	october 25
+D-382	-0.017855850979685783	october 25
+P-382	-0.0025 -0.0507 -0.0004
+S-384	<unk> નદી
+T-384	<<unk>> river
+H-384	-2.577366828918457	chapora river
+D-384	-2.577366828918457	chapora river
+P-384	-7.7262 -0.0051 -0.0008
+S-385	બોટાદ જિલ્લો
+T-385	botad district
+H-385	-0.08957988768815994	botad district
+D-385	-0.08957988768815994	botad district
+P-385	-0.2630 -0.0003 -0.0055
+S-386	એપ્રિલ ૮
+T-386	april 8
+H-386	-0.009594489820301533	april 8
+D-386	-0.009594489820301533	april 8
+P-386	-0.0027 -0.0256 -0.0005
+S-387	મે ૨૬
+T-387	may 26
+H-387	-0.004487506113946438	may 26
+D-387	-0.004487506113946438	may 26
+P-387	-0.0025 -0.0107 -0.0002
+S-392	<unk> સેન
+T-392	<<unk>> sen
+H-392	-3.710742950439453	central library
+D-392	-3.710742950439453	central library
+P-392	-7.9292 -3.1983 -0.0048
+S-394	<unk> જિલ્લો
+T-394	<<unk>> district
+H-394	-2.437493324279785	communication district
+D-394	-2.437493324279785	communication district
+P-394	-7.3047 -0.0021 -0.0057
+S-396	<unk> <unk>
+T-396	<<unk>> bhavai
+H-396	-3.395026922225952	cosmetics
+D-396	-3.395026922225952	cosmetics
+P-396	-6.7866 -0.0034
+S-398	ઓગસ્ટ ૧૯
+T-398	august 19
+H-398	-0.004309646785259247	august 19
+D-398	-0.004309646785259247	august 19
+P-398	-0.0029 -0.0096 -0.0004
+S-399	<unk> જિલ્લો
+T-399	<<unk>> district
+H-399	-2.437493324279785	communication district
+D-399	-2.437493324279785	communication district
+P-399	-7.3047 -0.0021 -0.0057
+S-410	<unk> નદી
+T-410	<<unk>> river
+H-410	-2.577366828918457	chapora river
+D-410	-2.577366828918457	chapora river
+P-410	-7.7262 -0.0051 -0.0008
+S-414	માર્કો <unk>
+T-414	marco polo
+H-414	-1.166090726852417	marco casagrande
+D-414	-1.166090726852417	marco casagrande
+P-414	-2.0093 -1.4886 -0.0004
+S-415	ઓક્ટોબર ૨૦
+T-415	october 20
+H-415	-0.009412127546966076	october 20
+D-415	-0.009412127546966076	october 20
+P-415	-0.0035 -0.0217 -0.0031
+S-370	<unk> ઘાટી
+T-370	<<unk>> valley
+H-370	-3.345721483230591	communication
+D-370	-3.345721483230591	communication
+P-370	-6.6868 -0.0046
+S-419	<unk> નદી
+T-419	<<unk>> river
+H-419	-2.577366828918457	chapora river
+D-419	-2.577366828918457	chapora river
+P-419	-7.7262 -0.0051 -0.0008
+S-437	<unk> નદી
+T-437	<<unk>> river
+H-437	-2.577366828918457	chapora river
+D-437	-2.577366828918457	chapora river
+P-437	-7.7262 -0.0051 -0.0008
+S-441	વિનોદ ભટ્ટ
+T-441	vinod bhatt
+H-441	-0.13703510165214539	vinod bhatt
+D-441	-0.13703510165214539	vinod bhatt
+P-441	-0.1682 -0.2425 -0.0004
+S-446	ભેરી પ્રાંત
+T-446	bheri zone
+H-446	-0.12449487298727036	bheri zone
+D-446	-0.12449487298727036	bheri zone
+P-446	-0.3392 -0.0335 -0.0007
+S-449	જાન્યુઆરી ૭
+T-449	january 7
+H-449	-0.005357338581234217	january 7
+D-449	-0.005357338581234217	january 7
+P-449	-0.0023 -0.0135 -0.0003
+S-451	<unk> જિલ્લો
+T-451	<<unk>> district
+H-451	-2.437493324279785	communication district
+D-451	-2.437493324279785	communication district
+P-451	-7.3047 -0.0021 -0.0057
+S-452	<unk> <unk>
+T-452	<<unk>> <<unk>>
+H-452	-3.395026922225952	cosmetics
+D-452	-3.395026922225952	cosmetics
+P-452	-6.7866 -0.0034
+S-453	કાશ્મીર ખીણ
+T-453	kashmir valley
+H-453	-1.3899494409561157	kashmir
+D-453	-1.3899494409561157	kashmir
+P-453	-2.7566 -0.0233
+S-457	ગુજરાતી લોકો
+T-457	gujarati people
+H-457	-0.3240232765674591	gujarati people
+D-457	-0.3240232765674591	gujarati people
+P-457	-0.8678 -0.0454 -0.0588
+S-458	<unk> પંચાલ
+T-458	<<unk>> panchal
+H-458	-2.375507354736328	ketan panchal
+D-458	-2.375507354736328	ketan panchal
+P-458	-5.8200 -1.3061 -0.0004
+S-459	<unk> કિલ્લો
+T-459	<<unk>> fort
+H-459	-2.3305020332336426	ranthambore fort
+D-459	-2.3305020332336426	ranthambore fort
+P-459	-6.9742 -0.0162 -0.0011
+S-466	<unk> વાવ
+T-466	<<unk>> vav
+H-466	-1.5254673957824707	stepwell
+D-466	-1.5254673957824707	stepwell
+P-466	-2.9251 -0.1258
+S-467	હેમંત <unk>
+T-467	hemant <<unk>>
+H-467	-0.8053463101387024	hemant chauhan
+D-467	-0.8053463101387024	hemant chauhan
+P-467	-1.2629 -1.1529 -0.0002
+S-469	હિમાલય <unk>
+T-469	himalayan <<unk>>
+H-469	-0.6689260005950928	himalayas
+D-469	-0.6689260005950928	himalayas
+P-469	-1.3369 -0.0009
+S-470	<unk> ઘાટ
+T-470	<<unk>> ghat
+H-470	-2.9266300201416016	microsoft ghat
+D-470	-2.9266300201416016	microsoft ghat
+P-470	-7.1481 -1.6314 -0.0004
+S-334	<unk> જિલ્લો
+T-334	<<unk>> district
+H-334	-2.437493324279785	communication district
+D-334	-2.437493324279785	communication district
+P-334	-7.3047 -0.0021 -0.0057
+S-292	ઓક્ટોબર ૮
+T-292	october 8
+H-292	-0.008158355951309204	october 8
+D-292	-0.008158355951309204	october 8
+P-292	-0.0025 -0.0214 -0.0005
+S-293	<unk> સુરક્ષા
+T-293	<<unk>> security
+H-293	-2.770266056060791	security
+D-293	-2.770266056060791	security
+P-293	-4.9259 -0.6146
+S-296	<unk> <unk>
+T-296	<<unk>> <<unk>>
+H-296	-3.395026922225952	cosmetics
+D-296	-3.395026922225952	cosmetics
+P-296	-6.7866 -0.0034
+S-298	<unk> <unk>
+T-298	<<unk>> <<unk>>
+H-298	-3.395026922225952	cosmetics
+D-298	-3.395026922225952	cosmetics
+P-298	-6.7866 -0.0034
+S-300	જાન્યુઆરી ૨૩
+T-300	january 23
+H-300	-0.004946813452988863	january 23
+D-300	-0.004946813452988863	january 23
+P-300	-0.0026 -0.0117 -0.0005
+S-302	સિમા <unk>
+T-302	sima <<unk>>
+H-302	-1.8607566356658936	sima qian
+D-302	-1.8607566356658936	sima qian
+P-302	-4.6595 -0.9226 -0.0002
+S-303	ચાર્લ્સ <unk>
+T-303	charles <<unk>>
+H-303	-1.1041038036346436	charles prince of india
+D-303	-1.1041038036346436	charles prince of india
+P-303	-0.6004 -3.9882 -0.2300 -0.7010 -0.0009
+S-305	<unk> ટેકરીઓ
+T-305	<<unk>> hills
+H-305	-2.0019783973693848	adamgarh hills
+D-305	-2.0019783973693848	adamgarh hills
+P-305	-5.7461 -0.2594 -0.0004
+S-307	જૂન ૨૦
+T-307	june 20
+H-307	-0.009373577311635017	june 20
+D-307	-0.009373577311635017	june 20
+P-307	-0.0031 -0.0234 -0.0016
+S-317	<unk> સંહિતા
+T-317	<<unk>> samhita
+H-317	-3.6739559173583984	code
+D-317	-3.6739559173583984	code
+P-317	-6.9736 -0.3743
+S-318	રાજીવ <unk>
+T-318	rajiv dixit
+H-318	-0.6360376477241516	rajiv gandhi
+D-318	-0.6360376477241516	rajiv gandhi
+P-318	-0.0818 -1.8225 -0.0037
+S-321	<unk> જિલ્લો
+T-321	<<unk>> district
+H-321	-2.437493324279785	communication district
+D-321	-2.437493324279785	communication district
+P-321	-7.3047 -0.0021 -0.0057
+S-323	મધુબની જિલ્લો
+T-323	madhubani district
+H-323	-0.32588765025138855	madhubani district
+D-323	-0.32588765025138855	madhubani district
+P-323	-0.8985 -0.0407 -0.0385
+S-330	રાજ કપૂર
+T-330	raj kapoor
+H-330	-2.4628331661224365	raj anadkat
+D-330	-2.4628331661224365	raj anadkat
+P-330	-2.1856 -5.2027 -0.0001
+S-331	<unk> <unk>
+T-331	<<unk>> <<unk>>
+H-331	-3.395026922225952	cosmetics
+D-331	-3.395026922225952	cosmetics
+P-331	-6.7866 -0.0034
+S-288	રાજેન્દ્ર શાહ
+T-288	rajendra shah
+H-288	-0.08863157033920288	rajendra shah
+D-288	-0.08863157033920288	rajendra shah
+P-288	-0.1063 -0.1553 -0.0042
+S-337	<unk> જિલ્લો
+T-337	<<unk>> district
+H-337	-2.437493324279785	communication district
+D-337	-2.437493324279785	communication district
+P-337	-7.3047 -0.0021 -0.0057
+S-338	કોકરાઝાર જિલ્લો
+T-338	kokrajhar district
+H-338	-0.07456660270690918	kokrajhar district
+D-338	-0.07456660270690918	kokrajhar district
+P-338	-0.2119 -0.0107 -0.0012
+S-340	દેવરિયા <unk>
+T-340	deoria tal
+H-340	-2.5372180938720703	deoria
+D-340	-2.5372180938720703	deoria
+P-340	-3.1382 -1.9362
+S-342	સપ્ટેમ્બર ૧૩
+T-342	september 13
+H-342	-0.007817581295967102	september 13
+D-342	-0.007817581295967102	september 13
+P-342	-0.0073 -0.0147 -0.0014
+S-346	સપ્ટેમ્બર ૪
+T-346	september 4
+H-346	-0.01530540082603693	september 4
+D-346	-0.01530540082603693	september 4
+P-346	-0.0041 -0.0415 -0.0003
+S-348	મૌર્ય સામ્રાજ્ય
+T-348	maurya empire
+H-348	-1.8826940059661865	mughal empire
+D-348	-1.8826940059661865	mughal empire
+P-348	-5.4604 -0.1875 -0.0002
+S-351	<unk> સરોવર
+T-351	<<unk>> lake
+H-351	-2.2283804416656494	lake manasarovar
+D-351	-2.2283804416656494	lake manasarovar
+P-351	-4.1198 -2.5639 -0.0014
+S-353	બાગપત જિલ્લો
+T-353	<<unk>> district
+H-353	-0.14415405690670013	baghpat district
+D-353	-0.14415405690670013	baghpat district
+P-353	-0.2984 -0.1259 -0.0082
+S-354	<unk> <unk>
+T-354	geographic <<unk>>
+H-354	-3.395026922225952	cosmetics
+D-354	-3.395026922225952	cosmetics
+P-354	-6.7866 -0.0034
+S-358	<unk> મૌર્ય
+T-358	<<unk>> maurya
+H-358	-2.8148162364959717	greek alphabet
+D-358	-2.8148162364959717	greek alphabet
+P-358	-7.5792 -0.8651 -0.0002
+S-361	જેટ <unk>
+T-361	jet aircraft
+H-361	-1.9956912994384766	jet airways
+D-361	-1.9956912994384766	jet airways
+P-361	-2.8571 -3.1296 -0.0003
+S-364	<unk> સાગર
+T-364	caribbean sea
+H-364	-1.7058484554290771	himayat sagar
+D-364	-1.7058484554290771	himayat sagar
+P-364	-4.5472 -0.0524 -0.5179
+S-367	<unk> ડેવિડ
+T-367	<<unk>> david
+H-367	-1.4154833555221558	david beckham
+D-367	-1.4154833555221558	david beckham
+P-367	-1.3104 -2.9337 -0.0023
+S-368	<unk> જિલ્લો
+T-368	<<unk>> district
+H-368	-2.437493324279785	communication district
+D-368	-2.437493324279785	communication district
+P-368	-7.3047 -0.0021 -0.0057
+S-369	<unk> શક્કરખરો
+T-369	<<unk>> sunbird
+H-369	-1.9365882873535156	purplerumped sunbird
+D-369	-1.9365882873535156	purplerumped sunbird
+P-369	-5.2746 -0.5341 -0.0010
+S-612	ડિસેમ્બર ૪
+T-612	december 4
+H-612	-0.010634497739374638	december 4
+D-612	-0.010634497739374638	december 4
+P-612	-0.0033 -0.0284 -0.0003
+S-572	<unk> <unk>
+T-572	<<unk>> <<unk>>
+H-572	-3.395026922225952	cosmetics
+D-572	-3.395026922225952	cosmetics
+P-572	-6.7866 -0.0034
+S-573	<unk> <unk>
+T-573	<<unk>> <<unk>>
+H-573	-3.395026922225952	cosmetics
+D-573	-3.395026922225952	cosmetics
+P-573	-6.7866 -0.0034
+S-581	<unk> <unk>
+T-581	<<unk>> <<unk>>
+H-581	-3.395026922225952	cosmetics
+D-581	-3.395026922225952	cosmetics
+P-581	-6.7866 -0.0034
+S-584	પન્ના <unk>
+T-584	panna <<unk>>
+H-584	-0.10620903223752975	panna india
+D-584	-0.10620903223752975	panna india
+P-584	-0.0624 -0.2502 -0.0060
+S-585	કોમ્પ્યુટર <unk>
+T-585	computer <<unk>>
+H-585	-1.1074230670928955	computers
+D-585	-1.1074230670928955	computers
+P-585	-2.2141 -0.0007
+S-586	મે ૧૦
+T-586	may 10
+H-586	-0.0065094842575490475	may 10
+D-586	-0.0065094842575490475	may 10
+P-586	-0.0022 -0.0169 -0.0005
+S-587	<unk> <unk>
+T-587	<<unk>> <<unk>>
+H-587	-3.395026922225952	cosmetics
+D-587	-3.395026922225952	cosmetics
+P-587	-6.7866 -0.0034
+S-592	કટોકટી કાળ
+T-592	the emergency
+H-592	-2.790997266769409	flag of india
+D-592	-2.790997266769409	flag of india
+P-592	-6.8589 -0.0014 -4.3032 -0.0005
+S-593	ઉજ્જૈન જિલ્લો
+T-593	ujjain district
+H-593	-0.07548613101243973	ujjain district
+D-593	-0.07548613101243973	ujjain district
+P-593	-0.2073 -0.0169 -0.0023
+S-595	<unk> ભીલ
+T-595	<<unk>> <<unk>>
+H-595	-2.7977752685546875	diwaliben bhil
+D-595	-2.7977752685546875	diwaliben bhil
+P-595	-7.7258 -0.6673 -0.0002
+S-597	<unk> <unk>
+T-597	<<unk>> banking
+H-597	-3.395026922225952	cosmetics
+D-597	-3.395026922225952	cosmetics
+P-597	-6.7866 -0.0034
+S-603	સેતી પ્રાંત
+T-603	seti zone
+H-603	-0.10586999356746674	seti zone
+D-603	-0.10586999356746674	seti zone
+P-603	-0.2847 -0.0323 -0.0005
+S-604	કિરણ બેદી
+T-604	kiran bedi
+H-604	-1.9077643156051636	kiran mazumdarshaw
+D-604	-1.9077643156051636	kiran mazumdarshaw
+P-604	-3.6027 -2.1195 -0.0010
+S-605	<unk> ગુજરાતી
+T-605	<<unk>> gujarati
+H-605	-1.0580376386642456	gujarati films
+D-605	-1.0580376386642456	gujarati films
+P-605	-0.5817 -2.5902 -0.0022
+S-606	<unk> <unk>
+T-606	<<unk>> <<unk>>
+H-606	-3.395026922225952	cosmetics
+D-606	-3.395026922225952	cosmetics
+P-606	-6.7866 -0.0034
+S-570	મુંબઈ મેટ્રો
+T-570	mumbai metro
+H-570	-0.7058885097503662	mumbai metro stations
+D-570	-0.7058885097503662	mumbai metro stations
+P-570	-1.3203 -0.6791 -0.8048 -0.0194
+S-613	<unk> પ્રાંત
+T-613	<<unk>> division
+H-613	-2.4455549716949463	population division
+D-613	-2.4455549716949463	population division
+P-613	-7.1274 -0.2089 -0.0004
+S-617	જયંત <unk>
+T-617	jayant <<unk>>
+H-617	-2.990941286087036	jayant kothari
+D-617	-2.990941286087036	jayant kothari
+P-617	-4.2679 -4.6917 -0.0132
+S-619	<unk> <unk>
+T-619	<<unk>> commission
+H-619	-3.395026922225952	cosmetics
+D-619	-3.395026922225952	cosmetics
+P-619	-6.7866 -0.0034
+S-623	<unk> સ્ટેડિયમ
+T-623	<<unk>> stadium
+H-623	-1.7518900632858276	stadium
+D-623	-1.7518900632858276	stadium
+P-623	-3.4922 -0.0116
+S-627	સ્વાતંત્ર્ય સેનાની
+T-627	independence activists
+H-627	-1.8311595916748047	independence movement
+D-627	-1.8311595916748047	independence movement
+P-627	-4.9197 -0.5737 -0.0001
+S-628	<unk> <unk>
+T-628	<<unk>> ambani
+H-628	-3.395026922225952	cosmetics
+D-628	-3.395026922225952	cosmetics
+P-628	-6.7866 -0.0034
+S-629	<unk> દલાલ
+T-629	<<unk>> dalal
+H-629	-3.593376636505127	girish kasaravalli
+D-629	-3.593376636505127	girish kasaravalli
+P-629	-7.7091 -3.0695 -0.0015
+S-632	<unk> <unk>
+T-632	<<unk>> <<unk>>
+H-632	-3.395026922225952	cosmetics
+D-632	-3.395026922225952	cosmetics
+P-632	-6.7866 -0.0034
+S-634	દક્ષિણ એશિયા
+T-634	south asia
+H-634	-0.6848310828208923	south asia
+D-634	-0.6848310828208923	south asia
+P-634	-0.0125 -2.0388 -0.0033
+S-635	કન્યાકુમારી જિલ્લો
+T-635	kanyakumari district
+H-635	-0.07739151269197464	kanyakumari district
+D-635	-0.07739151269197464	kanyakumari district
+P-635	-0.2274 -0.0032 -0.0016
+S-638	<unk> ધોધ
+T-638	<<unk>> falls
+H-638	-2.1633799076080322	barkana falls
+D-638	-2.1633799076080322	barkana falls
+P-638	-6.4749 -0.0150 -0.0003
+S-641	ઉત્તર પ્રદેશ
+T-641	uttar pradesh
+H-641	-0.6563956141471863	north uttar pradesh
+D-641	-0.6563956141471863	north uttar pradesh
+P-641	-0.0214 -2.5933 -0.0100 -0.0008
+S-642	રાજનાંદગાંવ જિલ્લો
+T-642	rajnandgaon district
+H-642	-0.11188533157110214	rajnandgaon district
+D-642	-0.11188533157110214	rajnandgaon district
+P-642	-0.3251 -0.0021 -0.0085
+S-643	<unk> <unk>
+T-643	<<unk>> <<unk>>
+H-643	-3.395026922225952	cosmetics
+D-643	-3.395026922225952	cosmetics
+P-643	-6.7866 -0.0034
+S-644	<unk> જિલ્લો
+T-644	<<unk>> district
+H-644	-2.437493324279785	communication district
+D-644	-2.437493324279785	communication district
+P-644	-7.3047 -0.0021 -0.0057
+S-522	<unk> દવે
+T-522	<<unk>> dave
+H-522	-2.206282615661621	jyotindra dave
+D-522	-2.206282615661621	jyotindra dave
+P-522	-6.5840 -0.0345 -0.0004
+S-476	<unk> <unk>
+T-476	chemical <<unk>>
+H-476	-3.395026922225952	cosmetics
+D-476	-3.395026922225952	cosmetics
+P-476	-6.7866 -0.0034
+S-477	વિજય યાદવ
+T-477	vijay yadav
+H-477	-0.983913779258728	vijay yadav
+D-477	-0.983913779258728	vijay yadav
+P-477	-2.1338 -0.8175 -0.0005
+S-481	<unk> એરલાઇન્સ
+T-481	<<unk>> airlines
+H-481	-2.956127643585205	greek alphabet
+D-481	-2.956127643585205	greek alphabet
+P-481	-7.2628 -1.6054 -0.0002
+S-486	<unk> <unk>
+T-486	fossil fuel
+H-486	-3.395026922225952	cosmetics
+D-486	-3.395026922225952	cosmetics
+P-486	-6.7866 -0.0034
+S-489	જાન્યુઆરી ૫
+T-489	january 5
+H-489	-0.008697660639882088	january 5
+D-489	-0.008697660639882088	january 5
+P-489	-0.0026 -0.0229 -0.0006
+S-490	<unk> કિલ્લો
+T-490	<<unk>> fort
+H-490	-2.3305020332336426	ranthambore fort
+D-490	-2.3305020332336426	ranthambore fort
+P-490	-6.9742 -0.0162 -0.0011
+S-495	<unk> <unk>
+T-495	ravindra <<unk>>
+H-495	-3.395026922225952	cosmetics
+D-495	-3.395026922225952	cosmetics
+P-495	-6.7866 -0.0034
+S-496	<unk> દાસ
+T-496	<<unk>> das
+H-496	-3.0401861667633057	microsoft das
+D-496	-3.0401861667633057	microsoft das
+P-496	-7.3739 -1.7464 -0.0003
+S-497	<unk> જિલ્લો
+T-497	<<unk>> district
+H-497	-2.437493324279785	communication district
+D-497	-2.437493324279785	communication district
+P-497	-7.3047 -0.0021 -0.0057
+S-498	જ્યોર્જ <unk>
+T-498	george washington
+H-498	-0.7699583768844604	george gurdjieff
+D-498	-0.7699583768844604	george gurdjieff
+P-498	-0.3431 -1.9664 -0.0003
+S-504	<unk> <unk>
+T-504	<<unk>> <<unk>>
+H-504	-3.395026922225952	cosmetics
+D-504	-3.395026922225952	cosmetics
+P-504	-6.7866 -0.0034
+S-505	<unk> શાહ
+T-505	<<unk>> shah
+H-505	-1.8842167854309082	shah
+D-505	-1.8842167854309082	shah
+P-505	-2.2852 -1.4832
+S-510	<unk> ભાષા
+T-510	<<unk>> language
+H-510	-2.2696962356567383	mizo language
+D-510	-2.2696962356567383	mizo language
+P-510	-6.8018 -0.0070 -0.0003
+S-511	<unk> <unk>
+T-511	<<unk>> <<unk>>
+H-511	-3.395026922225952	cosmetics
+D-511	-3.395026922225952	cosmetics
+P-511	-6.7866 -0.0034
+S-520	જૂન ૫
+T-520	june 5
+H-520	-0.014748616144061089	june 5
+D-520	-0.014748616144061089	june 5
+P-520	-0.0041 -0.0396 -0.0006
+S-474	સુવર્ણ માનક
+T-474	<<unk>> standard
+H-474	-2.3373215198516846	golden temple
+D-474	-2.3373215198516846	golden temple
+P-474	-3.1401 -3.8623 -0.0096
+S-526	<unk> <unk>
+T-526	<<unk>> <<unk>>
+H-526	-3.395026922225952	cosmetics
+D-526	-3.395026922225952	cosmetics
+P-526	-6.7866 -0.0034
+S-528	ડિસેમ્બર ૧૨
+T-528	december 12
+H-528	-0.004241968039423227	december 12
+D-528	-0.004241968039423227	december 12
+P-528	-0.0046 -0.0079 -0.0002
+S-532	વિદર્ભ એક્સપ્રેસ
+T-532	vidarbha express
+H-532	-1.3811602592468262	vidarbha express
+D-532	-1.3811602592468262	vidarbha express
+P-532	-3.5406 -0.6007 -0.0022
+S-534	<unk> <unk>
+T-534	<<unk>> <<unk>>
+H-534	-3.395026922225952	cosmetics
+D-534	-3.395026922225952	cosmetics
+P-534	-6.7866 -0.0034
+S-536	<unk> જિલ્લો
+T-536	<<unk>> district
+H-536	-2.437493324279785	communication district
+D-536	-2.437493324279785	communication district
+P-536	-7.3047 -0.0021 -0.0057
+S-539	<unk> <unk>
+T-539	<<unk>> star
+H-539	-3.395026922225952	cosmetics
+D-539	-3.395026922225952	cosmetics
+P-539	-6.7866 -0.0034
+S-540	કુલ્લૂ ખીણ
+T-540	kullu valley
+H-540	-0.1348324716091156	kullu
+D-540	-0.1348324716091156	kullu
+P-540	-0.2565 -0.0131
+S-541	રેખા <unk>
+T-541	rekha <<unk>>
+H-541	-2.75887131690979	solar system
+D-541	-2.75887131690979	solar system
+P-541	-6.8988 -1.3199 -0.0579
+S-542	<unk> બચ્ચન
+T-542	<<unk>> bachchan
+H-542	-1.3349491357803345	bachchan bachchan
+D-542	-1.3349491357803345	bachchan bachchan
+P-542	-2.6209 -1.3300 -0.0540
+S-545	<unk> મસાલો
+T-545	<<unk>> masala
+H-545	-1.574660062789917	chaat masala
+D-545	-1.574660062789917	chaat masala
+P-545	-4.0088 -0.7008 -0.0144
+S-547	<unk> પક્ષીઓ
+T-547	bird migration
+H-547	-2.2377703189849854	predators
+D-547	-2.2377703189849854	predators
+P-547	-4.4751 -0.0004
+S-553	મુંગેર વિભાગ
+T-553	munger division
+H-553	-1.2227404117584229	munger division
+D-553	-1.2227404117584229	munger division
+P-553	-3.6125 -0.0553 -0.0004
+S-554	<unk> પ્રાંત
+T-554	<<unk>> zone
+H-554	-2.4455549716949463	population division
+D-554	-2.4455549716949463	population division
+P-554	-7.1274 -0.2089 -0.0004
+S-565	<unk> <unk>
+T-565	<<unk>> <<unk>>
+H-565	-3.395026922225952	cosmetics
+D-565	-3.395026922225952	cosmetics
+P-565	-6.7866 -0.0034
+S-567	તેહરી બંધ
+T-567	tehri dam
+H-567	-1.3085920810699463	tehri dam
+D-567	-1.3085920810699463	tehri dam
+P-567	-2.9603 -0.9643 -0.0012
+S-758	અમદાવાદ જિલ્લો
+T-758	ahmedabad district
+H-758	-0.02588276006281376	ahmedabad district
+D-758	-0.02588276006281376	ahmedabad district
+P-758	-0.0661 -0.0008 -0.0107
+S-727	તમેન્ગલોન્ગ જિલ્લો
+T-727	tamenglong district
+H-727	-0.25498566031455994	tamenglong district
+D-727	-0.25498566031455994	tamenglong district
+P-727	-0.7612 -0.0009 -0.0029
+S-729	બાંકુડા જિલ્લો
+T-729	bankura district
+H-729	-0.1453137993812561	bankura district
+D-729	-0.1453137993812561	bankura district
+P-729	-0.4297 -0.0036 -0.0027
+S-730	<unk> જિલ્લો
+T-730	<<unk>> district
+H-730	-2.437493324279785	communication district
+D-730	-2.437493324279785	communication district
+P-730	-7.3047 -0.0021 -0.0057
+S-732	કોલ્લમ જિલ્લો
+T-732	kollam district
+H-732	-0.11120709776878357	kollam district
+D-732	-0.11120709776878357	kollam district
+P-732	-0.3079 -0.0174 -0.0084
+S-733	<unk> જિલ્લો
+T-733	<<unk>> district
+H-733	-2.437493324279785	communication district
+D-733	-2.437493324279785	communication district
+P-733	-7.3047 -0.0021 -0.0057
+S-737	<unk> ધોધ
+T-737	<<unk>> waterfall
+H-737	-2.1633799076080322	barkana falls
+D-737	-2.1633799076080322	barkana falls
+P-737	-6.4749 -0.0150 -0.0003
+S-738	<unk> <unk>
+T-738	<<unk>> <<unk>>
+H-738	-3.395026922225952	cosmetics
+D-738	-3.395026922225952	cosmetics
+P-738	-6.7866 -0.0034
+S-739	<unk> <unk>
+T-739	<<unk>> management
+H-739	-3.395026922225952	cosmetics
+D-739	-3.395026922225952	cosmetics
+P-739	-6.7866 -0.0034
+S-743	નાની ડુબકી
+T-743	little grebe
+H-743	-1.9439456462860107	grebe
+D-743	-1.9439456462860107	grebe
+P-743	-3.8874 -0.0005
+S-745	<unk> ગ્રુપ
+T-745	<<unk>> group
+H-745	-3.543853521347046	kabir
+D-745	-3.543853521347046	kabir
+P-745	-7.0531 -0.0346
+S-747	જોસેફ <unk>
+T-747	joseph <<unk>>
+H-747	-0.6293496489524841	joseph stalin
+D-747	-0.6293496489524841	joseph stalin
+P-747	-0.9208 -0.9669 -0.0004
+S-748	<unk> <unk>
+T-748	<<unk>> <<unk>>
+H-748	-3.395026922225952	cosmetics
+D-748	-3.395026922225952	cosmetics
+P-748	-6.7866 -0.0034
+S-754	<unk> <unk>
+T-754	user <<unk>>
+H-754	-3.395026922225952	cosmetics
+D-754	-3.395026922225952	cosmetics
+P-754	-6.7866 -0.0034
+S-755	<unk> જિલ્લો
+T-755	<<unk>> district
+H-755	-2.437493324279785	communication district
+D-755	-2.437493324279785	communication district
+P-755	-7.3047 -0.0021 -0.0057
+S-757	કોમ્પ્યુટર <unk>
+T-757	computer <<unk>>
+H-757	-1.1074230670928955	computers
+D-757	-1.1074230670928955	computers
+P-757	-2.2141 -0.0007
+S-726	ઓગસ્ટ ૧૮
+T-726	august 18
+H-726	-0.007604255806654692	august 18
+D-726	-0.007604255806654692	august 18
+P-726	-0.0023 -0.0204 -0.0002
+S-760	<unk> ગુફાઓ
+T-760	<<unk>> caves
+H-760	-1.7283604145050049	caves
+D-760	-1.7283604145050049	caves
+P-760	-3.2728 -0.1839
+S-761	<unk> પૂર્ણિમા
+T-761	<<unk>> purnima
+H-761	-3.583470106124878	purnima
+D-761	-3.583470106124878	purnima
+P-761	-7.1666 -0.0003
+S-769	અજય જાડેજા
+T-769	ajay jadeja
+H-769	-0.38033396005630493	ajay jadeja
+D-769	-0.38033396005630493	ajay jadeja
+P-769	-0.7967 -0.3441 -0.0002
+S-772	માર્ચ ૬
+T-772	march 6
+H-772	-0.014050155878067017	march 6
+D-772	-0.014050155878067017	march 6
+P-772	-0.0026 -0.0392 -0.0003
+S-775	મુઘલ <unk>
+T-775	mughal <<unk>>
+H-775	-1.0748722553253174	mughal emperors
+D-775	-1.0748722553253174	mughal emperors
+P-775	-0.2187 -2.5886 -0.4173
+S-776	ઉત્પાદન ઇજનેરી
+T-776	production engineering
+H-776	-2.4260048866271973	countries in gujarat
+D-776	-2.4260048866271973	countries in gujarat
+P-776	-6.0033 -0.9508 -2.7489 -0.0011
+S-780	<unk> <unk>
+T-780	<<unk>> <<unk>>
+H-780	-3.395026922225952	cosmetics
+D-780	-3.395026922225952	cosmetics
+P-780	-6.7866 -0.0034
+S-783	<unk> દેસાઈ
+T-783	mahadev desai
+H-783	-1.998537302017212	vasant desai
+D-783	-1.998537302017212	vasant desai
+P-783	-5.9041 -0.0913 -0.0002
+S-786	બનાસ ડેરી
+T-786	banas dairy
+H-786	-0.8807333111763	west bengal
+D-786	-0.8807333111763	west bengal
+P-786	-1.2168 -1.3828 -0.0427
+S-790	<unk> નદી
+T-790	<<unk>> river
+H-790	-2.577366828918457	chapora river
+D-790	-2.577366828918457	chapora river
+P-790	-7.7262 -0.0051 -0.0008
+S-791	ધ <unk>
+T-791	the <<unk>>
+H-791	-1.662459135055542	the undertaker
+D-791	-1.662459135055542	the undertaker
+P-791	-0.0115 -4.9754 -0.0005
+S-792	મીઠી <unk>
+T-792	mithi <<unk>>
+H-792	-1.4286800622940063	mithi vav
+D-792	-1.4286800622940063	mithi vav
+P-792	-0.4068 -3.8667 -0.0126
+S-794	<unk> જિલ્લો
+T-794	sabarkantha district
+H-794	-2.437493324279785	communication district
+D-794	-2.437493324279785	communication district
+P-794	-7.3047 -0.0021 -0.0057
+S-796	વૈશ્વિક આરોગ્ય
+T-796	global health
+H-796	-0.7041786313056946	global warming
+D-796	-0.7041786313056946	global warming
+P-796	-1.7187 -0.3936 -0.0002
+S-798	<unk> જિલ્લો
+T-798	<<unk>> district
+H-798	-2.437493324279785	communication district
+D-798	-2.437493324279785	communication district
+P-798	-7.3047 -0.0021 -0.0057
+S-692	ગુલબર્ગ જિલ્લો
+T-692	gulbarga district
+H-692	-0.13069887459278107	gulbarga district
+D-692	-0.13069887459278107	gulbarga district
+P-692	-0.3851 -0.0045 -0.0024
+S-649	<unk> <unk>
+T-649	<<unk>> <<unk>>
+H-649	-3.395026922225952	cosmetics
+D-649	-3.395026922225952	cosmetics
+P-649	-6.7866 -0.0034
+S-650	<unk> ખીણ
+T-650	<<unk>> valley
+H-650	-2.4811387062072754	valley
+D-650	-2.4811387062072754	valley
+P-650	-4.5607 -0.4016
+S-653	મહાકાળી ગુફાઓ
+T-653	mahakali caves
+H-653	-1.055580496788025	ghadhasaru and caves
+D-653	-1.055580496788025	ghadhasaru and caves
+P-653	-3.4732 -0.2189 -0.5261 -0.0042
+S-655	ગઢવા જિલ્લો
+T-655	garhwa district
+H-655	-0.2235259711742401	garhwa district
+D-655	-0.2235259711742401	garhwa district
+P-655	-0.6576 -0.0099 -0.0031
+S-659	<unk> ક્રાંતિ
+T-659	operation <<unk>>
+H-659	-3.2488372325897217	industrial revolution
+D-659	-3.2488372325897217	industrial revolution
+P-659	-7.5288 -2.2171 -0.0006
+S-660	<unk> જ્વાળામુખી
+T-660	<<unk>> volcano
+H-660	-2.2106239795684814	volcano
+D-660	-2.2106239795684814	volcano
+P-660	-4.4186 -0.0026
+S-661	સમાજ <unk>
+T-661	social <<unk>>
+H-661	-2.253002166748047	arya samaj
+D-661	-2.253002166748047	arya samaj
+P-661	-5.9017 -0.8569 -0.0004
+S-667	<unk> ઘાટ
+T-667	<<unk>> ghat
+H-667	-2.9266300201416016	microsoft ghat
+D-667	-2.9266300201416016	microsoft ghat
+P-667	-7.1481 -1.6314 -0.0004
+S-672	<unk> પાર્ક
+T-672	<<unk>> park
+H-672	-2.482656955718994	park
+D-672	-2.482656955718994	park
+P-672	-4.8363 -0.1291
+S-677	જૂન ૩૦
+T-677	june 30
+H-677	-0.025971805676817894	june 30
+D-677	-0.025971805676817894	june 30
+P-677	-0.0035 -0.0737 -0.0007
+S-679	નરેન્દ્ર <unk>
+T-679	narendra <<unk>>
+H-679	-1.374811053276062	narendra modi
+D-679	-1.374811053276062	narendra modi
+P-679	-0.5833 -3.5409 -0.0002
+S-681	<unk> દ્વીપ
+T-681	christmas island
+H-681	-3.3425168991088867	cosmetics
+D-681	-3.3425168991088867	cosmetics
+P-681	-6.6816 -0.0035
+S-682	<unk> <unk>
+T-682	george <<unk>>
+H-682	-3.395026922225952	cosmetics
+D-682	-3.395026922225952	cosmetics
+P-682	-6.7866 -0.0034
+S-683	જુલાઇ ૬
+T-683	july 6
+H-683	-0.009105468168854713	july 6
+D-683	-0.009105468168854713	july 6
+P-683	-0.0028 -0.0242 -0.0003
+S-689	એપ્રિલ ૨૭
+T-689	april 27
+H-689	-0.008319007232785225	april 27
+D-689	-0.008319007232785225	april 27
+P-689	-0.0019 -0.0229 -0.0002
+S-648	<unk> <unk>
+T-648	<<unk>> <<unk>>
+H-648	-3.395026922225952	cosmetics
+D-648	-3.395026922225952	cosmetics
+P-648	-6.7866 -0.0034
+S-695	સપ્ટેમ્બર ૨૪
+T-695	september 24
+H-695	-0.006941509898751974	september 24
+D-695	-0.006941509898751974	september 24
+P-695	-0.0050 -0.0128 -0.0030
+S-696	ધ્રાંગધ્રા રેલ્વે
+T-696	dhrangadhra railway
+H-696	-0.7524950504302979	dharangadhra railway station
+D-696	-0.7524950504302979	dharangadhra railway station
+P-696	-1.8051 -0.0193 -1.1851 -0.0005
+S-699	<unk> પરમાર
+T-699	<<unk>> parmar
+H-699	-1.5539299249649048	parmar
+D-699	-1.5539299249649048	parmar
+P-699	-3.1073 -0.0006
+S-703	થૌબલ જિલ્લો
+T-703	thoubal district
+H-703	-0.11410756409168243	thoubal district
+D-703	-0.11410756409168243	thoubal district
+P-703	-0.1219 -0.2196 -0.0009
+S-705	<unk> <unk>
+T-705	<<unk>> <<unk>>
+H-705	-3.395026922225952	cosmetics
+D-705	-3.395026922225952	cosmetics
+P-705	-6.7866 -0.0034
+S-707	મહારાજા <unk>
+T-707	<<unk>> singh
+H-707	-0.8340322375297546	maharaja sayajirao university
+D-707	-0.8340322375297546	maharaja sayajirao university
+P-707	-1.8868 -0.6295 -0.7933 -0.0266
+S-708	<unk> ભાષા
+T-708	<<unk>> language
+H-708	-2.2696962356567383	mizo language
+D-708	-2.2696962356567383	mizo language
+P-708	-6.8018 -0.0070 -0.0003
+S-709	એપ્રિલ ૫
+T-709	april 5
+H-709	-0.012930362485349178	april 5
+D-709	-0.012930362485349178	april 5
+P-709	-0.0022 -0.0361 -0.0005
+S-710	માર્ચ ૭
+T-710	march 7
+H-710	-0.005464283283799887	march 7
+D-710	-0.005464283283799887	march 7
+P-710	-0.0027 -0.0135 -0.0002
+S-712	માર્ચ ૨
+T-712	march 2
+H-712	-0.011312099173665047	march 2
+D-712	-0.011312099173665047	march 2
+P-712	-0.0027 -0.0311 -0.0001
+S-715	સરિતા ગાયકવાડ
+T-715	sarita <<unk>>
+H-715	-1.1901880502700806	sarita gaekwad
+D-715	-1.1901880502700806	sarita gaekwad
+P-715	-1.3885 -1.1987 -0.9834
+S-716	માર્ચ ૨૯
+T-716	march 29
+H-716	-0.023881446570158005	march 29
+D-716	-0.023881446570158005	march 29
+P-716	-0.0023 -0.0691 -0.0003
+S-718	વારલી <unk>
+T-718	warli <<unk>>
+H-718	-1.8189492225646973	warli
+D-718	-1.8189492225646973	warli
+P-718	-3.6368 -0.0011
+S-721	ફેબ્રુઆરી ૧૫
+T-721	february 15
+H-721	-0.006600346881896257	february 15
+D-721	-0.006600346881896257	february 15
+P-721	-0.0079 -0.0116 -0.0003
+S-722	વિકિપીડિયા <unk>
+T-722	wikipedia <<unk>>
+H-722	-1.5809173583984375	wikipedia help
+D-722	-1.5809173583984375	wikipedia help
+P-722	-0.1903 -4.5520 -0.0004
+S-210	અમદાવાદના દરવાજા
+T-210	gates of ahmedabad
+H-210	-1.8317307233810425	teen darwaza
+D-210	-1.8317307233810425	teen darwaza
+P-210	-4.0728 -1.4222 -0.0002
+S-891	શિમલા જિલ્લો
+T-891	shimla district
+H-891	-0.062016766518354416	shimla district
+D-891	-0.062016766518354416	shimla district
+P-891	-0.1820 -0.0014 -0.0027
+S-893	<unk> બંધ
+T-893	<<unk>> dam
+H-893	-2.1539289951324463	omkareshwar dam
+D-893	-2.1539289951324463	omkareshwar dam
+P-893	-6.4378 -0.0228 -0.0012
+S-894	નર્મદા જિલ્લો
+T-894	narmada district
+H-894	-0.19425401091575623	narmada district
+D-894	-0.19425401091575623	narmada district
+P-894	-0.3840 -0.1958 -0.0029
+S-897	<unk> <unk>
+T-897	<<unk>> <<unk>>
+H-897	-3.395026922225952	cosmetics
+D-897	-3.395026922225952	cosmetics
+P-897	-6.7866 -0.0034
+S-899	<unk> નારાયણ
+T-899	sunita narain
+H-899	-3.4200572967529297	kabir
+D-899	-3.4200572967529297	kabir
+P-899	-6.8099 -0.0302
+S-900	<unk> જિલ્લો
+T-900	<<unk>> district
+H-900	-2.437493324279785	communication district
+D-900	-2.437493324279785	communication district
+P-900	-7.3047 -0.0021 -0.0057
+S-905	માર્ચ ૨૪
+T-905	march 24
+H-905	-0.011496266350150108	march 24
+D-905	-0.011496266350150108	march 24
+P-905	-0.0023 -0.0311 -0.0011
+S-7	<unk> રાષ્ટ્રધ્વજ
+T-7	flag of nepal
+H-7	-1.4738174676895142	flag of laos
+D-7	-1.4738174676895142	flag of laos
+P-7	-0.0018 -0.0032 -5.8900 -0.0003
+S-20	ભારતીય <unk>
+T-20	bharatiya jana <<unk>>
+H-20	-1.6751151084899902	indian subcontinent
+D-20	-1.6751151084899902	indian subcontinent
+P-20	-0.2548 -4.7703 -0.0002
+S-38	<unk> રાષ્ટ્રધ્વજ
+T-38	flag of <<unk>>
+H-38	-1.4738174676895142	flag of laos
+D-38	-1.4738174676895142	flag of laos
+P-38	-0.0018 -0.0032 -5.8900 -0.0003
+S-62	<unk> <unk>
+T-62	<<unk>> <<unk>> <<unk>>
+H-62	-3.395026922225952	cosmetics
+D-62	-3.395026922225952	cosmetics
+P-62	-6.7866 -0.0034
+S-71	ભારતના રાષ્ટ્રપતિ
+T-71	presidents of india
+H-71	-0.767278254032135	list of india
+D-71	-0.767278254032135	list of india
+P-71	-2.0250 -0.0008 -0.9901 -0.0533
+S-176	માહિતીચોકઠું રોગ
+T-176	infobox medical <<unk>>
+H-176	-1.648343801498413	infobox recurring event
+D-176	-1.648343801498413	infobox recurring event
+P-176	-0.0051 -3.4955 -3.0926 -0.0002
+S-180	<unk> રાષ્ટ્રધ્વજ
+T-180	flag of chad
+H-180	-1.4738174676895142	flag of laos
+D-180	-1.4738174676895142	flag of laos
+P-180	-0.0018 -0.0032 -5.8900 -0.0003
+S-185	<unk> શહેરો
+T-185	cities in europe
+H-185	-1.0319210290908813	cities in france
+D-185	-1.0319210290908813	cities in france
+P-185	-0.4687 -1.6509 -2.0078 -0.0002
+S-886	જાન્યુઆરી ૬
+T-886	january 6
+H-886	-0.006305876187980175	january 6
+D-886	-0.006305876187980175	january 6
+P-886	-0.0030 -0.0157 -0.0003
+S-221	ભારતમાં <unk>
+T-221	<<unk>> in india
+H-221	-1.0707688331604004	list of india
+D-221	-1.0707688331604004	list of india
+P-221	-2.2751 -0.0028 -1.8445 -0.1607
+S-225	મોહન ગોસ્વામી
+T-225	mohan nath goswami
+H-225	-1.666766881942749	mohan
+D-225	-1.666766881942749	mohan
+P-225	-0.5326 -2.8010
+S-229	<unk> રાષ્ટ્રધ્વજ
+T-229	flag of bahrain
+H-229	-1.4738174676895142	flag of laos
+D-229	-1.4738174676895142	flag of laos
+P-229	-0.0018 -0.0032 -5.8900 -0.0003
+S-241	<unk> રાષ્ટ્રધ્વજ
+T-241	flag of indonesia
+H-241	-1.4738174676895142	flag of laos
+D-241	-1.4738174676895142	flag of laos
+P-241	-0.0018 -0.0032 -5.8900 -0.0003
+S-281	કાશી વિશ્વનાથ
+T-281	<<unk>> vishwanath temple
+H-281	-3.889171600341797	lithium
+D-281	-3.889171600341797	lithium
+P-281	-7.7778 -0.0006
+S-405	ભારતમાં <unk>
+T-405	health in india
+H-405	-1.0707688331604004	list of india
+D-405	-1.0707688331604004	list of india
+P-405	-2.2751 -0.0028 -1.8445 -0.1607
+S-426	ભારતીય અભિનેત્રી
+T-426	indian film actresses
+H-426	-0.9099546074867249	indian actresses
+D-426	-0.9099546074867249	indian actresses
+P-426	-1.7467 -0.9828 -0.0003
+S-433	વિકિપીડિયા સમાચાર
+T-433	in the <<unk>>
+H-433	-1.2014377117156982	wikipedia samachar
+D-433	-1.2014377117156982	wikipedia samachar
+P-433	-0.2267 -3.3770 -0.0006
+S-445	ભારતના <unk>
+T-445	<<unk>> in india
+H-445	-0.719254195690155	list of india
+D-445	-0.719254195690155	list of india
+P-445	-2.0581 -0.0017 -0.5587 -0.2586
+S-460	<unk> રાષ્ટ્રધ્વજ
+T-460	flag of lithuania
+H-460	-1.4738174676895142	flag of laos
+D-460	-1.4738174676895142	flag of laos
+P-460	-0.0018 -0.0032 -5.8900 -0.0003
+S-507	ભારતના રાષ્ટ્રપતિ
+T-507	<<unk>> of india
+H-507	-0.767278254032135	list of india
+D-507	-0.767278254032135	list of india
+P-507	-2.0250 -0.0008 -0.9901 -0.0533
+S-538	<unk> મૂર્તિ
+T-538	statue of <<unk>>
+H-538	-0.9893103837966919	murti
+D-538	-0.9893103837966919	murti
+P-538	-1.9785 -0.0002
+S-549	ભારતીય સંગીત
+T-549	music of india
+H-549	-0.3878849446773529	indian music
+D-549	-0.3878849446773529	indian music
+P-549	-0.0422 -1.1192 -0.0023
+S-550	<unk> <unk>
+T-550	<<unk>> kumar <<unk>>
+H-550	-3.395026922225952	cosmetics
+D-550	-3.395026922225952	cosmetics
+P-550	-6.7866 -0.0034
+S-610	<unk> નાયક
+T-610	<<unk>> keshav nayak
+H-610	-1.9622340202331543	madakari nayaka
+D-610	-1.9622340202331543	madakari nayaka
+P-610	-4.8727 -1.0136 -0.0004
+S-831	ઓક્ટોબર ૪
+T-831	october 4
+H-831	-0.010441910475492477	october 4
+D-831	-0.010441910475492477	october 4
+P-831	-0.0024 -0.0285 -0.0004
+S-803	માર્ચ ૧૩
+T-803	march 13
+H-803	-0.011837667785584927	march 13
+D-803	-0.011837667785584927	march 13
+P-803	-0.0028 -0.0321 -0.0006
+S-805	મહાકાલી પ્રાંત
+T-805	mahakali zone
+H-805	-0.8301839828491211	mahakali division
+D-805	-0.8301839828491211	mahakali division
+P-805	-1.5336 -0.9564 -0.0005
+S-806	<unk> હિન્દી
+T-806	<<unk>> hindi
+H-806	-3.585545539855957	hindi
+D-806	-3.585545539855957	hindi
+P-806	-6.8271 -0.3440
+S-807	અરવલ જિલ્લો
+T-807	arwal district
+H-807	-0.12056045979261398	arwal district
+D-807	-0.12056045979261398	arwal district
+P-807	-0.3546 -0.0015 -0.0056
+S-808	<unk> નદી
+T-808	<<unk>> river
+H-808	-2.577366828918457	chapora river
+D-808	-2.577366828918457	chapora river
+P-808	-7.7262 -0.0051 -0.0008
+S-809	એપ્રિલ ૯
+T-809	april 9
+H-809	-0.005932497326284647	april 9
+D-809	-0.005932497326284647	april 9
+P-809	-0.0025 -0.0151 -0.0002
+S-810	<unk> જિલ્લો
+T-810	<<unk>> district
+H-810	-2.437493324279785	communication district
+D-810	-2.437493324279785	communication district
+P-810	-7.3047 -0.0021 -0.0057
+S-813	ફેબ્રુઆરી ૧૭
+T-813	february 17
+H-813	-0.01696065254509449	february 17
+D-813	-0.01696065254509449	february 17
+P-813	-0.0318 -0.0189 -0.0002
+S-814	કચ્છ રાજ્ય
+T-814	kutch state
+H-814	-1.3181207180023193	kutch kutch kutch
+D-814	-1.3181207180023193	kutch kutch kutch
+P-814	-0.0195 -2.0908 -3.0880 -0.0742
+S-815	<unk> <unk>
+T-815	<<unk>> <<unk>>
+H-815	-3.395026922225952	cosmetics
+D-815	-3.395026922225952	cosmetics
+P-815	-6.7866 -0.0034
+S-820	જાન્યુઆરી ૨૬
+T-820	january 26
+H-820	-0.006854868493974209	january 26
+D-820	-0.006854868493974209	january 26
+P-820	-0.0024 -0.0179 -0.0002
+S-821	<unk> ગિરનાર
+T-821	<<unk>> girnar
+H-821	-0.3362550437450409	girnar
+D-821	-0.3362550437450409	girnar
+P-821	-0.3427 -0.3299
+S-828	<unk> <unk>
+T-828	gulf war
+H-828	-3.395026922225952	cosmetics
+D-828	-3.395026922225952	cosmetics
+P-828	-6.7866 -0.0034
+S-829	મહાત્મા ગાંધી
+T-829	mahatma gandhi
+H-829	-0.557275652885437	mahatma gandhi
+D-829	-0.557275652885437	mahatma gandhi
+P-829	-1.2586 -0.0109 -0.4024
+S-830	કોલાબા કિલ્લો
+T-830	<<unk>> fort
+H-830	-0.37183868885040283	colaba
+D-830	-0.37183868885040283	colaba
+P-830	-0.6630 -0.0807
+S-802	વાંસદા રજવાડું
+T-802	<<unk>> state
+H-802	-0.04410257935523987	vansda state
+D-802	-0.04410257935523987	vansda state
+P-802	-0.0175 -0.1132 -0.0017
+S-837	<unk> જિલ્લો
+T-837	<<unk>> district
+H-837	-2.437493324279785	communication district
+D-837	-2.437493324279785	communication district
+P-837	-7.3047 -0.0021 -0.0057
+S-838	<unk> રજવાડું
+T-838	<<unk>> state
+H-838	-1.890874981880188	state
+D-838	-1.890874981880188	state
+P-838	-3.4942 -0.2876
+S-840	કોઇમ્બતુર જિલ્લો
+T-840	coimbatore district
+H-840	-0.15182703733444214	coimbatore district
+D-840	-0.15182703733444214	coimbatore district
+P-840	-0.4442 -0.0058 -0.0055
+S-841	<unk> જિલ્લો
+T-841	<<unk>> district
+H-841	-2.437493324279785	communication district
+D-841	-2.437493324279785	communication district
+P-841	-7.3047 -0.0021 -0.0057
+S-842	<unk> વંશ
+T-842	<<unk>> dynasty
+H-842	-2.5937113761901855	rajendra dynasty
+D-842	-2.5937113761901855	rajendra dynasty
+P-842	-7.4159 -0.3648 -0.0004
+S-843	મૈસૂર જિલ્લો
+T-843	mysore district
+H-843	-0.10936558991670609	mysore district
+D-843	-0.10936558991670609	mysore district
+P-843	-0.3214 -0.0015 -0.0052
+S-854	સ્ટાર <unk>
+T-854	star <<unk>>
+H-854	-3.497507333755493	kasar devi
+D-854	-3.497507333755493	kasar devi
+P-854	-8.0334 -2.4538 -0.0053
+S-856	લક્ષ્મણ <unk>
+T-856	<<unk>> <<unk>>
+H-856	-1.1110340356826782	lakshmana
+D-856	-1.1110340356826782	lakshmana
+P-856	-1.1444 -1.0777
+S-859	ગુજરાત વિદ્યાપીઠ
+T-859	gujarat <<unk>>
+H-859	-2.1493797302246094	gujarat university
+D-859	-2.1493797302246094	gujarat university
+P-859	-0.0405 -5.9254 -0.4822
+S-870	<unk> યુનિવર્સિટી
+T-870	<<unk>> university
+H-870	-1.7761847972869873	university of india
+D-870	-1.7761847972869873	university of india
+P-870	-3.6757 -0.1639 -3.2376 -0.0276
+S-871	ઓક્ટોબર ૧૭
+T-871	october 17
+H-871	-0.016340382397174835	october 17
+D-871	-0.016340382397174835	october 17
+P-871	-0.0026 -0.0462 -0.0003
+S-873	<unk> માર્કેટિંગ
+T-873	<<unk>> marketing
+H-873	-2.307506561279297	marketing
+D-873	-2.307506561279297	marketing
+P-873	-4.6146 -0.0004
+S-874	<unk> કુમાર
+T-874	<<unk>> kumar
+H-874	-2.4651577472686768	may kumar
+D-874	-2.4651577472686768	may kumar
+P-874	-7.1277 -0.1663 -0.1015
+S-877	ઝાલાવાડ જિલ્લો
+T-877	jhalawar district
+H-877	-0.05828648805618286	jhalawar district
+D-877	-0.05828648805618286	jhalawar district
+P-877	-0.1641 -0.0079 -0.0029
+S-885	<unk> <unk>
+T-885	<<unk>> <<unk>>
+H-885	-3.395026922225952	cosmetics
+D-885	-3.395026922225952	cosmetics
+P-885	-6.7866 -0.0034
+S-260	કાર્ડિફ સિટી સ્ટેડિયમ
+T-260	cardiff city stadium
+H-260	-0.5357992649078369	cardiff city stadium
+D-260	-0.5357992649078369	cardiff city stadium
+P-260	-0.3793 -0.0511 -1.7074 -0.0055
+S-812	કાળા <unk> <unk>
+T-812	<<unk>> <<unk>>
+H-812	-3.710516929626465	chickpea
+D-812	-3.710516929626465	chickpea
+P-812	-7.4069 -0.0142
+S-898	<unk> સ્વામી મહારાજ
+T-898	<<unk>> swami
+H-898	-2.259999990463257	microsoft maharaj
+D-898	-2.259999990463257	microsoft maharaj
+P-898	-6.2690 -0.4797 -0.0313
+S-10	ડો <unk> <unk>
+T-10	har gobind <<unk>>
+H-10	-2.6722605228424072	k radhakrishnan
+D-10	-2.6722605228424072	k radhakrishnan
+P-10	-4.8708 -3.1456 -0.0004
+S-78	મહેંદી નવાઝ <unk>
+T-78	<<unk>> nawaz <<unk>>
+H-78	-2.8358442783355713	solar system
+D-78	-2.8358442783355713	solar system
+P-78	-7.2800 -1.0311 -0.1964
+S-112	<unk> જ્યોર્જ મુંબઇ
+T-112	fort george bombay
+H-112	-2.62790584564209	bombay state
+D-112	-2.62790584564209	bombay state
+P-112	-5.7272 -2.0090 -0.1476
+S-121	હિરોશિમા શાંતિ સ્મારક
+T-121	hiroshima peace memorial
+H-121	-1.6524207592010498	atomic number
+D-121	-1.6524207592010498	atomic number
+P-121	-2.0540 -2.4861 -0.4171
+S-132	<unk> <unk> <unk>
+T-132	<<unk>> flying <<unk>>
+H-132	-3.3871188163757324	central library
+D-132	-3.3871188163757324	central library
+P-132	-6.6012 -3.5411 -0.0191
+S-169	પૌડી ગઢવાલ જિલ્લો
+T-169	pauri garhwal district
+H-169	-0.6517403721809387	pauri district
+D-169	-0.6517403721809387	pauri district
+P-169	-1.9452 -0.0046 -0.0054
+S-181	અફઘાનિસ્તાન ક્રિકેટ બોર્ડ
+T-181	afghanistan cricket board
+H-181	-1.5136643648147583	afghanistan in india
+D-181	-1.5136643648147583	afghanistan in india
+P-181	-0.3787 -4.9147 -0.6547 -0.1065
+S-184	<unk> <unk> <unk>
+T-184	<<unk>> <<unk>> sultan
+H-184	-3.3871188163757324	central library
+D-184	-3.3871188163757324	central library
+P-184	-6.6012 -3.5411 -0.0191
+S-202	ઉત્તર ગોઆ જિલ્લો
+T-202	north goa district
+H-202	-0.8998042941093445	north korea district
+D-202	-0.8998042941093445	north korea district
+P-202	-0.0492 -3.2184 -0.2852 -0.0465
+S-216	<unk> પંજાબ હત્યાકાંડ
+T-216	<<unk>> punjab <<unk>>
+H-216	-2.0290701389312744	list of chief ministers of india
+D-216	-2.0290701389312744	list of chief ministers of india
+P-216	-6.3444 -0.0072 -5.9602 -0.2194 -0.0037 -1.6629 -0.0057
+S-246	ભારતીય <unk> ખેલાડી
+T-246	indian <<unk>> players
+H-246	-0.7915807366371155	indian people in india
+D-246	-0.7915807366371155	indian people in india
+P-246	-0.4409 -1.1208 -2.3347 -0.0532 -0.0084
+S-254	સીમા સડક <unk>
+T-254	border <<unk>> organisation
+H-254	-2.2378780841827393	border security force
+D-254	-2.2378780841827393	border security force
+P-254	-2.4765 -3.8030 -2.6711 -0.0010
+S-258	<unk> <unk> પાકિસ્તાન
+T-258	<<unk>> to pakistan
+H-258	-3.4237687587738037	central library
+D-258	-3.4237687587738037	central library
+P-258	-6.8379 -3.3802 -0.0532
+S-779	<unk> નાથ શર્મા
+T-779	somnath sharma
+H-779	-2.1005303859710693	abhinandananatha
+D-779	-2.1005303859710693	abhinandananatha
+P-779	-4.1962 -0.0049
+S-294	એચ એમ પટેલ
+T-294	<<unk>> m patel
+H-294	-1.0108590126037598	m patel
+D-294	-1.0108590126037598	m patel
+P-294	-2.4399 -0.5913 -0.0013
+S-297	રાષ્ટ્રીય ધોરીમાર્ગ <unk>
+T-297	national highway <<unk>>
+H-297	-0.7702733278274536	national highway 2a
+D-297	-0.7702733278274536	national highway 2a
+P-297	-0.0034 -0.0875 -2.9898 -0.0003
+S-299	<unk> લખેલી સુવાર્તા
+T-299	gospel of mark
+H-299	-1.8725589513778687	gospel of matthew
+D-299	-1.8725589513778687	gospel of matthew
+P-299	-5.5154 -0.0725 -1.9020 -0.0004
+S-306	<unk> એરિયા નેટવર્ક
+T-306	<<unk>> area network
+H-306	-1.1577072143554688	area network
+D-306	-1.1577072143554688	area network
+P-306	-3.3829 -0.0132 -0.0771
+S-310	ભારતની <unk> <unk>
+T-310	languages of india
+H-310	-2.4064834117889404	state of india
+D-310	-2.4064834117889404	state of india
+P-310	-6.0236 -3.5601 -0.0107 -0.0314
+S-316	<unk> ઓફ પાઇ
+T-316	life of pi
+H-316	-3.1178934574127197	greek pi
+D-316	-3.1178934574127197	greek pi
+P-316	-7.5561 -1.7972 -0.0004
+S-344	<unk> <unk> <unk>
+T-344	<<unk>> <<unk>> disorder
+H-344	-3.3871188163757324	central library
+D-344	-3.3871188163757324	central library
+P-344	-6.6012 -3.5411 -0.0191
+S-345	પૂર્વ સિયાંગ જિલ્લો
+T-345	east siang district
+H-345	-0.8244356513023376	east khasi district
+D-345	-0.8244356513023376	east khasi district
+P-345	-0.0046 -2.7853 -0.5019 -0.0059
+S-379	ભૈરોં સિંઘ <unk>
+T-379	bhairon singh shekhawat
+H-379	-0.8534350991249084	bhairon singh shekhawat
+D-379	-0.8534350991249084	bhairon singh shekhawat
+P-379	-0.4649 -0.0196 -2.9283 -0.0010
+S-389	<unk> મેદાન ભુજ
+T-389	jubilee maidan ground
+H-389	-1.6017296314239502	list of chief ministers of india
+D-389	-1.6017296314239502	list of chief ministers of india
+P-389	-5.6514 -0.0008 -2.1826 -0.0615 -0.0006 -3.3123 -0.0029
+S-412	<unk> દેવી મંદિર
+T-412	<<unk>> devi temple
+H-412	-2.559934139251709	central temple
+D-412	-2.559934139251709	central temple
+P-412	-7.3096 -0.2907 -0.0794
+S-416	આઝાદ <unk> <unk>
+T-416	indian national army
+H-416	-1.8230016231536865	azad
+D-416	-1.8230016231536865	azad
+P-416	-3.6359 -0.0101
+S-431	ટ્રાન્સપોર્ટ ફોર લંડન
+T-431	transport for london
+H-431	-2.5824337005615234	transport in india
+D-431	-2.5824337005615234	transport in india
+P-431	-5.4287 -0.9656 -1.3879 -2.5475
+S-440	<unk> ભવન મહેલ
+T-440	<<unk>> <<unk>> palace
+H-440	-3.2994682788848877	microsoft mahal
+D-440	-3.2994682788848877	microsoft mahal
+P-440	-6.7419 -3.1547 -0.0018
+S-455	૪ ગુરખા <unk>
+T-455	<<unk>> gorkha rifles
+H-455	-1.2074170112609863	9th gorkha rifles
+D-455	-1.2074170112609863	9th gorkha rifles
+P-455	-3.9412 -0.4790 -0.4089 -0.0006
+S-751	<unk> <unk> <unk>
+T-751	<<unk>> <<unk>>
+H-751	-3.3871188163757324	central library
+D-751	-3.3871188163757324	central library
+P-751	-6.6012 -3.5411 -0.0191
+S-206	<unk> <unk> <unk>
+T-206	<<unk>>
+H-206	-3.3871188163757324	central library
+D-206	-3.3871188163757324	central library
+P-206	-6.6012 -3.5411 -0.0191
+S-255	<unk> દુર્ગા મંદિર
+T-255	<<unk>>
+H-255	-2.380479574203491	communication temple
+D-255	-2.380479574203491	communication temple
+P-255	-6.2551 -0.8025 -0.0839
+S-41	મહુવા સુરત જિલ્લો
+T-41	mahuva surat
+H-41	-0.8053181171417236	mahuva bhavnagar district
+D-41	-0.8053181171417236	mahuva bhavnagar district
+P-41	-2.7683 -0.4485 -0.0016 -0.0029
+S-86	ડો <unk> <unk>
+T-86	<<unk>> <<unk>>
+H-86	-2.6722605228424072	k radhakrishnan
+D-86	-2.6722605228424072	k radhakrishnan
+P-86	-4.8708 -3.1456 -0.0004
+S-147	<unk> માટેના <unk>
+T-147	sandbox templates
+H-147	-3.013622283935547	central library
+D-147	-3.013622283935547	central library
+P-147	-6.2462 -2.7722 -0.0224
+S-256	<unk> દેવી મંદિર
+T-256	<<unk>> temple
+H-256	-2.559934139251709	central temple
+D-256	-2.559934139251709	central temple
+P-256	-7.3096 -0.2907 -0.0794
+S-295	<unk> મણિશંકર રાવળ
+T-295	<<unk>> raval
+H-295	-2.808704376220703	kavi kant
+D-295	-2.808704376220703	kavi kant
+P-295	-7.0553 -1.3707 -0.0001
+S-314	<unk> <unk> <unk>
+T-314	<<unk>> <<unk>>
+H-314	-3.3871188163757324	central library
+D-314	-3.3871188163757324	central library
+P-314	-6.6012 -3.5411 -0.0191
+S-322	<unk> કુંજ દિલ્હી
+T-322	<<unk>> <<unk>>
+H-322	-2.1587703227996826	delhi gang rape
+D-322	-2.1587703227996826	delhi gang rape
+P-322	-3.7294 -3.8697 -1.0348 -0.0011
+S-350	<unk> ફૂટબોલ ક્લબ
+T-350	<<unk>> fc
+H-350	-2.8250086307525635	barmer fc
+D-350	-2.8250086307525635	barmer fc
+P-350	-6.9980 -1.4766 -0.0005
+S-579	<unk> જિલ્લો નેપાળ
+T-579	<<unk>> district
+H-579	-2.2617719173431396	communication district
+D-579	-2.2617719173431396	communication district
+P-579	-6.7766 -0.0027 -0.0060
+S-609	<unk> જિલ્લો નેપાળ
+T-609	<<unk>> district
+H-609	-2.2617719173431396	communication district
+D-609	-2.2617719173431396	communication district
+P-609	-6.7766 -0.0027 -0.0060
+S-640	ડૉ <unk> રાધાકૃષ્ણન
+T-640	<<unk>> radhakrishnan
+H-640	-2.280947208404541	zakir husain
+D-640	-2.280947208404541	zakir husain
+P-640	-4.7834 -2.0591 -0.0003
+S-694	<unk> જિલ્લો નેપાળ
+T-694	<<unk>> district
+H-694	-2.2617719173431396	communication district
+D-694	-2.2617719173431396	communication district
+P-694	-6.7766 -0.0027 -0.0060
+S-631	ભારતીય <unk>
+T-631	<<unk>> of india
+H-631	-1.6748418807983398	indian subcontinent
+D-631	-1.6748418807983398	indian subcontinent
+P-631	-0.2546 -4.7697 -0.0002
+S-616	<unk> પટ્ટાઇ
+T-616	western <<unk>> harrier
+H-616	-2.4679996967315674	pallid harrier
+D-616	-2.4679996967315674	pallid harrier
+P-616	-7.3117 -0.0922 -0.0001
+S-666	રાષ્ટ્રીય પંચાંગ
+T-666	indian national calendar
+H-666	-1.157970905303955	national panchangam
+D-666	-1.157970905303955	national panchangam
+P-666	-0.0355 -3.4381 -0.0003
+S-686	રાજસ્થાનના <unk>
+T-686	<<unk>> in rajasthan
+H-686	-2.1903374195098877	rajasthan
+D-686	-2.1903374195098877	rajasthan
+P-686	-4.3803 -0.0004
+S-719	કચ્છનો ઇતિહાસ
+T-719	history of kutch
+H-719	-0.511323869228363	history of india
+D-719	-0.511323869228363	history of india
+P-719	-0.0304 -0.0054 -2.0086 -0.0009
+S-762	<unk> મકબરો
+T-762	<<unk>> ka maqbara
+H-762	-1.5172264575958252	mahabat maqbara
+D-762	-1.5172264575958252	mahabat maqbara
+P-762	-4.0981 -0.4534 -0.0002
+S-811	ચિત્રકૂટ ધામ
+T-811	chitrakoot madhya pradesh
+H-811	-0.9089310765266418	chitrakoot dham
+D-811	-0.9089310765266418	chitrakoot dham
+P-811	-0.2559 -2.4706 -0.0003
+S-869	ભારતીય ધોરીમાર્ગો
+T-869	indian highways network
+H-869	-1.4560085535049438	indian highway
+D-869	-1.4560085535049438	indian highway
+P-869	-0.0440 -4.3032 -0.0208
+S-177	ગુજરાતના મુખ્યમંત્રીઓ
+T-177	chief ministers of gujarat
+H-177	-0.050656531006097794	list of chief ministers of gujarat
+D-177	-0.050656531006097794	list of chief ministers of gujarat
+P-177	-0.0009 -0.0010 -0.3249 -0.0092 -0.0008 -0.0160 -0.0018
+S-275	ગુજરાતના <unk>
+T-275	wildlife sanctuaries in gujarat
+H-275	-1.15645170211792	gujarat
+D-275	-1.15645170211792	gujarat
+P-275	-1.4664 -0.8465
+S-723	ગુજરાતી <unk>
+T-723	list of gujaratilanguage <<unk>>
+H-723	-0.8497328162193298	gujarati films
+D-723	-0.8497328162193298	gujarati films
+P-723	-0.1055 -2.4409 -0.0028
+S-825	જિલ્લા પંચાયત
+T-825	district <<unk>> of india
+H-825	-2.040114164352417	district
+D-825	-2.040114164352417	district
+P-825	-4.0751 -0.0051
+S-564	ગુજરાતની યુનિવર્સિટીઓ
+T-564	universities and colleges in gujarat
+H-564	-0.7691566348075867	gujarat
+D-564	-0.7691566348075867	gujarat
+P-564	-0.3202 -1.2182
+S-866	ગુજરાતના રાજ્યપાલો
+T-866	list of governors of gujarat
+H-866	-0.6051296591758728	governors of gujarat
+D-866	-0.6051296591758728	governors of gujarat
+P-866	-2.3933 -0.0108 -0.0130 -0.0034
+S-227	ઈજનેરી <unk>
+T-227	engineering universities and colleges in india
+H-227	-2.0306742191314697	agricultural engineering
+D-227	-2.0306742191314697	agricultural engineering
+P-227	-5.8977 -0.1759 -0.0185
+S-395	મહારાષ્ટ્રના મુખ્યમંત્રીઓ
+T-395	list of chief ministers of maharashtra
+H-395	-0.46898752450942993	list of chief ministers of maharashtra
+D-395	-0.46898752450942993	list of chief ministers of maharashtra
+P-395	-0.0010 -0.0022 -0.2313 -0.0058 -0.0004 -3.0263 -0.0158
+S-734	<unk> મુખ્યમંત્રીઓ
+T-734	list of chief ministers of nagaland
+H-734	-0.34645789861679077	list of chief ministers of india
+D-734	-0.34645789861679077	list of chief ministers of india
+P-734	-0.0020 -0.0018 -0.1784 -0.0044 -0.0009 -2.2371 -0.0006
+S-101	<unk> <unk> ફિલ્મોની યાદી
+T-101	list of <<unk>> films of <<unk>>
+H-101	-1.078491449356079	list of chief ministers of india
+D-101	-1.078491449356079	list of chief ministers of india
+P-101	-0.0056 -0.0027 -4.6043 -0.0364 -0.0012 -2.8918 -0.0075
+S-527	<unk> ઘટના કે <unk>
+T-527	<<unk>>
+H-527	-1.8974767923355103	list of chief ministers of india
+D-527	-1.8974767923355103	list of chief ministers of india
+P-527	-6.2855 -0.0056 -4.3872 -0.0430 -0.0029 -2.5208 -0.0373
+S-892	સંદિગ્ધ શીર્ષક <unk> <unk>
+T-892	disambiguation pages
+H-892	-0.4261409640312195	disambiguation
+D-892	-0.4261409640312195	disambiguation
+P-892	-0.6647 -0.1876
+S-74	<unk> કી <unk> બુંદી
+T-74	<<unk>> ki baori
+H-74	-3.3807780742645264	central library
+D-74	-3.3807780742645264	central library
+P-74	-7.1261 -2.5230 -0.4932
+S-179	લવ <unk> <unk> કલાકાર
+T-179	love <<unk>> <<unk>>
+H-179	-1.318178415298462	lava
+D-179	-1.318178415298462	lava
+P-179	-2.6120 -0.0244
+S-190	<unk> <unk> ફૂટબૉલ ક્લબ
+T-190	<<unk>> <<unk>> fc
+H-190	-3.2356152534484863	people from maharashtra
+D-190	-3.2356152534484863	people from maharashtra
+P-190	-7.4248 -0.6420 -4.8680 -0.0077
+S-390	<unk> રુદ્રપુર <unk> વિસ્ફોટ
+T-390	<<unk>> rudrapur bombings
+H-390	-2.9745686054229736	valley of india
+D-390	-2.9745686054229736	valley of india
+P-390	-7.1360 -0.2480 -4.3633 -0.1510
+S-423	ઓખા મંડળ સ્ટેટ રેલ્વે
+T-423	<<unk>> state railway
+H-423	-1.6824713945388794	okha india state railway
+D-423	-1.6824713945388794	okha india state railway
+P-423	-3.5556 -0.2184 -4.0587 -0.5608 -0.0188
+S-561	જૂના ભવનાથ મંદિર <unk>
+T-561	bhavnath temple mau
+H-561	-1.8323533535003662	juna temple
+D-561	-1.8323533535003662	juna temple
+P-561	-1.8346 -2.1956 -1.4668
+S-594	<unk> <unk> ગુફા મંદિર
+T-594	<<unk>> <<unk>> caves
+H-594	-3.127364158630371	greek alphabet
+D-594	-3.127364158630371	greek alphabet
+P-594	-6.9715 -2.4022 -0.0084
+S-625	ક્રિસ્ટલ પેલેસ ફૂટબોલ ક્લબ
+T-625	crystal palace fc
+H-625	-2.3874340057373047	liquidcrystal display
+D-625	-2.3874340057373047	liquidcrystal display
+P-625	-4.3720 -2.7242 -0.0661
+S-889	જય વિલાસ મહેલ ગ્વાલિયર
+T-889	jai vilas mahal
+H-889	-0.9443684220314026	laxmi vilas palace vadodara
+D-889	-0.9443684220314026	laxmi vilas palace vadodara
+P-889	-3.9579 -0.1745 -0.0208 -0.5639 -0.0048
+S-91	ઇન્ટરનેશનલ સ્ટાન્ડર્ડ બુક નંબર
+T-91	international standard book number
+H-91	-0.6004770994186401	international standard serial number
+D-91	-0.6004770994186401	international standard serial number
+P-91	-0.1825 -1.2313 -1.1614 -0.4203 -0.0070
+S-113	<unk> <unk> મંદિર મુરૈના
+T-113	chausath yogini temple morena
+H-113	-2.98416805267334	b r temple
+D-113	-2.98416805267334	b r temple
+P-113	-7.1880 -2.7868 -1.8064 -0.1554
+S-145	<unk> અને <unk> પાંડે
+T-145	<<unk>> and <<unk>> pandey
+H-145	-3.2462427616119385	microsoft and kashmir
+D-145	-3.2462427616119385	microsoft and kashmir
+P-145	-6.8841 -0.7328 -5.3615 -0.0066
+S-620	હોટલ તાજ મહેલ પેલેસ
+T-620	the taj mahal palace hotel
+H-620	-1.59445321559906	list of palace palace
+D-620	-1.59445321559906	list of palace palace
+P-620	-3.7573 -0.0028 -1.7323 -2.0875 -0.3924
+S-245	વિસ્તૃત <unk> બધાં લેખો
+T-245	all articles to <<unk>> expanded
+H-245	-1.8204368352890015	world heritage sites in india
+D-245	-1.8204368352890015	world heritage sites in india
+P-245	-6.9417 -2.6782 -1.0198 -0.2294 -0.0300 -0.0234
+S-678	ભારતના <unk> ચૂંટણી ૨૦૧૭
+T-678	2017 indian <<unk>> election
+H-678	-0.6685181856155396	2017 indian vicepresidential election
+D-678	-0.6685181856155396	2017 indian vicepresidential election
+P-678	-1.4993 -0.1149 -1.6582 -0.0685 -0.0017
+S-472	શ્રી <unk> <unk> <unk>
+T-472	shri <<unk>> ni <<unk>>
+H-472	-2.8432869911193848	recipients of india
+D-472	-2.8432869911193848	recipients of india
+P-472	-7.5962 -0.0258 -3.3123 -0.4388
+S-420	સાન <unk> આંતરરાષ્ટ્રીય એરપોર્ટ
+T-420	san <<unk>> international airport
+H-420	-1.488149642944336	san international airport
+D-420	-1.488149642944336	san international airport
+P-420	-0.3220 -1.2201 -4.4099 -0.0006
+S-278	<unk> <unk> મંદિર <unk>
+T-278	<<unk>> <<unk>> temple <<unk>>
+H-278	-3.0035758018493652	central temple khajuraho
+D-278	-3.0035758018493652	central temple khajuraho
+P-278	-6.4037 -1.5427 -4.0677 -0.0002
+S-264	<unk> <unk> ઓફ ઇન્ડિયા
+T-264	airports authority of india
+H-264	-2.3698930740356445	countries of india
+D-264	-2.3698930740356445	countries of india
+P-264	-7.2686 -2.0623 -0.1229 -0.0257
+S-252	<unk> રોડ રેલ્વે સ્ટેશન
+T-252	<<unk>> road railway station
+H-252	-0.59415203332901	road railway station
+D-252	-0.59415203332901	road railway station
+P-252	-2.3021 -0.0191 -0.0529 -0.0025
+S-218	<unk> મચ્છુ બંધ <unk>
+T-218	<<unk>> machchhu dam <<unk>>
+H-218	-2.468554735183716	communication dam
+D-218	-2.468554735183716	communication dam
+P-218	-6.9398 -0.4609 -0.0050
+S-207	ઉકાઇ તાપ વિદ્યુત મથક
+T-207	ukai thermal power station
+H-207	-0.5952978134155273	ukai power station
+D-207	-0.5952978134155273	ukai power station
+P-207	-0.2127 -2.0793 -0.0887 -0.0005
+S-186	<unk> <unk> <unk> <unk>
+T-186	<<unk>> <<unk>> <<unk>> <<unk>>
+H-186	-3.372591495513916	central library
+D-186	-3.372591495513916	central library
+P-186	-6.4745 -3.5345 -0.1087
+S-138	અંદામાન અને નિકોબાર દ્વિપસમૂહ
+T-138	andaman and nicobar islands
+H-138	-0.5689368844032288	andaman and nicobar command
+D-138	-0.5689368844032288	andaman and nicobar command
+P-138	-1.9797 -0.0202 -0.4413 -0.4024 -0.0011
+S-333	<unk> <unk> ઇતિહાસ
+T-333	history of the <<unk>> area
+H-333	-0.5975049734115601	history of india
+D-333	-0.5975049734115601	history of india
+P-333	-0.5688 -0.0260 -1.7908 -0.0044
+S-485	અણુ <unk> સંધિ
+T-485	treaty on the <<unk>> of <<unk>> weapons
+H-485	-1.5197546482086182	atom
+D-485	-1.5197546482086182	atom
+P-485	-2.8937 -0.1458
+S-158	અરુણાચલ પ્રદેશના મુખ્યમંત્રીઓ
+T-158	list of chief ministers of arunachal pradesh
+H-158	-0.5781614780426025	list of chief ministers of pradesh
+D-158	-0.5781614780426025	list of chief ministers of pradesh
+P-158	-0.0025 -0.0011 -0.7767 -0.0094 -0.0006 -3.2560 -0.0009
+S-713	ગુજરાતના <unk> યાદી
+T-713	list of state highways in gujarat
+H-713	-0.7461628913879395	list of gujarat
+D-713	-0.7461628913879395	list of gujarat
+P-713	-0.0032 -0.0008 -1.6955 -1.2852
+S-535	<unk> ગણતંત્રનો રાષ્ટ્રધ્વજ
+T-535	flag of the <<unk>> republic
+H-535	-0.25847044587135315	flag of the republic of the congo
+D-535	-0.25847044587135315	flag of the republic of the congo
+P-535	-0.0021 -0.0016 -0.0982 -0.5427 -0.0037 -0.5787 -0.8388 -0.0019
+S-801	<unk> <unk> ગઢવી
+T-801	<<unk>> <<unk>> gadhavi
+H-801	-3.1787161827087402	b k gadhvi
+D-801	-3.1787161827087402	b k gadhvi
+P-801	-5.1495 -4.7297 -2.8350 -0.0007
+S-506	સુરત શબ્દ યોગ
+T-506	surat <<unk>> yoga
+H-506	-1.7629456520080566	abbreviation
+D-506	-1.7629456520080566	abbreviation
+P-506	-3.5249 -0.0010
+S-512	<unk> <unk> સિંઘ
+T-512	joginder <<unk>> singh
+H-512	-2.839163064956665	central singh
+D-512	-2.839163064956665	central singh
+P-512	-7.1637 -0.5229 -0.8309
+S-516	<unk> જીવરાજ મહેતા
+T-516	<<unk>> jivraj mehta
+H-516	-0.8903141021728516	jivraj narayan mehta
+D-516	-0.8903141021728516	jivraj narayan mehta
+P-516	-3.1634 -0.3736 -0.0226 -0.0017
+S-575	ગણેશ વાસુદેવ <unk>
+T-575	ganesh vasudev <<unk>>
+H-575	-2.4325387477874756	ganesha
+D-575	-2.4325387477874756	ganesha
+P-575	-4.8508 -0.0143
+S-580	<unk> <unk> કોર્પોરેશન
+T-580	<<unk>> india limited
+H-580	-2.899859666824341	central library
+D-580	-2.899859666824341	central library
+P-580	-6.2113 -2.4187 -0.0697
+S-582	<unk> મહાદેવ મંદિર
+T-582	<<unk>> mahadev temple
+H-582	-2.3823606967926025	central temple
+D-582	-2.3823606967926025	central temple
+P-582	-6.6776 -0.1135 -0.3560
+S-615	<unk> શાસ્ત્રી <unk>
+T-615	<<unk>> shastri <<unk>>
+H-615	-1.6304609775543213	kavi shastri
+D-615	-1.6304609775543213	kavi shastri
+P-615	-4.5006 -0.3900 -0.0007
+S-636	ઉદયપુર વન્યજીવન અભયારણ્ય
+T-636	<<unk>> wildlife sanctuary
+H-636	-0.5737544894218445	udaipur wildlife sanctuary
+D-636	-0.5737544894218445	udaipur wildlife sanctuary
+P-636	-2.0434 -0.1897 -0.0612 -0.0008
+S-654	રાષ્ટ્રીય ધોરીમાર્ગ <unk>
+T-654	national highway <<unk>>
+H-654	-0.7702733278274536	national highway 2a
+D-654	-0.7702733278274536	national highway 2a
+P-654	-0.0034 -0.0875 -2.9898 -0.0003
+S-671	એમ <unk> હુસૈન
+T-671	m <<unk>> husain
+H-671	-2.2164175510406494	m c escher
+D-671	-2.2164175510406494	m c escher
+P-671	-0.1770 -4.9298 -3.7586 -0.0003
+S-740	<unk> <unk> સિંઘ
+T-740	<<unk>> <<unk>> singh
+H-740	-2.839163064956665	central singh
+D-740	-2.839163064956665	central singh
+P-740	-7.1637 -0.5229 -0.8309
+S-759	<unk> મોહન <unk>
+T-759	madan mohan <<unk>>
+H-759	-2.473513603210449	outposts of india
+D-759	-2.473513603210449	outposts of india
+P-759	-7.6388 -0.1844 -2.0624 -0.0084
+S-773	વી એસ <unk>
+T-773	v s <<unk>>
+H-773	-1.0086265802383423	v sindhu
+D-773	-1.0086265802383423	v sindhu
+P-773	-0.4827 -2.5423 -0.0009
+S-789	ધ પાર્ક <unk>
+T-789	the park chennai
+H-789	-0.7912046313285828	the park
+D-789	-0.7912046313285828	the park
+P-789	-0.0090 -2.3148 -0.0498
+S-795	<unk> મંદિર ઇન્દોર
+T-795	<<unk>> ganesh temple
+H-795	-2.0528006553649902	central temple
+D-795	-2.0528006553649902	central temple
+P-795	-5.6450 -0.1301 -0.3833
+S-484	પી સી વૈદ્ય
+T-484	<<unk>> <<unk>> vaidya
+H-484	-2.1817004680633545	p k sethi
+D-484	-2.1817004680633545	p k sethi
+P-484	-0.8675 -3.3719 -4.4870 -0.0003
+S-804	કૃષિ યુનિવર્સિટી નવસારી
+T-804	navsari agricultural university
+H-804	-1.0280853509902954	agricultural university of india
+D-804	-1.0280853509902954	agricultural university of india
+P-804	-1.7396 -0.1023 -0.3902 -2.9037 -0.0047
+S-817	<unk> <unk> સંગ્રહાલય
+T-817	<<unk>> <<unk>> museum
+H-817	-3.1525168418884277	central library
+D-817	-3.1525168418884277	central library
+P-817	-7.3160 -2.1359 -0.0056
+S-826	<unk> વન્યજીવન અભયારણ્ય
+T-826	<<unk>> wildlife sanctuary
+H-826	-1.1611948013305664	wildlife sanctuary
+D-826	-1.1611948013305664	wildlife sanctuary
+P-826	-3.3973 -0.0854 -0.0008
+S-850	માહિતીચોકઠું દેવી દેવતા
+T-850	infobox hindu <<unk>>
+H-850	-0.37812456488609314	infobox deities
+D-850	-0.37812456488609314	infobox deities
+P-850	-0.0039 -1.1178 -0.0126
+S-865	<unk> <unk> ચૌહાણ
+T-865	<<unk>> <<unk>> chauhan
+H-865	-3.5117907524108887	kabir chauhan
+D-865	-3.5117907524108887	kabir chauhan
+P-865	-6.9738 -3.5609 -0.0007
+S-888	પશ્ચિમ કમેંગ જિલ્લો
+T-888	west kameng district
+H-888	-0.1586981862783432	west kameng district
+D-888	-0.1586981862783432	west kameng district
+P-888	-0.0383 -0.5916 -0.0014 -0.0036
+S-25	<unk> ઉપગ્રહ શ્રેણી
+T-25	<<unk>> rohini satellite <<unk>>
+H-25	-0.866534411907196	indian national satellite system
+D-25	-0.866534411907196	indian national satellite system
+P-25	-1.3138 -2.3490 -0.4212 -0.2420 -0.0066
+S-73	ઉત્તર પ્રદેશના જિલ્લાઓ
+T-73	districts of uttar pradesh
+H-73	-0.3219398260116577	districts of uttar pradesh
+D-73	-0.3219398260116577	districts of uttar pradesh
+P-73	-1.1267 -0.0009 -0.4278 -0.0533 -0.0010
+S-183	ભારતના રાષ્ટ્રીય ઉદ્યાનો
+T-183	national parks of india
+H-183	-0.7142282724380493	indian national parks
+D-183	-0.7142282724380493	indian national parks
+P-183	-1.4936 -0.2197 -1.1416 -0.0020
+S-205	<unk> <unk> પિરામિડ
+T-205	great pyramid of <<unk>>
+H-205	-3.4944448471069336	communication
+D-205	-3.4944448471069336	communication
+P-205	-6.8277 -0.1612
+S-235	સિંધુ <unk> સ્થળો
+T-235	indus valley civilisation sites
+H-235	-0.8327224254608154	indus valley sites in india
+D-235	-0.8327224254608154	indus valley sites in india
+P-235	-0.6105 -1.9195 -2.3764 -0.0511 -0.0351 -0.0037
+S-509	દક્ષિણ <unk> બંધારણ
+T-509	constitution of south africa
+H-509	-0.9820590019226074	south america
+D-509	-0.9820590019226074	south america
+P-509	-0.0227 -2.9233 -0.0002
+S-744	<unk> <unk> <unk>
+T-744	<<unk>> tower of <<unk>>
+H-744	-3.3871188163757324	central library
+D-744	-3.3871188163757324	central library
+P-744	-6.6012 -3.5411 -0.0191
+S-852	માઉન્ટ આબુ <unk>
+T-852	mount abu <<unk>> <<unk>>
+H-852	-0.5673801898956299	mount abu
+D-852	-0.5673801898956299	mount abu
+P-852	-0.0224 -0.2209 -1.4589
+S-890	ભુચર <unk> યુદ્ધ
+T-890	battle of bhuchar mori
+H-890	-2.011244773864746	bhuchar mori
+D-890	-2.011244773864746	bhuchar mori
+P-890	-4.1529 -1.8762 -0.0047
+S-596	<unk> સભ્ય <unk> માટે <unk> <unk>
+T-596	<<unk>> <<unk>> <<unk>> <<unk>>
+H-596	-2.6857519149780273	user pages
+D-596	-2.6857519149780273	user pages
+P-596	-1.5291 -6.4397 -0.0885
+S-752	સાર્વજનિક કોલેજ ઓફ <unk> એન્ડ ટેકનોલોજી
+T-752	sarvajanik college of engineering and technology
+H-752	-1.6751161813735962	list of chief ministers of india
+D-752	-1.6751161813735962	list of chief ministers of india
+P-752	-4.7895 -0.0005 -3.8442 -0.0154 -0.0003 -3.0398 -0.0361
+S-652	જર્મન <unk> રાષ્ટ્રીય <unk> પક્ષ
+T-652	<<unk>> party
+H-652	-2.0297794342041016	german language
+D-652	-2.0297794342041016	german language
+P-652	-2.4950 -3.5937 -0.0007
+S-66	ગીર રાષ્ટ્રીય ઉદ્યાન અને અભયારણ્ય
+T-66	gir national park
+H-66	-0.7431721687316895	gir national park
+D-66	-0.7431721687316895	gir national park
+P-66	-0.0333 -2.5474 -0.0469 -0.3451
+S-131	પરિયોજના વિકિપીડિયા એશિયન મહિનો <unk>
+T-131	wikipedia asian <<unk>>
+H-131	-1.5556780099868774	list of chief ministers of india
+D-131	-1.5556780099868774	list of chief ministers of india
+P-131	-3.4650 -0.0012 -5.2500 -0.0258 -0.0016 -2.0977 -0.0486
+S-311	વેસ્ટ <unk> <unk> ફૂટબોલ ક્લબ
+T-311	west <<unk>> <<unk>> fc
+H-311	-2.665203809738159	west indies
+D-311	-2.665203809738159	west indies
+P-311	-4.4629 -3.4118 -0.1209
+S-231	પંડિત દીનદયાળ ઉપાધ્યાય <unk> સ્ટેડિયમ
+T-231	pandit deendayal upadhyay <<unk>> stadium
+H-231	-1.347058892250061	pandit deendayal petroleum
+D-231	-1.347058892250061	pandit deendayal petroleum
+P-231	-1.2174 -0.7317 -2.2117 -1.2274
+S-378	યુઇએફએ યૂરો ૨૦૧૨ વિભાગ <unk>
+T-378	uefa euro 2012 group a
+H-378	-0.3886687159538269	uefa euro 2012 division
+D-378	-0.3886687159538269	uefa euro 2012 division
+P-378	-0.0333 -0.0491 -0.0047 -1.8556 -0.0007
+S-525	ભારત <unk> પક્ષ રંગ ઢાંચો
+T-525	india <<unk>> party <<unk>> templates
+H-525	-0.633026123046875	bharat ratna india
+D-525	-0.633026123046875	bharat ratna india
+P-525	-0.4132 -0.5721 -1.4480 -0.0988
+S-735	<unk> માતા મંદિર જૂની <unk>
+T-735	<<unk>> mata temple old <<unk>>
+H-735	-2.5351593494415283	mata temple khajuraho
+D-735	-2.5351593494415283	mata temple khajuraho
+P-735	-5.8685 -0.4535 -3.8184 -0.0002
+S-741	જમ્મુ અને કાશ્મીર લાઇટ્ ઇન્ફન્ટ્રી
+T-741	jammu and kashmir light infantry
+H-741	-0.5858744382858276	jammu and kashmir
+D-741	-0.5858744382858276	jammu and kashmir
+P-741	-1.8757 -0.0029 -0.0144 -0.4505
+S-135	ભારત <unk> સંસ્કૃત <unk> યાદી
+T-135	list of sanskrit universities in india
+H-135	-0.8157065510749817	list of india number of india
+D-135	-0.8157065510749817	list of india number of india
+P-135	-0.0348 -0.0009 -0.2548 -5.0828 -0.3217 -0.0096 -0.0054
+2021-10-26 16:26:34 | INFO | fairseq_cli.generate | NOTE: hypothesis and token scores are output in base 2
+2021-10-26 16:26:34 | INFO | fairseq_cli.generate | Translated 908 sentences (2395 tokens) in 1.8s (495.43 sentences/s, 1306.79 tokens/s)
+Generate test with beam=5: BLEU4 = 19.85, 38.8/29.4/15.3/16.1 (BP=0.862, ratio=0.871, syslen=1487, reflen=1707)
