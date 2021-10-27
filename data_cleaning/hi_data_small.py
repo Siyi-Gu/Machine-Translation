@@ -23,6 +23,7 @@ hi_pairs = pairs("data/TED2020.en-hi.hi","data/TED2020.en-hi.en")
 hi_df = pd.DataFrame.from_dict(hi_pairs)
 hi_df.replace("", np.nan, inplace=True)
 hi_df.replace("\n", np.nan, inplace=True)
+hi_df.replace("\t", np.nan, inplace=True)
 hi_df.dropna(subset=['target'], inplace=True)
 hi_df.dropna(subset=['source'], inplace=True)
 hi_df = hi_df.drop_duplicates()
@@ -30,7 +31,7 @@ hi_df = hi_df.drop_duplicates()
 hi_df = hi_df.loc[hi_df['target'].str.len() < 100]
 
 #train, validation split 
-train, valid = train_test_split(hi_df,test_size=0.2,random_state=42)
+train, valid = train_test_split(hi_df,test_size=0.2,shuffle=True)
 
 hi_train = train['source']
 en_train = train['target']
